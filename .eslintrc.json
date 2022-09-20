@@ -1,3 +1,54 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "eslint-config-airbnb-base",
+    "airbnb-typescript",
+    "next/core-web-vitals",
+    "plugin:@next/next/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": [
+    "react",
+    "typescript",
+    "@typescript-eslint"
+  ],
+  "settings": {
+    "import-resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    },
+    "disable/plugins": [
+      "eslint-plugin-jsx-a11y"
+    ]
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": [
+      "tsconfig.json"
+    ]
+  },
+  "rules": {
+    "space-before-blocks": [
+      "error"
+    ],
+    "react/prop-types": [
+      "off"
+    ],
+    "max-len": [
+      "off"
+    ],
+    "react-hooks/exhaustive-deps": [
+      "off"
+    ],
+    "@typescript-eslint/ban-ts-comment": [
+      "off"
+    ]
+  }
 }
