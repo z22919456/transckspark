@@ -5,7 +5,7 @@ type Props = {}
 
 function Document({ }: Props) {
   return (
-    <Html>
+    <Html lang="zh-TW">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />

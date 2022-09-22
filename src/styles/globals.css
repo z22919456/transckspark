@@ -33,6 +33,11 @@
     @apply box-border
   }
 
+  aside,
+  aside * {
+    @apply text-white
+  }
+
 }
 
 a,
