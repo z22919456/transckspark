@@ -6,11 +6,11 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Noto Sans HK', 'sans-serif', '-apple-system'],
-      serif: ['Noto Sans HK', 'sans-serif', '-apple-system'],
-      mono: ['Noto Sans HK', 'sans-serif', '-apple-system'],
-      display: ['Noto Sans HK', 'sans-serif', '-apple-system'],
-      body: ['Noto Sans HK', 'sans-serif', '-apple-system'],
+      sans: ['Work Sans', 'Noto Sans HK', '-apple-system'],
+      serif: ['Work Sans', 'Noto Sans HK', '-apple-system'],
+      mono: ['Work Sans', 'Noto Sans HK', '-apple-system'],
+      display: ['Work Sans', 'Noto Sans HK', '-apple-system'],
+      body: ['Work Sans', 'Noto Sans HK', '-apple-system'],
     },
     extend: {
       colors: {
@@ -24,7 +24,21 @@ module.exports = {
         question: '#FF005C',
         exhibition: '#606060',
         footer: '#1F63FF',
-      }
+      },
+      // keyframes: {
+      //   slideUp: {
+      //     from: { translate: 'transform(0,0)', opacity: 1 },
+      //     to: { translate: 'transform(0,-100%)', opacity: 0 },
+      //   },
+      //   slideDown: {
+      //     from: { translate: 'transform(0,-100%)', opacity: 0 },
+      //     to: { translate: 'transform(0,0)', opacity: 1 },
+      //   },
+      // },
+      // animation: {
+      //   'slide-down': 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+      //   'slide-up': 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+      // }
     },
   },
   plugins: [],
