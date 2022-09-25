@@ -9,8 +9,6 @@ function LandingPage({ }: Props) {
   const handleScroll = () => {
     if (window.pageYOffset > 0) {
       setShow(false);
-    } else {
-      setShow(true)
     }
   }
 
@@ -21,10 +19,8 @@ function LandingPage({ }: Props) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [])
 
-  console.log(show)
-
   return (
-    <div className={classnames("fixed left-0 z-10 w-screen h-screen p-10 bg-default duration-300 transition-all ease", !show && '-translate-y-full opacity-0')}>
+    <div className={classnames("fixed left-0 z-50 w-screen h-screen p-10 bg-default duration-300 transition-all ease", !show && '-translate-y-full opacity-0')}>
       <div className="relative w-full h-1/2">
         <Image src="/eyes.png" layout="fill" objectPosition="top" objectFit='contain' ></Image>
       </div>

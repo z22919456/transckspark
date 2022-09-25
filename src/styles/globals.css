@@ -24,6 +24,7 @@
     @apply text-lg leading-[1.8]
   }
 
+  small,
   small {
     @apply text-sm leading-[1.8]
   }

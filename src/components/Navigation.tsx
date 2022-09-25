@@ -23,7 +23,7 @@ function Navigation({ onClose }: Props) {
   const route = useRouter()
   const pathname = route.pathname
   return (
-    <nav className="absolute top-0 left-0 flex w-1/2 h-screen max-h-screen p-5 overflow-hidden text-white bg-default">
+    <nav className="fixed top-0 left-0 flex w-1/2 h-screen max-h-screen p-5 overflow-hidden text-white bg-default">
       <List className="mt-3" />
       <div className="px-3">
         <ul className="ml-3 space-y-3">
