@@ -25,7 +25,7 @@
   }
 
   small,
-  small {
+  .small {
     @apply text-sm leading-[1.8]
   }
 
@@ -42,7 +42,48 @@
     @apply text-white
   }
 
+  .about,
+  .about * {
+    --primary-color: #FF5C4A
+  }
+
+  .news,
+  .news * {
+    --primary-color: #E0E404
+  }
+
+  .competition,
+  .competition * {
+    --primary-color: #004EFF
+  }
+
+  .judge,
+  .judge * {
+    --primary-color: #04E4AE
+  }
+
+  .shortlist,
+  .shortlist * {
+    --primary-color: #FFC700
+  }
+
+  .activity,
+  .activity * {
+    --primary-color: #B9FF24
+  }
+
+  .question,
+  .question * {
+    --primary-color: #FF005C
+  }
+
+  .exhibition,
+  .exhibition * {
+    --primary-color: #606060
+  }
 }
+
+
 
 a,
 button,

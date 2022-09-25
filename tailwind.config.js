@@ -14,6 +14,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        primary: 'var(--primary-color)',
         default: '#191B20',
         about: '#FF5C4A',
         news: '#E0E404',

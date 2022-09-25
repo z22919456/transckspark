@@ -9,8 +9,8 @@ const DEFAULT_CLASS_NAME = {
   padding: 'px-2 py-1',
   width: 'shrink-0',
   transition: 'transition-all duration-200',
-  border: 'hover:border-about border-b-4 border-transparent rdx-state-active:border-about',
-  text: 'rdx-state-active:text-about',
+  border: 'hover:border-primary border-b-4 border-transparent rdx-state-active:border-primary',
+  text: 'rdx-state-active:text-primary',
   others: 'whitespace-nowrap',
 };
 
