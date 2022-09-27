@@ -27,10 +27,10 @@ function Navigation({ onClose }: Props) {
   return (
     <nav className="fixed top-0 left-0 flex w-1/2 h-screen max-h-screen p-5 overflow-hidden text-white bg-default">
       <List className="mt-3" />
-      <div className="relative h-full px-3 ml-3 lg:ml-14 max-h-[720px]">
+      <div className="relative h-full px-3 ml-3 lg:ml-14 max-h-[720px] w-full">
         <ul className="space-y-3">
           {NAV_LIST.map(list => (
-            <li className="h1">
+            <li className="h3">
               <Link href={list.href}>
                 <a className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 hover:border-white border-default', pathname == list.href && 'border-white')} onClick={onClose} >
                   {list.name}
@@ -39,10 +39,10 @@ function Navigation({ onClose }: Props) {
             </li>
           ))}
         </ul>
-        <div className="absolute bottom-0 left-0 flex flex-wrap items-center space-x-5">
-          <FacebookIcon className="w-6 h-6 fill-white" />
-          <YoutubeIcon className="w-6 h-6 fill-white" />
-          <a className="small" href="email://info@vipassanacreative.com">
+        <div className="absolute bottom-0 left-0 flex flex-wrap items-center">
+          <FacebookIcon className="w-6 h-6 mx-5 fill-white" />
+          <YoutubeIcon className="w-6 h-6 mx-5 fill-white" />
+          <a className="mx-5 small" href="email://info@vipassanacreative.com">
             info@vipassanacreative.com
           </a>
         </div>
