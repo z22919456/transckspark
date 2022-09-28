@@ -19,11 +19,11 @@ function Layout({ children }: Props) {
       <Side onOpen={handleOpen} />
       {open && <Navigation onClose={handleClose} />}
       <div className="flex justify-end flex-nowrap">
-        <div className="w-1/2 min-h-[calc(100vh+1px)]">
+        <div className="w-1/2 min-h-screen">
           {children}
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

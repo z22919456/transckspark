@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from 'components/Header'
 import ScrollNav, { ScrollNavLink } from '../components/ScrollNav/index';
-import Divider from 'components/divider';
+import Divider from 'components/Divider';
 import Section from 'components/Section';
 
 type Props = {}
@@ -9,7 +9,7 @@ type Props = {}
 function About({ }: Props) {
 
   return (
-    <div className="h-screen about">
+    <div className="about">
       <Header className="from-primary" />
 
       <div className="py-10 text-center">

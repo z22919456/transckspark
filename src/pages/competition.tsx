@@ -1,6 +1,6 @@
 
 import Button from 'components/Button'
-import Divider from 'components/divider'
+import Divider from 'components/Divider'
 import Header from 'components/Header'
 import ScrollNav, { ScrollNavLink } from 'components/ScrollNav'
 import Section from 'components/Section'
@@ -123,7 +123,7 @@ function Competition({ }: Props) {
 
         </Section>
         <Section id="award" className="border-none ">
-        
+
         </Section>
         <Section id="standard" className="text-center border-none ">
           <div className="p-2 mb-12 text-center border border-black bg-competition/50">
