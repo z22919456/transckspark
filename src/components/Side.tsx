@@ -1,7 +1,9 @@
-import React from 'react'
-import NavButton from './NavButton'
-import Logo from 'components/assets/nav/logo.svg'
-import Location from 'components/assets/nav/location.svg'
+import Location from 'components/assets/nav/location.svg';
+import Logo from 'components/assets/nav/logo.svg';
+import React from 'react';
+
+import EyeAnimate from './animates/EyeAnimate';
+import NavButton from './NavButton';
 
 type Props = {
   onOpen: () => void
@@ -15,6 +17,8 @@ function Side({ onOpen }: Props) {
         <Location className="hidden ml-auto mr-5 lg:block" />
         <Logo className="mr-5" />
       </div>
+      {/* <AnimateIframe /> */}
+      <EyeAnimate />
     </aside>
   )
 }
