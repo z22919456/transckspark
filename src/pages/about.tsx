@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import Header from 'components/Header'
-import ScrollNav, { ScrollNavLink } from '../components/ScrollNav/index';
 import Divider from 'components/Divider';
+import Header from 'components/Header';
 import Section from 'components/Section';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+
+import ScrollNav, { ScrollNavLink } from '../components/ScrollNav';
 
 type Props = {}
 
@@ -38,11 +40,31 @@ function About({ }: Props) {
         <Section id="about" >
           <h2 className="py-12 text-center">活動緣起｜民間發起的紙上概念競圖</h2>
           <p>首都之心，城中轉正：中正紀念堂園區新願景概念競圖，由台灣現代建築學會、中華民國都市設計學會、中華民國景觀學會國內三大空間規劃設計專業學會共同發起。透過競圖徵件，鼓勵社會將論述具象化；經由公眾參與活動，促進社會溝通。此競圖與系列活動，以 「公共參與」 為理念及方法，在嚴謹公平的程序中，聚焦規劃專業，由下而上動員空間專業界與社會大眾，激發想像力和創造力，參與都市公共空間改造過程。競圖徵件期間，搭配系列公共論壇、講座、工作坊、成果展覽，期待打開更多的對話場合、帶動社會進一步討論，從文字進展到概念，從論述具象為圖面，凝聚社會共識，推動轉型正義的空間工程。</p>
+          <div className="w-full relative aspect-[1.54] my-5">
+            <Image src="/images/about/04.jpg" layout="fill" objectFit='contain' />
+          </div>
         </Section>
         <Section id="base" >
           <h2 className="py-12 text-center">中正紀念堂基地脈絡</h2>
           <p>中正紀念堂園區在清治時期為營邊段，是屯兵之地。日治時期是重要營區，鎮壓霧社事件之山砲部隊就設立於此。戰後仍延續軍事用途，設聯勤總司令部、陸軍總司令部、憲兵司令部等機關。</p>
+          <div className="w-full relative aspect-[1.54] my-5">
+            <Image src="/images/about/00.jpg" layout="fill" objectFit='contain' />
+          </div>
           <p>1970年代市府欲進行土地開發營邊段計畫，規劃高層飯店、會展中心、百貨商場，但因決定興建中正紀念堂而告終。1975年進行中正紀念堂公開徵圖，設計要點：清楚表達「中國文化」的精神、創造新穎的設計、莊嚴獨特的風格，同時涵入現代工程技術。</p>
+          <div className="flex flex-wrap md:flex-nowrap md:space-x-5">
+            <div className="w-full">
+              <div className="w-full relative aspect-[1.54] my-5">
+                <Image src="/images/about/01.jpg" layout="fill" objectFit='contain' alt="中正紀念堂園區在1903年後（日治時期間），曾是台灣步兵第一聯隊駐紮地。（中央研究院臺灣史研究所典藏、引用自開放博物館）" />
+              </div>
+              <small className="text-xs text-default/50 leading-[1]">中正紀念堂園區在1903年後（日治時期間），曾是台灣步兵第一聯隊駐紮地。（中央研究院臺灣史研究所典藏、引用自開放博物館）</small>
+            </div>
+            <div className="w-full">
+              <div className="w-full relative aspect-[1.54] my-5">
+                <Image src="/images/about/02.png" layout="fill" objectFit='contain' alt="原訂興建於今日中正紀念堂基地上雙塔型商業中心（《臺北畫刊》第67期，李乾朗繪製）" />
+              </div>
+              <small className="text-xs text-default/50">原訂興建於今日中正紀念堂基地上雙塔型商業中心（《臺北畫刊》第67期，李乾朗繪製）</small>
+            </div>
+          </div>
         </Section>
         <Section id="event" >
           <h2 className="py-12 text-center">中正紀念堂大事紀</h2>
