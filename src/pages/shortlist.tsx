@@ -1,14 +1,12 @@
-import Header from 'components/header'
-import React from 'react'
+import Header from 'components/header';
+import React from 'react';
 
-type Props = {}
-
-function Shortlist({ }: Props) {
+function Shortlist() {
   return (
     <div>
       <Header className="from-shortlist" />
     </div>
-  )
+  );
 }
 
-export default Shortlist
+export default Shortlist;

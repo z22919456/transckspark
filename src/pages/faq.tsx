@@ -1,14 +1,12 @@
-import Header from 'components/header'
-import React from 'react'
+import Header from 'components/header';
+import React from 'react';
 
-type Props = {}
-
-function Faq({ }: Props) {
+function Faq() {
   return (
     <div>
       <Header className="from-question" />
     </div>
-  )
+  );
 }
 
-export default Faq
+export default Faq;

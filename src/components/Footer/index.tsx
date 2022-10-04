@@ -1,19 +1,17 @@
-import Link from 'next/link'
-import React from 'react'
-import YoutubeIcon from 'components/assets/footer/yt.svg'
-import FacebookIcon from 'components/assets/footer/fb.svg'
-import EmailIcon from 'components/assets/footer/email.svg'
-import Organizer1Icon from 'components/assets/footer/organizer-1.svg'
-import Organizer2Icon from 'components/assets/footer/organizer-2.svg'
-import Organizer3Icon from 'components/assets/footer/organizer-3.svg'
-import PlanningIcon from 'components/assets/footer/planning.svg'
-import MinistryCultureIcon from 'components/assets/footer/ministry-culture.svg'
-import Column from './Column'
+import EmailIcon from 'components/assets/footer/email.svg';
+import FacebookIcon from 'components/assets/footer/fb.svg';
+import MinistryCultureIcon from 'components/assets/footer/ministry-culture.svg';
+import Organizer1Icon from 'components/assets/footer/organizer-1.svg';
+import Organizer2Icon from 'components/assets/footer/organizer-2.svg';
+import Organizer3Icon from 'components/assets/footer/organizer-3.svg';
+import PlanningIcon from 'components/assets/footer/planning.svg';
+import YoutubeIcon from 'components/assets/footer/yt.svg';
+import Link from 'next/link';
+import React from 'react';
 
+import Column from './Column';
 
-type Props = {}
-
-function Footer({ }: Props) {
+function Footer() {
   return (
     <div className="relative z-50 block w-full overflow-hidden bg-footer/95">
       {/* sm */}
@@ -145,7 +143,7 @@ function Footer({ }: Props) {
 
       </div>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

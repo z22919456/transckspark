@@ -6,10 +6,7 @@ import React, { useEffect, useState } from 'react';
 
 import ScrollNav, { ScrollNavLink } from '../components/ScrollNav';
 
-type Props = {}
-
-function About({ }: Props) {
-
+function About() {
   return (
     <div className="about">
       <Header className="from-primary" />
@@ -105,7 +102,7 @@ function About({ }: Props) {
         </Section>
       </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

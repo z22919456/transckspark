@@ -1,16 +1,18 @@
 import { useRef } from 'react';
 
-const useInterval = (callback: Function, time: number) => {
-  const interval = useRef<number>()
+const useInterval = (callback: ()=> void, time: number) => {
+  const interval = useRef<NodeJS.Timer>();
+
+  const stop = () => {
+    clearInterval(interval.current);
+  };
+
   const start = () => {
     stop();
-    interval.current = setInterval(callback, time)
-  }
-  const stop = () => {
-    clearInterval(interval.current)
-  }
+    interval.current = setInterval(callback, time);
+  };
 
-  return [start, stop]
-}
+  return [start, stop];
+};
 
-export default useInterval
+export default useInterval;

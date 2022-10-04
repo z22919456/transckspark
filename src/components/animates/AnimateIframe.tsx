@@ -1,12 +1,10 @@
-import React from 'react'
-import Iframe from 'react-iframe'
+import React from 'react';
+import Iframe from 'react-iframe';
 
-type Props = {}
-
-function AnimateIframe({ }: Props) {
+function AnimateIframe() {
   return (
     <Iframe url="/animate/index.html" className="w-full h-full"></Iframe>
-  )
+  );
 }
 
-export default AnimateIframe
+export default AnimateIframe;

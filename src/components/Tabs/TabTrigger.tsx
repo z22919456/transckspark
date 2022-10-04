@@ -1,8 +1,6 @@
-import React, { forwardRef, MouseEvent } from 'react';
+import { TabsTriggerProps, Trigger } from '@radix-ui/react-tabs';
 import classnames from 'classnames';
-import {
-  Trigger, TabsTriggerProps,
-} from '@radix-ui/react-tabs';
+import React, { forwardRef } from 'react';
 import objectsToString from 'utils/objectsToString';
 
 const DEFAULT_CLASS_NAME = {
@@ -17,7 +15,6 @@ const DEFAULT_CLASS_NAME = {
 const TabTrigger = forwardRef<HTMLButtonElement, TabsTriggerProps>(({
   className, children, ...props
 }, ref) => {
-
   const defaultClassName = objectsToString(DEFAULT_CLASS_NAME);
 
   return (

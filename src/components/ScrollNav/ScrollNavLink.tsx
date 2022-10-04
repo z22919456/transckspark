@@ -1,11 +1,12 @@
-import React from 'react'
 import classnames from 'classnames';
-import objectsToString from 'utils/objectsToString';
+import React from 'react';
 import { Link } from 'react-scroll';
-import { LinkProps } from 'react-scroll/modules/components/Link'
+import { LinkProps } from 'react-scroll/modules/components/Link';
+import objectsToString from 'utils/objectsToString';
+
 import { useScrollNavContext } from './Context';
 
-interface Props extends Omit<LinkProps, 'ref'> { }
+type Props = Omit<LinkProps, 'ref'>;
 
 const DEFAULT_CLASS_NAME = {
   padding: 'px-2 py-1',
@@ -16,13 +17,14 @@ const DEFAULT_CLASS_NAME = {
   others: 'whitespace-nowrap',
 };
 
-function ScrollTabLink({ children, className, to, ...props }: Props) {
-
+function ScrollTabLink({
+  children, className, to, ...props
+}: Props) {
   const defaultClassName = objectsToString(DEFAULT_CLASS_NAME);
 
-  const height = useScrollNavContext()
+  const height = useScrollNavContext();
 
-  console.log({ height })
+  console.log({ height });
 
   return (
     <Link activeClass="!border-primary" offset={-height} className={classnames(defaultClassName, className)} spy smooth to={to} {...props}>
@@ -30,7 +32,7 @@ function ScrollTabLink({ children, className, to, ...props }: Props) {
         {children}
       </small>
     </Link>
-  )
+  );
 }
 
-export default ScrollTabLink
+export default ScrollTabLink;

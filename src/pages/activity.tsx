@@ -1,14 +1,12 @@
-import Header from 'components/header'
-import React from 'react'
+import Header from 'components/header';
+import React from 'react';
 
-type Props = {}
-
-function Activity({ }: Props) {
+function Activity() {
   return (
     <div>
       <Header className="from-activity" />
     </div>
-  )
+  );
 }
 
-export default Activity
+export default Activity;

@@ -10,3 +10,5 @@ export const throttle = (func: Function, limit: number): () => void => {
     }
   };
 };
+
+export default throttle;

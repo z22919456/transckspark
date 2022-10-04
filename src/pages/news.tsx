@@ -1,14 +1,12 @@
-import Header from 'components/header'
-import React from 'react'
+import Header from 'components/header';
+import React from 'react';
 
-type Props = {}
-
-function News({ }: Props) {
+function News() {
   return (
     <div>
       <Header className="from-news" />
     </div>
-  )
+  );
 }
 
-export default News
+export default News;

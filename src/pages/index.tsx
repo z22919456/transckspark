@@ -1,13 +1,11 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import React from 'react';
 
-const Home: NextPage = () => {
-  return (
-    <span>
-      fdsf
-    </span>
-  )
-}
+import type { NextPage } from 'next';
 
-export default Home
+const Home: NextPage = () => (
+  <span>
+    fdsf
+  </span>
+);
+
+export default Home;

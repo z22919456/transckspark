@@ -1,9 +1,9 @@
-import { Html, Main, Head, NextScript } from 'next/document'
-import React from 'react'
+import {
+  Head, Html, Main, NextScript,
+} from 'next/document';
+import React from 'react';
 
-type Props = {}
-
-function Document({ }: Props) {
+function Document() {
   return (
     <Html lang="zh-TW">
       <Head>
@@ -16,7 +16,7 @@ function Document({ }: Props) {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
 
-export default Document
+export default Document;

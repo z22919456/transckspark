@@ -1,7 +1,10 @@
 import 'styles/globals.css';
-import type { AppProps } from 'next/app'
-import Layout from 'components/Layout'
+
+import Layout from 'components/Layout';
+import React from 'react';
 import { RecoilRoot } from 'recoil';
+
+import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     </RecoilRoot>
 
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

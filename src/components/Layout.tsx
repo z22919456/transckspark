@@ -1,18 +1,18 @@
-import React, { ReactNode, useState } from 'react'
-import Footer from './Footer'
-import LandingPage from './LandingPage'
-import NavButton from './NavButton'
-import Navigation from './Navigation'
-import Side from './Side'
+import React, { ReactNode, useState } from 'react';
+
+import Footer from './Footer';
+import LandingPage from './LandingPage';
+import Navigation from './Navigation';
+import Side from './Side';
 
 type Props = {
   children: ReactNode
-}
+};
 
 function Layout({ children }: Props) {
-  const [open, setOpen] = useState(false)
-  const handleOpen = () => setOpen(true)
-  const handleClose = () => setOpen(false)
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <div className="relative">
       <LandingPage />
@@ -25,7 +25,7 @@ function Layout({ children }: Props) {
       </div>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

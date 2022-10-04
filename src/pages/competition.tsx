@@ -1,14 +1,11 @@
+import Button from 'components/Button';
+import Divider from 'components/Divider';
+import Header from 'components/Header';
+import ScrollNav, { ScrollNavLink } from 'components/ScrollNav';
+import Section from 'components/Section';
+import React from 'react';
 
-import Button from 'components/Button'
-import Divider from 'components/Divider'
-import Header from 'components/Header'
-import ScrollNav, { ScrollNavLink } from 'components/ScrollNav'
-import Section from 'components/Section'
-import React from 'react'
-
-type Props = {}
-
-function Competition({ }: Props) {
+function Competition() {
   return (
     <div className="competition">
       <Header />
@@ -146,7 +143,7 @@ function Competition({ }: Props) {
         <Button>下載中文簡章</Button>
       </div>
     </div>
-  )
+  );
 }
 
-export default Competition
+export default Competition;

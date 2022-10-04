@@ -7,7 +7,7 @@ import NavButton from './NavButton';
 
 type Props = {
   onOpen: () => void
-}
+};
 
 function Side({ onOpen }: Props) {
   return (
@@ -20,7 +20,7 @@ function Side({ onOpen }: Props) {
       {/* <AnimateIframe /> */}
       <EyeAnimate />
     </aside>
-  )
+  );
 }
 
-export default Side
+export default Side;

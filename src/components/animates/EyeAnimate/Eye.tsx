@@ -1,11 +1,13 @@
 import { animated, useSpring } from '@react-spring/web';
 import useInterval from 'hooks/useInterval';
 import useTimeout from 'hooks/useTimeout';
-import { Component, ReactElement, useEffect, useRef, useState } from 'react';
+import React, {
+  Component, ReactElement, useEffect, useRef, useState,
+} from 'react';
 
 type Props = {
   ball: () => JSX.Element
-}
+};
 
 const CONFIG = {
   mass: 2,
@@ -15,12 +17,11 @@ const CONFIG = {
   precision: 0.01,
   velocity: 0,
   // easing: (t: number) => t
-}
+};
 
 export default function Eye({ ball }: Props) {
-
   // eyeball component
-  const Ball = ball
+  const Ball = ball;
 
   const eyeRef = useRef<SVGSVGElement>(null);
   const ballRef = useRef<SVGSVGElement>(null);
@@ -28,50 +29,52 @@ export default function Eye({ ball }: Props) {
 
   // auto animate when mouse unmoved
   const [startAutoAnimate, stopAutoAnimate] = useInterval(() => {
-    if (!eyeRef.current) return
+    if (!eyeRef.current) return;
 
-    const { width, height, top, left } = eyeRef.current.getBoundingClientRect();
-    setMove([(Math.random() - 0.5) / 2 * width, (Math.random() - 0.5) / 2 * height]);
-  }, Math.random() * 2500 + 500)
+    const {
+      width, height, top, left,
+    } = eyeRef.current.getBoundingClientRect();
+    setMove([((Math.random() - 0.5) / 2) * width, ((Math.random() - 0.5) / 2) * height]);
+  }, Math.random() * 2500 + 500);
 
   useEffect(() => startAutoAnimate(), []);
 
   // count down 5 sec and start auto animate
-  const [countDown, resetCountDown] = useTimeout(startAutoAnimate, 3000)
-
+  const [countDown, resetCountDown] = useTimeout(startAutoAnimate, 3000);
 
   // animate tick
   const mouseEvent = (e: MouseEvent) => {
     // stop auto animate and count Down
-    resetCountDown()
-    stopAutoAnimate()
+    resetCountDown();
+    stopAutoAnimate();
 
-    if (!ballRef.current || !eyeRef.current) return
+    if (!ballRef.current || !eyeRef.current) return;
 
-    const { width, height, top, left } = eyeRef.current.getBoundingClientRect();
+    const {
+      width, height, top, left,
+    } = eyeRef.current.getBoundingClientRect();
     //  get eye center point on screen
-    const centerX = left + width / 2
-    const centerY = top + height / 2
+    const centerX = left + width / 2;
+    const centerY = top + height / 2;
     // get move x and y
     const x = ((e.clientX - centerX) / window.innerWidth / 2) * width;
     const y = ((e.clientY - centerY) / window.innerHeight / 2) * height;
-    setMove([x, y])
+    setMove([x, y]);
 
     // count down 5 sec to start auto animate
-    countDown()
+    countDown();
   };
 
   // Mouse Move Event Listener
   useEffect(() => {
-    document.addEventListener('mousemove', mouseEvent)
+    document.addEventListener('mousemove', mouseEvent);
     return () => {
-      document.removeEventListener('mousemove', mouseEvent)
+      document.removeEventListener('mousemove', mouseEvent);
     };
   }, [eyeRef, ballRef]);
 
   // Animate Props
   const props = useSpring({ move, config: CONFIG });
-
 
   return (
     <div className="App">
@@ -89,7 +92,7 @@ export default function Eye({ ball }: Props) {
         />
         <mask
           id="mask0_271_190"
-          style={{ maskType: "alpha" }}
+          style={{ maskType: 'alpha' }}
           maskUnits="userSpaceOnUse"
           x="0"
           y="0"

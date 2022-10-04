@@ -8,13 +8,12 @@ import ScrollNavLink from './ScrollNavLink';
 type Props = {
   children: ReactNode,
   className?: string
-}
+};
 
 function ScrollNav({ children, className }: Props) {
-
   const [ref, { height }] = useMeasure();
 
-  console.log(height)
+  console.log(height);
 
   return (
     <ScrollNavProvider value={height} >
@@ -22,9 +21,9 @@ function ScrollNav({ children, className }: Props) {
         {children}
       </div>
     </ScrollNavProvider>
-  )
+  );
 }
 
-export { ScrollNavLink }
+export { ScrollNavLink };
 
-export default ScrollNav
+export default ScrollNav;
