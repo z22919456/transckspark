@@ -5,8 +5,7 @@
     "next/core-web-vitals",
     "plugin:@next/next/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:storybook/recommended"
+    "plugin:react/recommended"
   ],
   "plugins": [
     "react",
