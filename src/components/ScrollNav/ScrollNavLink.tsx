@@ -13,7 +13,7 @@ const DEFAULT_CLASS_NAME = {
   width: 'shrink-0',
   transition: 'transition-all duration-200',
   border: 'hover:border-primary border-b-4 border-transparent',
-  text: 'rdx-state-active:text-primary',
+  text: 'rdx-state-active:text-primary small',
   others: 'whitespace-nowrap',
 };
 
@@ -28,9 +28,7 @@ function ScrollTabLink({
 
   return (
     <Link activeClass="!border-primary" offset={-height} className={classnames(defaultClassName, className)} spy smooth to={to} {...props}>
-      <small>
-        {children}
-      </small>
+      {children}
     </Link>
   );
 }

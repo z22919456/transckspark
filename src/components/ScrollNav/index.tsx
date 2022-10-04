@@ -17,7 +17,7 @@ function ScrollNav({ children, className }: Props) {
 
   return (
     <ScrollNavProvider value={height} >
-      <div className={classNames('sticky bg-white z-10 top-0 flex flex-wrap justify-center py-3 border-b border-black w-full space-x-3', className)} ref={ref}>
+      <div className={classNames('sticky bg-white z-10 top-0 flex flex-wrap justify-center py-3 border-b border-black w-full gap-3', className)} ref={ref}>
         {children}
       </div>
     </ScrollNavProvider>
