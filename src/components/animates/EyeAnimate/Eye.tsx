@@ -1,9 +1,7 @@
 import { animated, useSpring } from '@react-spring/web';
 import useInterval from 'hooks/useInterval';
 import useTimeout from 'hooks/useTimeout';
-import React, {
-  Component, ReactElement, useEffect, useRef, useState,
-} from 'react';
+import React, { Component, ReactElement, useEffect, useRef, useState } from 'react';
 
 type Props = {
   ball: () => JSX.Element
@@ -77,7 +75,7 @@ export default function Eye({ ball }: Props) {
   const props = useSpring({ move, config: CONFIG });
 
   return (
-    <div className="App">
+    <div className="relative w-2/3 md:w-1/2 aspect-[2.84]">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="416"
@@ -85,6 +83,7 @@ export default function Eye({ ball }: Props) {
         viewBox="0 0 416 147"
         fill="none"
         ref={eyeRef}
+        className="absolute w-full h-full"
       >
         <path
           d="M415.5 73.4602C359.211 27.5675 286.794 0 207.75 0C128.706 0 56.2889 27.5675 0 73.4602C56.2889 119.353 128.706 146.92 207.75 146.92C286.794 146.92 359.211 119.273 415.5 73.4602Z"
