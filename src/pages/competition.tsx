@@ -114,10 +114,43 @@ function Competition() {
           <p>註：為了讓更多創見得以發揮、更多意見可以加入社會溝通，提案者提出的轉型方案，暫時不須考慮文化資產、都市計畫、都市設計相關空間管制規範。</p>
         </Section>
         <Section id="qualification" className="border-none ">
+          <div className="p-2 text-center border border-black bg-competition/50">
+            <h2 className="text-base">參賽資格</h2>
+          </div>
+          <div className="p-2 mb-12 text-center border border-black ">
+            <h3 className="text-base h2">學生組</h3>
+          </div>
+          <div className="mb-10">
+            <p>對象為高中職以上在學者或2022 年取得學位之應屆畢業生。不限國籍地區之報名者參加，不限個人或多人組隊，亦鼓勵組成多元背景團隊參加。</p>
+          </div>
+          <div className="p-2 mb-12 text-center border border-black ">
+            <h3 className="text-base h2">社會組</h3>
+          </div>
+          <div>
+            <p>不限個人、社團、法人或公司單位，需至少一位成員為空間領域專業者。不限國籍地區之報名者參加、不限個人或多人組隊，亦鼓勵組成多元背景團隊參加。</p>
+          </div>
 
         </Section>
         <Section id="specification" className="border-none ">
-
+          <div className="p-2 text-center border border-black bg-competition/50">
+            <h2 className="text-base">交件規格</h2>
+          </div>
+          <div className="p-2 mb-12 text-center border border-black ">
+            <h3 className="text-base h2">學生組</h3>
+          </div>
+          <div className="mb-10">
+            <p>初審：需繳交 1-3 張 A1 圖面，或 3 分鐘內影像（100 MB以內），皆繳交亦可。並檢附作品說明文字（800 字內）。版面或影片中必須包含必要的設計概念呈現，任意表現法皆可被接受（如標題、圖表、草圖、3D 模擬、平面圖、剖面圖、立面圖、照片等）。</p>
+            <p>決審：針對初審內容加強、增補之 3-5 張A1 圖面，或 6 分鐘內影像，兩者擇一，皆繳交亦可。評選時需準備口頭簡報 15 分鐘。</p>
+            <p>評審推薦優秀作品前五名：於成果展覽時繳交一個 2mx2mx2m 為限的模型或其他多元媒材作品。</p>
+          </div>
+          <div className="p-2 mb-12 text-center border border-black ">
+            <h3 className="text-base h2">社會組</h3>
+          </div>
+          <div>
+            <p>初審：須繳交 1 張 A1 圖面，或 3 分鐘內影像（100 MB以內），兩者擇一，皆繳交亦可，並檢附作品說明文字（800 字內）。</p>
+            <p>決審：針對初審交件內容加強、增補之 3 張A1 圖面或 6 分鐘內影像，評選時需準備口頭簡報 15 分鐘。</p>
+            <p>評審推薦優秀作品前五名：於成果展覽時繳交一個 2mx2mx2m 為限的模型或其他多元媒材作品。</p>
+          </div>
         </Section>
         <Section id="award" className="border-none ">
 

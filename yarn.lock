@@ -1074,6 +1074,16 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@master/literal@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@master/literal/-/literal-1.0.11.tgz#4223d60dabcc58bc9972ad8247a22fc063f05bc5"
+  integrity sha512-kS6Kev2TUseg5Ea3ZefcvXdIKOaoBTQugKaWPFp/MwSCJagMBa2HL+zahgZQKC6lvX0C17sGfjGHc8hO2L0mEw==
+
+"@master/style-element.react@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@master/style-element.react/-/style-element.react-1.1.6.tgz#497ab149813701427e5e9c33ac346d3099952de0"
+  integrity sha512-hNm4+7NDixN+IpcXbXg55tp7EpCJYwWdrf11YXEilq1NgfS3dez2NyOsc4s3oOZHEu243hFLNNk8IakH8v4X9Q==
+
 "@next/env@12.3.1":
   version "12.3.1"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-12.3.1.tgz#18266bd92de3b4aa4037b1927aa59e6f11879260"
@@ -1178,6 +1188,36 @@
   integrity sha512-3e7rn8FDMin4CgeL7Z/49smCA3rFYY3Ha2rUQ7HRWFadS5iCRw08ZgVT1LaNTCNqgvrUiyczLflrVrF0SRQtNA==
   dependencies:
     "@babel/runtime" "^7.13.10"
+
+"@radix-ui/react-accordion@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-accordion/-/react-accordion-1.0.0.tgz#bf69dc1f13fce05d6d7560ff79954c49abc1b71b"
+  integrity sha512-F4vrzev+f1gjrWiU+IFQIzN43fYyvQ+AN0OicHYoDddis53xnPC0DKm16Ks4/XjvmqbISAR/FscYX0vymEHxcA==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@radix-ui/primitive" "1.0.0"
+    "@radix-ui/react-collapsible" "1.0.0"
+    "@radix-ui/react-collection" "1.0.0"
+    "@radix-ui/react-compose-refs" "1.0.0"
+    "@radix-ui/react-context" "1.0.0"
+    "@radix-ui/react-id" "1.0.0"
+    "@radix-ui/react-primitive" "1.0.0"
+    "@radix-ui/react-use-controllable-state" "1.0.0"
+
+"@radix-ui/react-collapsible@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-collapsible/-/react-collapsible-1.0.0.tgz#0d94fc847c2d4bee1ab646d15c87bd3be6448873"
+  integrity sha512-NfZqWntvPsC43szs0NvumRjmTTJTLgaDOAnmVGDZaGsg2u6LcJwUT7YeYSKnlxWRQWN4pwwEfoYdWrtoutfO8g==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@radix-ui/primitive" "1.0.0"
+    "@radix-ui/react-compose-refs" "1.0.0"
+    "@radix-ui/react-context" "1.0.0"
+    "@radix-ui/react-id" "1.0.0"
+    "@radix-ui/react-presence" "1.0.0"
+    "@radix-ui/react-primitive" "1.0.0"
+    "@radix-ui/react-use-controllable-state" "1.0.0"
+    "@radix-ui/react-use-layout-effect" "1.0.0"
 
 "@radix-ui/react-collection@1.0.0":
   version "1.0.0"

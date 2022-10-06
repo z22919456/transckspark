@@ -1,4 +1,4 @@
-import { JudgeType } from 'data/judges';
+import { JudgeType } from 'data/judgesData';
 import Image from 'next/image';
 import React from 'react';
 
