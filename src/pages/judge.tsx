@@ -11,15 +11,22 @@ function Judges() {
       <Header />
       <div className="mx-5">
         <ScrollNav className="">
-          <p className="py-1 ml-5 mr-auto text-xs text-gray-600 whitespace-nowrap">初審</p>
-          {firstJudges.map(({ name, id }) => (
-            <ScrollNavLink key={id} to={`first-${id}`} className="w-auto px-0 text-xs" >{name}</ScrollNavLink>
-          ))}
-          <div className="w-full"></div>
-          <p className="py-1 ml-5 mr-auto text-xs text-gray-600 whitespace-nowrap">決選</p>
-          {finalJudges.map(({ name, id }) => (
-            <ScrollNavLink key={id} to={`final-${id}`} className="w-auto px-0 text-xs" >{name}</ScrollNavLink>
-          ))}
+          <div className="flex items-baseline w-full flex-nowrap">
+            <p className="py-1 ml-5 mr-auto text-xs text-gray-600 whitespace-nowrap">初審</p>
+            <div className="flex flex-wrap w-full ml-5">
+              {firstJudges.map(({ name, id }) => (
+                <ScrollNavLink key={id} to={`first-${id}`} className="w-auto px-0 mr-1 text-xs" >{name}</ScrollNavLink>
+              ))}
+            </div>
+          </div>
+          <div className="flex items-baseline w-full flex-nowrap">
+            <p className="py-1 ml-5 mr-auto text-xs text-gray-600 whitespace-nowrap">決選</p>
+            <div className="flex flex-wrap w-full ml-5">
+              {finalJudges.map(({ name, id }) => (
+                <ScrollNavLink key={id} to={`final-${id}`} className="w-auto px-0 ml-1 text-xs" >{name}</ScrollNavLink>
+              ))}
+            </div>
+          </div>
         </ScrollNav>
 
         <div className="py-10 border-b border-default">
@@ -35,7 +42,7 @@ function Judges() {
 
           <div className="flex md:nowrap">
 
-            <div className="relative w-full mr-5">
+            <div className="relative w-full mr-5 aspect-video">
               <Image src={chairman.image} layout="fill" objectFit="cover" alt={chairman.name} />
             </div>
 
