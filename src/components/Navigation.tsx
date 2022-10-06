@@ -33,7 +33,7 @@ function Navigation({ onClose }: Props) {
           {NAV_LIST.map((list) => (
             <li className="h3" key={list.href}>
               <Link href={list.href}>
-                <a className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 hover:border-white border-default', pathname === list.href && 'border-white')} onClick={onClose} >
+                <a className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 hover:translate-x-5 hover:border-white border-default', pathname === list.href && 'border-white')} onClick={onClose} >
                   {list.name}
                 </a>
               </Link>
