@@ -24,8 +24,6 @@ function ScrollTabLink({
 
   const height = useScrollNavContext();
 
-  console.log({ height });
-
   return (
     <Link activeClass="!border-primary" offset={-height} className={classnames(defaultClassName, className)} spy smooth to={to} {...props}>
       {children}
