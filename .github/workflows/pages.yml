@@ -29,6 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_BASE_PATH: /transckspark
+      IMAGE_OPTIMIZED_SKIP: true
     steps:
       - name: Checkout
         uses: actions/checkout@v3

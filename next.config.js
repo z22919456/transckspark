@@ -11,7 +11,7 @@ const nextConfig = {
     return config
   },
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: process.env.IMAGE_OPTIMIZED_SKIP
   },
   images: {
     unoptimized: true
