@@ -10,14 +10,14 @@ const nextConfig = {
     })
     return config
   },
-  basePath:  '/transckspark',
   typescript: {
     ignoreBuildErrors: true
   },
   images: {
     unoptimized: true
   },
-  assetPrefix: '/transckspark'
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH, // for github page
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH // for github page
 }
 
 module.exports = nextConfig

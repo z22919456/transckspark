@@ -20,13 +20,13 @@ function LandingPage() {
   return (
     <div className={classnames('fixed left-0 z-50 w-screen h-screen p-10 bg-default duration-300 transition-all ease', !show && '-translate-y-full opacity-0')}>
       <div className="relative w-full h-1/2">
-        <Image src="/eyes.png" layout="fill" objectPosition="top" objectFit='contain' alt="" ></Image>
+        <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/eyes.png`} layout="fill" objectPosition="top" objectFit='contain' alt="" ></Image>
       </div>
       <div className="relative hidden w-full h-1/2 md:block">
-        <Image className="" src="/info-md.png" layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
+        <Image className="" src={`${process.env.NEXT_PUBLIC_BASE_PATH}/info-md.png`} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
       </div>
       <div className="relative block w-full h-1/2 sm:hidden">
-        <Image className="hidden md:block lg:hidden" src="/info-sm.png" layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
+        <Image className="hidden md:block lg:hidden" src={`${process.env.NEXT_PUBLIC_BASE_PATH}/info-sm.png`} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
       </div>
     </div>
   );
