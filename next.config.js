@@ -10,6 +10,7 @@ const nextConfig = {
     })
     return config
   },
+  basePath:  '/transckspark',
   typescript: {
     ignoreBuildErrors: true
   },
