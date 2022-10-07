@@ -17,7 +17,7 @@ function Faq() {
       <div className="px-5">
         <div className="mb-20">
           <h1 className="mb-5 text-base text-center">競圖報名相關問題</h1>
-          <Accordion type="single" >
+          <Accordion type="single" collapsible>
             {faqData1.map((faq) => (
               <AccordionItem value={faq.id.toString()} key={faq.id}>
                 <AccordionTrigger>
@@ -33,14 +33,14 @@ function Faq() {
 
         <div>
           <h1 className="mb-5 text-base text-center">想像中正紀念堂的100種方式系列活動相關問題</h1>
-          <Accordion type="single" >
+          <Accordion type="single" collapsible>
             {faqData2.map((faq) => (
               <AccordionItem value={faq.id.toString()} key={faq.id}>
                 <AccordionTrigger>
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {faq.answer}
+                  <p dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
                 </AccordionContent>
               </AccordionItem>
             ))}
