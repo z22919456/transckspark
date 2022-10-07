@@ -10,7 +10,7 @@ function Judges() {
     <div className="judge">
       <Header />
       <div className="mx-5">
-        <ScrollNav className="">
+        <ScrollNav className="bg-transparent">
           <div className="flex items-baseline w-full flex-nowrap">
             <p className="py-1 ml-5 mr-auto text-xs text-gray-600 whitespace-nowrap">初審</p>
             <div className="flex flex-wrap w-full ml-5">
@@ -40,13 +40,13 @@ function Judges() {
           </div>
           <h2 className="py-10 text-lg text-center">{chairman.name}</h2>
 
-          <div className="flex md:nowrap">
+          <div className="flex flex-wrap md:flex-nowrap">
 
-            <div className="relative w-full mr-5 aspect-video">
+            <div className="relative w-full mb-5 md:mr-5 aspect-video md:mb-0">
               <Image src={chairman.image} layout="fill" objectFit="cover" alt={chairman.name} />
             </div>
 
-            <div className="w-full ml-5">
+            <div className="w-full md:ml-5">
               <p className="text-xs">{chairman.information}</p>
             </div>
           </div>

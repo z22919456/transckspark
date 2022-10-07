@@ -26,7 +26,7 @@ function Navigation({ onClose }: Props) {
   const route = useRouter();
   const { pathname } = route;
   return (
-    <nav className="fixed top-0 left-0 flex w-1/2 h-screen max-h-screen p-5 overflow-hidden text-white bg-default">
+    <nav className="fixed top-0 left-0 z-50 flex w-screen h-screen max-h-screen p-5 overflow-hidden text-white md:w-1/2 bg-default">
       <List className="mt-3" />
       <div className="relative h-full px-3 ml-3 lg:ml-14 max-h-[720px] w-full">
         <ul className="space-y-3">

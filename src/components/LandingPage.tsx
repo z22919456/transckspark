@@ -25,7 +25,7 @@ function LandingPage() {
       <div className="relative hidden w-full h-1/2 md:block">
         <Image className="" src="/info-md.png" layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
       </div>
-      <div className="relative hidden w-full h-1/2 sm:block lg:hidden">
+      <div className="relative block w-full h-1/2 sm:hidden">
         <Image className="hidden md:block lg:hidden" src="/info-sm.png" layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
       </div>
     </div>

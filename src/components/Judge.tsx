@@ -8,7 +8,7 @@ function Judge({
   name, title, information, engName, final = false, id, image,
 }: Props) {
   return (
-    <div className="w-full p-5 border-t md:w-1/2 md:odd:border-r border-default relative md:even:before:content-none before:absolute before:h-10 before:w-10 before:top-0 before:right-0 before:translate-x-1/2 before:-translate-y-1/2 before:bg-white before:z-[1]" id={`${final ? 'final' : 'first'}-${id}`}>
+    <div className="w-full py-5 md:p-5 border-t md:w-1/2 md:odd:border-r border-default relative before:content-none md:odd:before:content-[''] before:absolute before:h-10 before:w-10 before:top-0 before:right-0 before:translate-x-1/2 before:-translate-y-1/2 before:bg-white before:z-[1]" id={`${final ? 'final' : 'first'}-${id}`}>
       <div className="flex justify-between text-xs">
         <p>{final ? '初選評審' : '決選評審'}</p>
         <p>{engName}</p>
