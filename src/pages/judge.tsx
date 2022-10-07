@@ -1,4 +1,4 @@
-import Header from 'components/header';
+import Header from 'components/Header';
 import Judge from 'components/Judge';
 import ScrollNav, { ScrollNavLink } from 'components/ScrollNav';
 import { chairman, finalJudges, firstJudges } from 'data/judgesData';

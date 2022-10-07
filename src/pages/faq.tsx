@@ -1,5 +1,10 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from 'components/Accordion';
-import Header from 'components/header';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from 'components/Accordion';
+import Header from 'components/Header';
 import React from 'react';
 
 import { faqData1, faqData2 } from '../data/faqData';

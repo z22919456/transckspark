@@ -10,6 +10,12 @@ const nextConfig = {
     })
     return config
   },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  images: {
+    unoptimized: true
+  }
 }
 
 module.exports = nextConfig

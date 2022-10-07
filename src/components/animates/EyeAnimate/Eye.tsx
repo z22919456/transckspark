@@ -1,7 +1,7 @@
 import { animated, useSpring } from '@react-spring/web';
 import useInterval from 'hooks/useInterval';
 import useTimeout from 'hooks/useTimeout';
-import React, { Component, ReactElement, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 type Props = {
   ball: () => JSX.Element

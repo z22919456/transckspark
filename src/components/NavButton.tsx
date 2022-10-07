@@ -1,7 +1,7 @@
-import React from 'react';
-import HamburgerIcon from 'components/assets/nav/hamburger.svg';
-import CloseIcon from 'components/assets/nav/close.svg';
 import classnames from 'classnames';
+import CloseIcon from 'components/assets/nav/close.svg';
+import HamburgerIcon from 'components/assets/nav/hamburger.svg';
+import React from 'react';
 
 type Props = Omit<React.HTMLProps<HTMLButtonElement>, 'ref'> & { close?: boolean };
 

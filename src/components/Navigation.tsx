@@ -11,8 +11,8 @@ import NavButton from './NavButton';
 type Props = { onClose: () => void };
 
 const NAV_LIST = [
-  { name: 'English', href: '/english' },
-  { name: '關於', href: '/about' },
+  { name: 'English', href: '/en' },
+  { name: '關於', href: '/' },
   { name: '最新消息', href: '/news' },
   { name: '競圖', href: '/competition' },
   { name: '評審', href: '/judge' },
