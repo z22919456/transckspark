@@ -12,7 +12,7 @@ type Props = {
 function Side({ onOpen }: Props) {
   return (
     <>
-      <div className="sticky top-0 z-20 flex items-center justify-between w-full md:hidden bg-default">
+      <div className="sticky top-0 z-50 flex items-center justify-between w-full md:hidden bg-default">
         <NavButton onClick={onOpen} />
         <Location className="hidden ml-auto mr-5 lg:block" />
         <Logo className="mr-5" />

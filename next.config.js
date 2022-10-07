@@ -11,13 +11,13 @@ const nextConfig = {
     return config
   },
   typescript: {
-    ignoreBuildErrors: process.env.IMAGE_OPTIMIZED_SKIP
+    ignoreBuildErrors: true
   },
   images: {
-    unoptimized: true
+    unoptimized: !!process.env.IMAGE_OPTIMIZED_SKIP
   },
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH, // for github page
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH // for github page
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined, // for github page
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || undefined // for github page
 }
 
 module.exports = nextConfig
