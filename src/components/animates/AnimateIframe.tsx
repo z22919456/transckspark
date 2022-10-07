@@ -3,7 +3,7 @@ import Iframe from 'react-iframe';
 
 function AnimateIframe() {
   return (
-    <Iframe url="/animate/index.html" className="w-full h-full"></Iframe>
+    <Iframe url={`${process.env.NEXT_PUBLIC_BASE_PATH}/animate/index.html`} className="w-full h-full"></Iframe>
   );
 }
 

@@ -13,9 +13,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true
   },
-  images: {
-    unoptimized: true
-  },
   basePath: process.env.NEXT_PUBLIC_BASE_PATH, // for github page
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH // for github page
 }
