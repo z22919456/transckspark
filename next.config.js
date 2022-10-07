@@ -16,7 +16,8 @@ const nextConfig = {
   },
   images: {
     unoptimized: true
-  }
+  },
+  assetPrefix: '/transckspark'
 }
 
 module.exports = nextConfig
