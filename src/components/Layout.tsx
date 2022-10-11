@@ -28,4 +28,6 @@ function Layout({ children }: Props) {
   );
 }
 
+export const withDefaultLayout = (children: ReactNode) => <Layout>{children}</Layout>;
+
 export default Layout;
