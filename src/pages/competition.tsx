@@ -58,7 +58,7 @@ function Competition() {
 
         <ScrollNav>
           <ScrollNavLink to="theme">
-            競選主題
+            競圖主題
           </ScrollNavLink>
           <ScrollNavLink to="statement">
             競圖宣言
@@ -85,7 +85,7 @@ function Competition() {
         </Section>
         <Section id="statement" className="border-none">
           <div className="p-2 text-center border border-black bg-competition/50">
-            <h2 className="text-base">競選宣言</h2>
+            <h2 className="text-base">競圖宣言</h2>
           </div>
           <div className="pt-12">
             {statements.map((s, i) => (<p className="mb-12 last:mb-0" key={i}>{s}</p>))}
