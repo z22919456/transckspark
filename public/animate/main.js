@@ -226,7 +226,7 @@
 	    this.boids = [];
 	    this.size = _point2.default.fromArray(size);
 	    for (var i = 0; i < 7; i++) {
-	      var kind = _subjects2.default.pijlers[i % 4];
+	      var kind = _subjects2.default.pijlers[i];
 	      var boid = new _boid3.default({
 	        position: new _point2.default((i + 0.5) / 8, 0.25 + (i % 2 ? 0.1 : -0.1)).multiply(this.size.clone().subtractNum(margin * 2)).addNum(margin),
 	        maxSpeed: 0.5 + Math.random() / 8,
@@ -240,7 +240,7 @@
 	      this.boids.push(boid);
 	    }
 	    for (var _i = 0; _i < 6; _i++) {
-	      var _kind = _subjects2.default.disciplines[_i % 3];
+	      var _kind = _subjects2.default.disciplines[_i];
 	      var _boid = new _boid3.default({
 	        position: new _point2.default((_i + 0.5) / 6, 0.75 + (_i % 2 ? 0.1 : -0.1)).multiply(this.size.clone().subtractNum(margin * 2)).addNum(margin),
 	        maxSpeed: 0.3 + Math.random() / 8,
@@ -1833,38 +1833,38 @@
 	});
 	exports.default = {
 	  disciplines: [{
-	    name: '戒嚴',
+	    name: '首都',
 	    work: true
 	  }, {
-	    name: '轉型<br/>正義',
+	    name: '紀念',
 	    work: true
 	  }, {
-	    name: '社會<br/>歧見',
+	    name: '使用<br/>營運',
 	    work: true
 	  }, {
-	    name: '中正<br/>紀念堂',
+	    name: '想像與<br/>可能性',
 	    work: true
 	  }, {
-	    name: '紀念碑',
+	    name: '對話',
 	    work: true
 	  }, {
-	    name: '歷史<br/>記憶',
+	    name: '公共性',
 	    work: true
 	  }],
 	  pijlers: [{
-	    name: '空間'
+	    name: '生活'
 	  }, {
-	    name: '負面<br/>遺跡'
+	    name: '人權<br/>歷史'
 	  }, {
-	    name: '白色<br/>恐怖'
+	    name: '民主'
 	  }, {
-	    name: '想像<br/>的建築'
+	    name: '中正<br/>紀念堂'
 	  }, {
-	    name: '文化<br/>資產'
+	    name: '開放'
 	  }, {
-	    name: '人名<br/>的聲音'
+	    name: '展望<br/>與轉型'
 	  }, {
-	    name: '民間<br/>力量'
+	    name: '城市<br/>精神'
 	  }]
 	};
 
