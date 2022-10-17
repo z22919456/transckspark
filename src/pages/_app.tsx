@@ -1,11 +1,12 @@
 import 'styles/globals.css';
 
-import Layout, { withDefaultLayout } from 'components/Layout';
+import { withDefaultLayout } from 'components/Layout';
 import React, { ReactElement, ReactNode } from 'react';
 import { RecoilRoot } from 'recoil';
 
 import type { AppProps } from 'next/app';
 import { NextPage } from 'next';
+import { ChakraProvider } from '@chakra-ui/react';
 
 type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement, pageProps: P) => ReactNode

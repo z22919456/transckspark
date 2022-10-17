@@ -1,18 +1,16 @@
-import { withAuthLayout } from 'components/AuthLayout';
+import { withAdminLayout } from 'components/admin/AdminLayout';
 import Button from 'components/Button';
 import { signIn, useSession } from 'next-auth/react';
 import React from 'react';
 
 function Admins() {
-  const { data: session } = useSession();
-  if (session) return <></>;
   return (
-    <Button>
-      <button onClick={() => signIn()}>登入</button>
+    <Button onClick={() => signIn()}>
+      登入
     </Button>
   );
 }
 
-Admins.getLayout = withAuthLayout;
+Admins.getLayout = withAdminLayout;
 
 export default Admins;
