@@ -98,3 +98,11 @@ textarea {
   -ms-user-select: none;
   user-select: none;
 }
+
+.ql-editor {
+  min-height: 25vh;
+}
+
+.ql-tooltip {
+  z-index: 50;
+}
