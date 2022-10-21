@@ -1,0 +1,8 @@
+import { Editor } from '@tiptap/react';
+import { createContext, useContext } from 'react';
+
+const TipTabContext = createContext<Editor>(null);
+
+export const TipTabProvider = TipTabContext.Provider;
+
+export const useEditorContext = () => useContext(TipTabContext);

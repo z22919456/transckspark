@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('tailwindcss').Config} */
 const tailwindcssRadix = require('tailwindcss-radix');
+const typography = require('@tailwindcss/typography');
 
 module.exports = {
   content: [
@@ -16,6 +17,22 @@ module.exports = {
       body: ['Work Sans', 'Noto Sans HK', '-apple-system'],
     },
     extend: {
+      // typography: {
+      //   DEFAULT: {
+      //     css: {
+      //       color: '#191B20',
+      //       a: {
+      //         color: '#004EFF',
+      //         '&hover': {
+      //           color: '#191B2090',
+      //         },
+      //       },
+      //       h1: {
+      //         font
+      //       }
+      //     },
+      //   },
+      // },
       colors: {
         primary: 'var(--primary-color)',
         default: '#191B20',
@@ -133,5 +150,6 @@ module.exports = {
     tailwindcssRadix({
       variantPrefix: 'rdx',
     }),
+    typography,
   ],
 };
