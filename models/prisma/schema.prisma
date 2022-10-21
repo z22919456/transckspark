@@ -38,13 +38,14 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            String        @id @default(cuid())
   name          String?
-  email         String?   @unique
+  email         String?       @unique
   emailVerified DateTime?
   image         String?
   accounts      Account[]
   sessions      Session[]
+  NewsArticle   NewsArticle[]
 }
 
 model VerificationToken {
@@ -53,4 +54,15 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model NewsArticle {
+  id             Int      @id @default(autoincrement())
+  title          String
+  image          String
+  content        String
+  date           DateTime @default(now())
+  published_date DateTime @default(now())
+  author         User     @relation(fields: [user_id], references: [id])
+  user_id        String
 }
