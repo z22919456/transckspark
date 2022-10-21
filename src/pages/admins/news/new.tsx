@@ -3,7 +3,7 @@ import axios from 'axios';
 import { withAdminLayout } from 'components/admin/AdminLayout';
 import FormikDatePicker from 'components/admin/form/FormikDatePicker';
 import FormikEditor from 'components/admin/form/FormikEditor';
-import FormikInput from 'components/admin/form/formikInput';
+import FormikInput from 'components/admin/form/FormikInput';
 import { FormikProvider, useFormik } from 'formik';
 import { useSession } from 'next-auth/react';
 import React, { useEffect } from 'react';

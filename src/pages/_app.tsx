@@ -6,7 +6,6 @@ import { RecoilRoot } from 'recoil';
 
 import type { AppProps } from 'next/app';
 import { NextPage } from 'next';
-import { ChakraProvider } from '@chakra-ui/react';
 
 type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement, pageProps: P) => ReactNode
