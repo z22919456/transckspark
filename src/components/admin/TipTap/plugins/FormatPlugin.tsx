@@ -5,11 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useEditorContext } from '../TipTapProvider';
 import ToolbarButton from './ToolbarButton';
+import ToolbarSection from './ToolbarSection';
 
 function HeadingPlugin() {
   const editor = useEditorContext();
   return (
-    <>
+    <ToolbarSection>
       <ToolbarButton
         active={editor.isActive('bold')}
         value="1"
@@ -47,7 +48,7 @@ function HeadingPlugin() {
       >
         <FontAwesomeIcon icon={faQuoteLeft} />
       </ToolbarButton>
-    </>
+    </ToolbarSection>
   );
 }
 

@@ -4,6 +4,7 @@ import React, { MouseEvent } from 'react';
 
 import { useEditorContext } from '../TipTapProvider';
 import ToolbarButton from './ToolbarButton';
+import ToolbarSection from './ToolbarSection';
 
 function TextAlignPlugin() {
   const editor = useEditorContext();
@@ -11,7 +12,7 @@ function TextAlignPlugin() {
     editor.chain().focus().setTextAlign((e.currentTarget as HTMLButtonElement).value).run();
   };
   return (
-    <>
+    <ToolbarSection>
       <ToolbarButton
         active={editor.isActive({ textAlign: 'left' })}
         value="left"
@@ -36,7 +37,7 @@ function TextAlignPlugin() {
       >
         <FontAwesomeIcon icon={faAlignRight} />
       </ToolbarButton>
-    </>
+    </ToolbarSection>
   );
 }
 

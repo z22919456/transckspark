@@ -4,11 +4,12 @@ import React from 'react';
 
 import { useEditorContext } from '../TipTapProvider';
 import ToolbarButton from './ToolbarButton';
+import ToolbarSection from './ToolbarSection';
 
 function ListPlugin() {
   const editor = useEditorContext();
   return (
-    <>
+    <ToolbarSection>
       <ToolbarButton
         active={editor.isActive('bulletList')}
         onClick={() => editor.chain().focus().toggleBulletList().run()}
@@ -23,7 +24,7 @@ function ListPlugin() {
       >
         <FontAwesomeIcon icon={faListOl} />
       </ToolbarButton>
-    </>
+    </ToolbarSection>
   );
 }
 

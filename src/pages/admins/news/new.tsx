@@ -3,11 +3,14 @@ import {
 } from '@chakra-ui/react';
 import { withAdminLayout } from 'components/admin/AdminLayout';
 import DatePicker from 'components/DatePicker';
-import React from 'react';
-import QuillInput from 'components/admin/QuillInput';
-import ReactQuill from 'react-quill';
+import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 
+const TipTap = dynamic(import('components/admin/TipTap'), { ssr: false });
 function CreateNews() {
+  const [value, setValue] = useState('');
+
+  console.log(value);
   return (
     <div>
       <h1 className="text-3xl font-medium">建立最新消息</h1>
@@ -30,7 +33,8 @@ function CreateNews() {
           <Input type="file" />
           {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
         </FormControl>
-        {/* <ReactQuill theme="snow" /> */}
+        <TipTap value={value} onChange={setValue} />
+        {/* <Lexical /> */}
         {/* content */}
         {/* active */}
       </form>

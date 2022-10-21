@@ -1,6 +1,7 @@
 import React, { MouseEvent } from 'react';
 import { useEditorContext } from '../TipTapProvider';
 import ToolbarButton from './ToolbarButton';
+import ToolbarSection from './ToolbarSection';
 
 type Level = 1 | 2 | 3 | 4 | 5 | 6;
 
@@ -12,7 +13,7 @@ function HeadingPlugin() {
   };
 
   return (
-    <>
+    <ToolbarSection>
       <ToolbarButton
         active={editor.isActive('heading', { level: 1 })}
         value="1"
@@ -34,7 +35,7 @@ function HeadingPlugin() {
       >
         h3
       </ToolbarButton>
-    </>
+    </ToolbarSection>
   );
 }
 

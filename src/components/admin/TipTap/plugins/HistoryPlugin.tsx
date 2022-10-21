@@ -4,11 +4,12 @@ import React from 'react';
 
 import { useEditorContext } from '../TipTapProvider';
 import ToolbarButton from './ToolbarButton';
+import ToolbarSection from './ToolbarSection';
 
 function HistoryPlugin() {
   const editor = useEditorContext();
   return (
-    <>
+    <ToolbarSection>
       <ToolbarButton
         disabled={!editor.can().undo()}
         onClick={() => editor.chain().focus().undo().run()}
@@ -23,7 +24,7 @@ function HistoryPlugin() {
       >
         <FontAwesomeIcon icon={faRedo} />
       </ToolbarButton>
-    </>
+    </ToolbarSection>
   );
 }
 
