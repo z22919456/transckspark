@@ -14,6 +14,12 @@ const nextConfig = {
     ignoreBuildErrors: true
   },
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+      },
+    ],
     unoptimized: !!process.env.IMAGE_OPTIMIZED_SKIP
   },
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined, // for github page

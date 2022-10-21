@@ -1,53 +1,69 @@
-import {
-  FormControl, FormHelperText, FormLabel, Input,
-} from '@chakra-ui/react';
+import { Button, FormControl } from '@chakra-ui/react';
+import axios from 'axios';
 import { withAdminLayout } from 'components/admin/AdminLayout';
-import DatePicker from 'components/DatePicker';
-import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
+import FormikDatePicker from 'components/admin/form/FormikDatePicker';
+import FormikEditor from 'components/admin/form/FormikEditor';
+import FormikInput from 'components/admin/form/formikInput';
+import { FormikProvider, useFormik } from 'formik';
+import { useSession } from 'next-auth/react';
+import React, { useEffect } from 'react';
+import { resourceLimits } from 'worker_threads';
 
-const TipTap = dynamic(import('components/admin/TipTap'), { ssr: false });
+import FormikImageUpload from '../../../components/admin/form/FormikImageUpload';
+
 function CreateNews() {
-  const [value, setValue] = useState('');
+  const { data: session } = useSession();
+  const formik = useFormik({
+    initialValues: {
+      title: '',
+      image: '',
+      content: '',
+      published_date: new Date(),
+      date: new Date(),
+      author: {
+        connect: {
+          email: session?.user?.email,
+        },
+      },
+    },
+    onSubmit(values) {
+      axios.post('/api/news', values)
+        .then((res) => {
+          console.log(res);
+        });
+    },
+  });
 
-  console.log(value);
+  useEffect(() => {
+    if (session?.user) {
+      formik.setFieldValue('author.connect.email', session?.user?.email);
+    }
+  }, [session]);
+
   return (
-    <div>
-      <h1 className="text-3xl font-medium">建立最新消息</h1>
-      <hr className="my-5"></hr>
-      <form className="w-full space-y-5">
-        {/* title */}
-        <FormControl>
-          <FormLabel>最新消息標題</FormLabel>
-          <Input type='text' />
-          {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
-        </FormControl>
-        {/* date */}
-        <FormControl>
-          <FormLabel>活動日期</FormLabel>
-          <DatePicker onChange={() => { }} />
-        </FormControl>
-        {/* image */}
-        <FormControl>
-          <FormLabel>最新消息標題</FormLabel>
-          <Input type="file" />
-          {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
-        </FormControl>
-        <TipTap value={value} onChange={setValue} />
-        {/* <Lexical /> */}
-        {/* content */}
-        {/* active */}
-      </form>
-    </div>
+    <>
+      <div className="w-1/2">
+        <h1 className="text-3xl font-medium">建立最新消息</h1>
+        <hr className="my-5"></hr>
+        <FormikProvider value={formik}>
+          <form className="w-full space-y-5" onSubmit={formik.handleSubmit}>
+            <FormikInput title="標題" name="title" />
+            <FormikDatePicker name="date" title="日期" />
+            <FormikDatePicker name="published_date" title="發布日期" />
+            <FormikImageUpload name="image" title="首圖" />
+            <FormikEditor name="content" title="內文" />
+            <FormControl>
+              <Button type="submit">送出</Button>
+            </FormControl>
+          </form>
+        </FormikProvider>
+      </div>
+      <div>
+
+      </div>
+    </>
   );
 }
-
-// {
-//   title: '亞當計畫－年會活動即日起啟動報名！',
-//   image: 'https://news.image.url'
-//   content: '<p>自2022年09月08日至2023年01月08日於臺北市立美術館二樓展出，由館內資深策展人張芳薇策劃，邀集1960年代以降，28組橫跨數個世代的臺灣與國際藝術家，也與國立臺灣美術館、國立歷史博物館、奇美博物館、韓國國立現代美術館、私人機構與藏家合作借件，展出媒材形式多元，包含平面繪畫、實驗水墨、動力裝置、行為表演、雕塑、錄像及相關文物等作品，打開與觀眾多重層次的對話，同時邀請文化研究學者李立鈞以圖像理論、文化史與哲學視角，發展一系列圖文來回應展題，繼而延展研究思路與作品之間對話，本展更試圖將觀看與閱讀的路徑融合成「行走中的展覽」體驗。</p>'
-//   date: '2022/09/10'
-// }
 
 CreateNews.getLayout = withAdminLayout;
 

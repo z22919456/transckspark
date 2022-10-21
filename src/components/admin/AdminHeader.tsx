@@ -9,7 +9,7 @@ function AdminHeader() {
   const { data: session } = useSession();
 
   return (
-    <nav className="flex-shrink-0 w-48 h-full p-5 bg-default/10">
+    <nav className="flex-shrink-0 w-40 h-full p-5 bg-default/10">
       <h1 className="text-2xl font-bold text-default">後台</h1>
       <ul className="mt-5 space-y-3">
         <li className="cursor-pointer">

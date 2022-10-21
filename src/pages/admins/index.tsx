@@ -4,6 +4,9 @@ import { signIn, useSession } from 'next-auth/react';
 import React from 'react';
 
 function Admins() {
+  const user = useSession();
+  console.log(user);
+
   return (
     <Button onClick={() => signIn()}>
       登入

@@ -10,7 +10,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 interface Props {
   isClearable?: boolean;
   onChange: (date: Date) => void;
-  selectedDate?: Date;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement, Element>) => void
+  date?: Date;
   // showPopperArrow?: boolean;
 }
 
@@ -51,12 +52,15 @@ CustomInput.displayName = 'DateInput';
 //     </InputGroup>
 //   </>
 // );
-const DatePicker = ({ selectedDate = new Date(), onChange, ...props }: Props) => (
+const DatePicker = ({
+  date = new Date(), onChange, onBlur, ...props
+}: Props) => (
   <>
     <InputGroup className="dark-theme">
       <ReactDatePicker
-        selected={selectedDate}
+        selected={date}
         onChange={onChange}
+        onBlur={onBlur}
         className="react-datapicker__input-text"
         customInput={<CustomInput />}
         dateFormat="yyyy/MM/dd"
