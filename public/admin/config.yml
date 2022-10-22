@@ -1,0 +1,19 @@
+publish_mode: editorial_workflow
+media_folder: "public/images/uploads"
+locale: "zh-TW"
+backend:
+  name: git-gateway
+  branch: main
+collections:
+  - name: "news" # Used in routes, e.g., /admin/collections/blog
+    label: "最新消息" # Used in the UI
+    folder: "_posts/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "標題", name: "title", widget: "string" }
+      - { label: "主圖片", name: "thumbnail", widget: "image" }
+      - { label: "內容", name: "content", widget: "datetime" }
+      - { label: "顯示日期", name: "date", widget: "datetime" }
+      - { label: "發布日期", name: "publish_date", widget: "datetime" }
