@@ -59,9 +59,6 @@ export const getPageList = async <T>(id: string) => {
     database_id: id,
   });
 
-  const pagePublished = response.data.filter(() => {
-  });
-
   const pagesWithCover = originResponse.results.map((page) => {
     const cover = (page?.cover && page?.cover[page?.cover?.type]) || { url: '' };
     return {
