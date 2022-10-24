@@ -46,11 +46,6 @@ function ActivityPage({ pageInformation, blocks }: Props) {
   );
 }
 
-export const getStaticPaths = () => ({
-  paths: [],
-  fallback: 'blocking',
-});
-
 export const getServerSideProps = async (context: GetServerSidePropsContext<{ id: string }>) => {
   const id = context.params?.id;
   if (!id) return { notFound: true };
