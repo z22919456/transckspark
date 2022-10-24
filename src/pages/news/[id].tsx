@@ -36,7 +36,9 @@ function NewsPage({ pageInformation, blocks }: Props) {
         <div className="relative w-full aspect-video">
           <Image src={pageInformation.cover.url} fill alt="" />
         </div>
-        <NotionRenderer blockMap={blocks} />
+        <div className="pt-3">
+          <NotionRenderer blockMap={blocks} />
+        </div>
       </div>
       <SocialShareButton />
     </div>
