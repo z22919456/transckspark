@@ -45,7 +45,11 @@ function About() {
         <Section id="base" >
           <h2 className="py-12 text-center">中正紀念堂基地脈絡</h2>
           <p>中正紀念堂園區在清治時期為營邊段，是屯兵之地。日治時期是重要營區，鎮壓霧社事件之山砲部隊就設立於此。戰後仍延續軍事用途，設聯勤總司令部、陸軍總司令部、憲兵司令部等機關。</p>
-          <p>1970年代市府欲進行土地開發營邊段計畫，規劃高層飯店、會展中心、百貨商場，但因決定興建中正紀念堂而告終。1975年進行中正紀念堂公開徵圖，設計要點：清楚表達「中國文化」的精神、創造新穎的設計、莊嚴獨特的風格，同時涵入現代工程技術。</p>
+          <br />
+          <p>1970年代市府欲進行土地開發營邊段計畫，規劃高層飯店、會展中心、百貨商場，但因決定興建中正紀念堂而告終。</p>
+          <br />
+          <p>1975年進行中正紀念堂公開徵圖，設計要點：清楚表達「中國文化」的精神、創造新穎的設計、莊嚴獨特的風格，同時涵入現代工程技術。</p>
+          <br />
           <div className="w-full relative aspect-[1.54] mt-5">
             <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/00.jpg`} layout="fill" objectFit='contain' />
           </div>
@@ -82,10 +86,13 @@ function About() {
         </Section>
         <Section id="meaning" >
           <h2 className="py-12 text-center">轉型的意義</h2>
-          <p>公共性成為空間主體，威權意象已悄然鬆動，社會中不同角度與聲音，皆期待此空間的轉變。中正紀念堂園區啟用40年後，最初崇敬緬懷領袖之意，已隨時代變遷而淡化。鬆動空間的是1990年代社會運動，和隨後的藝文活動、各式集會與日常生活使用，多元的意義、觀點、記憶轉化了空間性格，也打開轉型契機。公共空間是市民生活的據點，也是城市精神的象徵。帶著經年累月的日常使用心得，及美好公共空間的願景，社會對中正紀念堂園區轉型的呼聲此起彼落，不論是從歷史背景、城市中心再發展、當代文化發展路徑、轉型正義、日常生活、社區營造等不同的角度，都期待此空間的轉變。</p>
+          <p>公共性成為空間主體，威權意象已悄然鬆動，社會中不同角度與聲音，皆期待此空間的轉變。中正紀念堂園區啟用40年後，最初崇敬緬懷領袖之意，已隨時代變遷而淡化。鬆動空間的是1990年代社會運動，和隨後的藝文活動、各式集會與日常生活使用，多元的意義、觀點、記憶轉化了空間性格，也打開轉型契機。</p>
+          <br />
+          <p>公共空間是市民生活的據點，也是城市精神的象徵。帶著經年累月的日常使用心得，及美好公共空間的願景，社會對中正紀念堂園區轉型的呼聲此起彼落，不論是從歷史背景、城市中心再發展、當代文化發展路徑、轉型正義、日常生活、社區營造等不同的角度，都期待此空間的轉變。</p>
           <div className="w-full relative aspect-[4/3] mt-5">
             <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/about-03.jpg`} layout="fill" objectFit='contain' alt="活動主視覺，設計：永真急制 Workshop" />
           </div>
+          <p className="small text-default/50">國立中正紀念堂管理處提供</p>
           <div className="w-full relative aspect-[4/3] mt-5">
             <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/about-04.jpg`} layout="fill" objectFit='contain' alt="活動主視覺，設計：永真急制 Workshop" />
           </div>
@@ -103,7 +110,7 @@ function About() {
           <p>法律顧問 圓矩法律事務所</p>
           <p>美術及網站製作 J.C、Arthur</p>
           <p>展場設計及製作 林聖峰</p>
-          <p>主視覺設計 永真急制Workshop</p>
+          <p>主視覺構成 永真急制Workshop</p>
           <p>印刷 博創印藝文化事業有限公司</p>
         </Section>
       </div>
