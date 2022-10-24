@@ -1,7 +1,7 @@
 import 'react-notion/src/styles.css';
 
-import axios from 'axios';
 import Header from 'components/Header';
+import SocialShareButton from 'components/SocialShareButton';
 import { getPage, getPageList, PageData } from 'lib/notion';
 import { GetStaticPropsContext } from 'next';
 import Image from 'next/future/image';
@@ -24,7 +24,6 @@ type Props = {
 };
 
 function NewsPage({ pageInformation, blocks }: Props) {
-  console.log(blocks);
   return (
     <div className="news">
       <Header />
@@ -38,6 +37,7 @@ function NewsPage({ pageInformation, blocks }: Props) {
         </div>
         <NotionRenderer blockMap={blocks} />
       </div>
+      <SocialShareButton />
     </div>
   );
 }

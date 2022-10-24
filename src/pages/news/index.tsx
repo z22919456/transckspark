@@ -1,7 +1,6 @@
 import Header from 'components/Header';
 import Info from 'components/Info';
 import { getPageList } from 'lib/notion';
-import { GetStaticPropsContext } from 'next';
 import React from 'react';
 
 type NewsInformation = {
@@ -38,7 +37,7 @@ function News({ pageList }: Props) {
   );
 }
 
-export const getStaticProps = async (context: GetStaticPropsContext) => {
+export const getStaticProps = async () => {
   try {
     const pageList = await getPageList<NewsInformation>(process.env.NOTION_NEWS_DB_ID || '');
     const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布');

@@ -40,7 +40,7 @@ function Activity({ activity, id }: Props) {
         <div className="relative my-5 aspect-video">
           <Image src={activity.cover.url} layout="fill" objectFit="cover" alt={activity.Title} />
         </div>
-        <p className="h-24 text-xs line-clamp-6">{activity['摘要']}fdsjkfljslkafj;kdls;jafklds ;jafkld ;sjafkl;jdks la;fjkdsl ;ajfkdls;jafkld; sjkafl;djs kal;fjkdsl;ah gjs;dlajfkld;sjafh kldshgjld cvkjnsahfdj klnvchj sfldhsacd jhfkld;shafjds</p>
+        <p className="h-24 text-xs line-clamp-6">{activity['摘要']}</p>
       </div>
     </Link>
   );

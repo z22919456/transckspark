@@ -4,7 +4,6 @@ import Header from 'components/Header';
 import ScrollNav, { ScrollNavLink } from 'components/ScrollNav';
 import dayjs from 'dayjs';
 import { getPageList } from 'lib/notion';
-import { GetStaticPropsContext } from 'next';
 import React, { useState } from 'react';
 
 type ActivityInformation = {
@@ -73,7 +72,7 @@ function News({ pageList }: Props) {
   );
 }
 
-export const getStaticProps = async (context: GetStaticPropsContext) => {
+export const getStaticProps = async () => {
   try {
     const pageList = await getPageList<ActivityInformation>(process.env.NOTION_ACTIVITY_DB_ID || '');
     const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布');
