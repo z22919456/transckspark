@@ -2,7 +2,7 @@ import 'react-notion/src/styles.css';
 
 import Header from 'components/Header';
 import { getPage, getPageList, PageData } from 'lib/notion';
-import { GetStaticPropsContext } from 'next';
+import { GetServerSidePropsContext } from 'next';
 import Image from 'next/future/image';
 import React from 'react';
 import { BlockMapType, NotionRenderer } from 'react-notion';
@@ -51,9 +51,8 @@ export const getStaticPaths = () => ({
   fallback: 'blocking',
 });
 
-export const getStaticProps = async (context: GetStaticPropsContext) => {
+export const getServerSideProps = async (context: GetServerSidePropsContext<{ id: string }>) => {
   const id = context.params?.id;
-  console.log(id);
   if (!id) return { notFound: true };
 
   try {
@@ -61,8 +60,6 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
     const pageInformation = pageList.find((p) => p.id === id);
 
     const page = await getPage(id as string);
-
-    console.log(page);
 
     return {
       props: {
