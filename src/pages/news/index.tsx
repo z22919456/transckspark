@@ -21,7 +21,6 @@ type Props = {
 };
 
 function News({ pageList }: Props) {
-  console.log(pageList);
   return (
     <div className="news">
       <Header />
@@ -32,7 +31,7 @@ function News({ pageList }: Props) {
           <h1 className="h2">News</h1>
         </div>
         <div className="flex flex-wrap mb-5">
-          {/* {pageList.map((page) => <Info key={page.id} information={page} />)} */}
+          {pageList.map((page) => <Info key={page.id} information={page} />)}
         </div>
       </div>
     </div>
