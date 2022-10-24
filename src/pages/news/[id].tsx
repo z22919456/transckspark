@@ -51,17 +51,22 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
   const id = context.params?.id;
   if (!id) return { notFound: true };
 
-  const pageList = await getPageList(process.env.NOTION_NEWS_DB_ID || '');
-  const pageInformation = pageList.find((p) => p.id === id);
+  try {
+    const pageList = await getPageList(process.env.NOTION_NEWS_DB_ID || '');
+    const pageInformation = pageList.find((p) => p.id === id);
 
-  const page = await getPage(id as string);
+    const page = await getPage(id as string);
 
-  return {
-    props: {
-      pageInformation: JSON.parse(JSON.stringify(pageInformation)),
-      blocks: JSON.parse(JSON.stringify(page)),
-    },
-  };
+    return {
+      props: {
+        pageInformation: JSON.parse(JSON.stringify(pageInformation)),
+        blocks: JSON.parse(JSON.stringify(page)),
+      },
+    };
+  } catch (err) {
+    // console.log(err);
+    return { notFound: true };
+  }
 };
 
 export default NewsPage;

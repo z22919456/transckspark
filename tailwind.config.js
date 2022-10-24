@@ -2,6 +2,7 @@
 /** @type {import('tailwindcss').Config} */
 const tailwindcssRadix = require('tailwindcss-radix');
 const typography = require('@tailwindcss/typography');
+const lineClamp = require('@tailwindcss/line-clamp');
 
 module.exports = {
   content: [
@@ -151,5 +152,6 @@ module.exports = {
       variantPrefix: 'rdx',
     }),
     typography,
+    lineClamp,
   ],
 };
