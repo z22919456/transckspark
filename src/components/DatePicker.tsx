@@ -1,10 +1,11 @@
-import React, { HTMLAttributes, forwardRef } from 'react';
-import ReactDatePicker, { ReactDatePickerProps } from 'react-datepicker';
-// import { useColorMode } from "@chakra-ui/react";
-import { InputGroup, Input, InputRightElement } from '@chakra-ui/react';
-import { CalendarIcon } from '@chakra-ui/icons';
-
 import 'react-datepicker/dist/react-datepicker.css';
+
+import { CalendarIcon } from '@chakra-ui/icons';
+import { Input, InputGroup, InputRightElement } from '@chakra-ui/react';
+import React, { forwardRef } from 'react';
+import ReactDatePicker from 'react-datepicker';
+
+// import { useColorMode } from "@chakra-ui/react";
 // import './chakra-react-datepicker.css';
 
 interface Props {
@@ -28,30 +29,6 @@ const CustomInput = forwardRef(({ value, onClick, onChange }: any, ref: any) => 
 
 CustomInput.displayName = 'DateInput';
 
-// const ReactDatePickerComponent = ({
-//   selectedDate,
-//   onChange,
-//   isClearable = false,
-//   showPopperArrow = false,
-//   ...props
-// }: Props & HTMLAttributes<HTMLElement>) => (
-//   <>
-//     <InputGroup>
-//       <ReactDatePicker
-//         selected={selectedDate}
-//         onChange={onChange}
-//         isClearable={isClearable}
-//         showPopperArrow={showPopperArrow}
-//         className="react-datapicker__input-text"
-//         dateFormat="MM/dd/yyyy"
-//         customInput={<CustomInput />}
-//       />
-//       <InputRightElement color="gray.500" >
-//         <CalendarIcon fontSize="sm" />
-//       </InputRightElement>
-//     </InputGroup>
-//   </>
-// );
 const DatePicker = ({
   date = new Date(), onChange, onBlur, ...props
 }: Props) => (

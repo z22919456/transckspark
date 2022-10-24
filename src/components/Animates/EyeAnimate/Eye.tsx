@@ -30,7 +30,7 @@ export default function Eye({ ball }: Props) {
     if (!eyeRef.current) return;
 
     const {
-      width, height, top, left,
+      width, height,
     } = eyeRef.current.getBoundingClientRect();
     setMove([((Math.random() - 0.5) / 2) * width, ((Math.random() - 0.5) / 2) * height]);
   }, Math.random() * 2500 + 500);

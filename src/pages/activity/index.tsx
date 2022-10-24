@@ -5,23 +5,10 @@ import ScrollNav, { ScrollNavLink } from 'components/ScrollNav';
 import dayjs from 'dayjs';
 import { getPageList } from 'lib/notion';
 import React, { useState } from 'react';
-
-type ActivityInformation = {
-  id: string
-  Title: string
-  '狀態': string
-  '活動日期': string
-  '發布日期': string
-  '摘要': string
-  '報名截止日期': string
-  '種類': '導覽' | '講座' | '工作坊' | '影展' | '論壇'
-  cover: {
-    url: string
-  }
-};
+import { ActivityInformation, NotionPageData } from 'type';
 
 type Props = {
-  pageList: { [key: string]: ActivityInformation[] }
+  pageList: { [key: string]: NotionPageData<ActivityInformation>[] }
 };
 
 const ACTIVITY_TYPE = ['tour', 'lecture', 'workshop', 'film', 'forum'];
@@ -29,7 +16,6 @@ const ACTIVITY_TYPE = ['tour', 'lecture', 'workshop', 'film', 'forum'];
 const NavButton = el.button`px-2 py-1 transition-all duration-200 border-b-4 border-transparent shrink-0 hover:border-primary small whitespace-nowrap`;
 
 function News({ pageList }: Props) {
-  console.log(pageList);
   const [signUp, setSignUp] = useState(false);
   return (
     <div className="activity">
@@ -76,7 +62,7 @@ export const getServerSideProps = async () => {
   try {
     const pageList = await getPageList<ActivityInformation>(process.env.NOTION_ACTIVITY_DB_ID || '');
     const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布');
-    const pageListWithType: { [key: string]: ActivityInformation[] } = {
+    const pageListWithType: { [key: string]: NotionPageData<ActivityInformation>[] } = {
       tour: [],
       lecture: [],
       workshop: [],

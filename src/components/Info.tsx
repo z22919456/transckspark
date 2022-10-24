@@ -1,4 +1,3 @@
-import { JudgeType } from 'data/judgesData';
 import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';

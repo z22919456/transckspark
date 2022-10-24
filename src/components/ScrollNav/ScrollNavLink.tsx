@@ -8,7 +8,7 @@ import { useScrollNavContext } from './Context';
 
 type Props = Omit<LinkProps, 'ref'>;
 
-Events.scrollEvent.register('end', (to, element) => {
+Events.scrollEvent.register('end', () => {
   const { scrollY } = window;
   window.scroll(0, scrollY + 1);
 });

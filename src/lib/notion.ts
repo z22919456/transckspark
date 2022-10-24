@@ -1,8 +1,9 @@
 import { Client } from '@notionhq/client';
-import { BlockObjectResponse, PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import axios from 'axios';
-import { BlockMapType } from 'react-notion';
 import dayjs from 'dayjs';
+import { BlockMapType } from 'react-notion';
+import { NotionPageData } from 'type';
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
@@ -46,25 +47,35 @@ const notion = new Client({
 //   }));
 // };
 
-export type PageData<T> = {
-  id: string
-  Title: string
-  '發布日期': string
-  '狀態': string
-} & T;
-
 export const getPageList = async <T>(id: string) => {
-  const response = await axios.get<Array<PageData<T>>>(`https://notion-api.splitbee.io/v1/table/${id}`);
+  const response = await axios.get<Array<NotionPageData<T>>>(`https://notion-api.splitbee.io/v1/table/${id}`);
   const originResponse = await notion.databases.query({
     database_id: id,
   });
 
   const pagesWithCover = originResponse.results.map((page) => {
-    const cover = (page?.cover && page?.cover[page?.cover?.type]) || { url: '' };
-    return {
+    const nullCover = {
       id: page.id,
-      cover,
+      cover: { url: '' },
     };
+    const { cover } = page as PageObjectResponse;
+    if (!cover) return nullCover;
+
+    if ('external' in cover) {
+      return {
+        id: page.id,
+        cover: cover.external,
+      };
+    }
+
+    if ('file' in cover) {
+      return {
+        id: page.id,
+        cover: cover.file,
+      };
+    }
+
+    return nullCover;
   });
 
   return response.data

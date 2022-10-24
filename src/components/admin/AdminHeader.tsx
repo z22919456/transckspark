@@ -1,12 +1,10 @@
-import { faPage4 } from '@fortawesome/free-brands-svg-icons';
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
 
 function AdminHeader() {
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
 
   return (
     <nav className="flex-shrink-0 w-40 h-full p-5 bg-default/10">

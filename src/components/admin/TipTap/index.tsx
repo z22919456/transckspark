@@ -11,12 +11,10 @@ import React from 'react';
 import FormatPlugin from './plugins/FormatPlugin';
 import HeadingPlugin from './plugins/HeadingPlugin';
 import HistoryPlugin from './plugins/HistoryPlugin';
-import ImagePlugin from './plugins/ImagePlugin';
 import LinkPlugin from './plugins/LinkPlugin';
 import ListPlugin from './plugins/ListPlugin';
 import MediaPlugin from './plugins/MediaPlugin';
 import TextAlignPlugin from './plugins/TextAlignPlugin';
-import YoutubePlugin from './plugins/YoutubePlugin';
 import { TipTabProvider } from './TipTapProvider';
 
 type Props = { value: string, onChange: (value: string) => void };

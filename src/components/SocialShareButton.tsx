@@ -7,7 +7,6 @@ import React, { useMemo } from 'react';
 function SocialShareButton() {
   const { asPath } = useRouter();
   const host = useMemo(() => process.env.NEXT_PUBLIC_HOST || '', []);
-  console.log(host + asPath);
   return (
     <div className="my-5">
       <p className="text-center small text-default/70">Share with</p>

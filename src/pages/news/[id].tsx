@@ -2,29 +2,19 @@ import 'react-notion/src/styles.css';
 
 import Header from 'components/Header';
 import SocialShareButton from 'components/SocialShareButton';
-import { getPage, getPageList, PageData } from 'lib/notion';
-import { GetServerSidePropsContext } from 'next';
 import Image from 'next/future/image';
 import React from 'react';
 import { BlockMapType, NotionRenderer } from 'react-notion';
+import { NewsInformation, NotionPageData } from 'type';
 
-type NewsInformation = {
-  '狀態': string
-  '活動日期': string
-  '發布日期': string
-  '摘要': string
-  cover: {
-    url: string
-  }
-};
+import getPageServerSideProps from '../../utils/getNotionServerProps';
 
 type Props = {
   blocks: BlockMapType
-  pageInformation: PageData<NewsInformation>
+  pageInformation: NotionPageData<NewsInformation>
 };
 
 function NewsPage({ pageInformation, blocks }: Props) {
-  console.log(blocks);
   return (
     <div className="news">
       <Header />
@@ -45,27 +35,6 @@ function NewsPage({ pageInformation, blocks }: Props) {
   );
 }
 
-export const getServerSideProps = async (context: GetServerSidePropsContext<{ id: string }>) => {
-  const id = context.params?.id;
-  if (!id) return { notFound: true };
-
-  try {
-    const pageList = await getPageList(process.env.NOTION_NEWS_DB_ID || '');
-    const pageInformation = pageList.find((p) => p.id === id);
-
-    const page = await getPage(id as string);
-    // console.log(pageList);
-
-    return {
-      props: {
-        pageInformation: JSON.parse(JSON.stringify(pageInformation)),
-        blocks: JSON.parse(JSON.stringify(page)),
-      },
-    };
-  } catch (err) {
-    // console.log(err);
-    return { notFound: true };
-  }
-};
+export const getServerSideProps = getPageServerSideProps;
 
 export default NewsPage;
