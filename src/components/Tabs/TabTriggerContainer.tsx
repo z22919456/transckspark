@@ -8,7 +8,7 @@ type Props = {
 
 function TabTriggerContainer({ className, children }: Props) {
   return (
-    <div className={classnames('sticky bg-white top-0 flex flex-wrap justify-center py-3 border-b border-black w-full space-x-3', className)}>
+    <div className={classnames('md:sticky relative  md:bg-white z-10 top-0 flex flex-wrap justify-center py-3 border-b border-black w-full gap-3', className)}>
       {children}
     </div>
   );

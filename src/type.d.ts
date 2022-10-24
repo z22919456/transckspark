@@ -19,3 +19,9 @@ export type ActivityInformation = {
   '報名截止日期': string
   '種類': '導覽' | '講座' | '工作坊' | '影展' | '論壇'
 };
+
+export type WorkInformation = {
+  '製作者': string
+  '簡介': string
+  '種類': '學生組' | '社會組'
+};

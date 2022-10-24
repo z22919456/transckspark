@@ -5,7 +5,7 @@ import {
 } from '@radix-ui/react-tabs';
 
 const TabContent = forwardRef<HTMLDivElement, TabsContentProps>(({ className, children, ...props }, ref) => (
-  <Content {...props} ref={ref} className={classnames('p-3', className)}>
+  <Content {...props} ref={ref} className={classnames(className)}>
     {children}
   </Content>
 ));

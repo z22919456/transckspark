@@ -35,6 +35,6 @@ function NewsPage({ pageInformation, blocks }: Props) {
   );
 }
 
-export const getServerSideProps = getPageServerSideProps;
+export const getServerSideProps = getPageServerSideProps(process.env.NOTION_NEWS_DB_ID || '');
 
 export default NewsPage;

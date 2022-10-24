@@ -1,13 +1,14 @@
 import { getPage, getPageList } from 'lib/notion';
 import { GetServerSidePropsContext } from 'next';
 
-const getPageServerSideProps = async (context: GetServerSidePropsContext<{ id: string }>) => {
+const getPageServerSideProps = (dbId: string) => async (context: GetServerSidePropsContext<{ id: string }>) => {
   const id = context.params?.id;
   if (!id) return { notFound: true };
 
   try {
-    const pageList = await getPageList(process.env.NOTION_NEWS_DB_ID || '');
+    const pageList = await getPageList(dbId);
     const pageInformation = pageList.find((p) => p.id === id);
+    const pageIndex = pageList.findIndex((p) => p.id === id);
 
     const page = await getPage(id);
 
@@ -15,6 +16,8 @@ const getPageServerSideProps = async (context: GetServerSidePropsContext<{ id: s
       props: {
         pageInformation: JSON.parse(JSON.stringify(pageInformation)),
         blocks: JSON.parse(JSON.stringify(page)),
+        prevPage: pageList[pageIndex - 1]?.id || '',
+        nextPage: pageList[pageIndex + 1]?.id || '',
       },
     };
   } catch (err) {

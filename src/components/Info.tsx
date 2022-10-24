@@ -33,7 +33,7 @@ function Info({ information }: Props) {
       <p className="h-16 text-xs line-clamp-4">{information['摘要']}</p>
       <Link href={`/news/${information.id}`}>
         <p className="my-5 text-center">
-          <a className="hover:text-primary">
+          <a className="cursor-pointer hover:text-primary">
             read more ➔
           </a>
         </p>

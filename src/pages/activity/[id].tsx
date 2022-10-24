@@ -34,6 +34,6 @@ function ActivityPage({ pageInformation, blocks }: Props) {
   );
 }
 
-export const getServerSideProps = getPageServerSideProps;
+export const getServerSideProps = getPageServerSideProps(process.env.NOTION_ACTIVITY_DB_ID || '');
 
 export default ActivityPage;
