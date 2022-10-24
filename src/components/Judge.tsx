@@ -14,7 +14,7 @@ function Judge({
         <p>{engName}</p>
       </div>
       <h2 className="py-10 text-lg text-center">{name}</h2>
-      <p className="text-xs text-center">{title}</p>
+      <p className="text-xs text-center line-clamp-1">{title}</p>
       <div className="relative my-5 aspect-video">
         <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}${image}`} layout="fill" objectFit="cover" alt={name} />
       </div>
