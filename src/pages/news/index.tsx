@@ -3,8 +3,6 @@ import Info from 'components/Info';
 import { getPageList } from 'lib/notion';
 import React from 'react';
 import { NewsInformation, NotionPageData } from 'type';
-import getNotionServerPaths from 'utils/getNotionServerPaths';
-import { getStaticPath } from './index';
 
 type Props = {
   pageList: NotionPageData<NewsInformation>[]
