@@ -7,6 +7,7 @@ import React from 'react';
 import { BlockMapType, NotionRenderer } from 'react-notion';
 import { NewsInformation, NotionPageData } from 'type';
 
+import getNotionServerPaths from 'utils/getNotionServerPaths';
 import getPageServerSideProps from '../../utils/getNotionServerProps';
 
 type Props = {
@@ -35,6 +36,8 @@ function NewsPage({ pageInformation, blocks }: Props) {
   );
 }
 
-export const getServerSideProps = getPageServerSideProps(process.env.NOTION_NEWS_DB_ID || '');
+export const getStaticPaths = getNotionServerPaths(process.env.NOTION_NEWS_DB_ID || '');
+
+export const getStaticProps = getPageServerSideProps(process.env.NOTION_NEWS_DB_ID || '');
 
 export default NewsPage;
