@@ -1,7 +1,7 @@
 import { getPage, getPageList } from 'lib/notion';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 
-const getPageServerSideProps = (dbId: string) => async (context: GetServerSidePropsContext<{ id: string }>) => {
+const getPageServerSideProps = (dbId: string) => async (context: GetStaticPropsContext<{ id: string }>) => {
   const id = context.params?.id;
   if (!id) return { notFound: true };
 
