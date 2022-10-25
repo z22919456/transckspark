@@ -1,5 +1,6 @@
-import EmailIcon from 'components/assets/footer/email.svg';
-import FacebookIcon from 'components/assets/footer/fb.svg';
+import { faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MinistryCultureIcon from 'components/assets/footer/ministry-culture.svg';
 import Organizer1Icon from 'components/assets/footer/organizer-1.svg';
 import Organizer2Icon from 'components/assets/footer/organizer-2.svg';
@@ -21,13 +22,13 @@ function Footer() {
         </p>
         <div className="flex items-center justify-center w-full my-5 space-x-5 text-center">
           <Link href="mail:info@vipassanacreative.com">
-            <EmailIcon />
+            <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
           </Link>
           <Link href="/">
-            <YoutubeIcon className="fill-default" />
+            <FontAwesomeIcon icon={faYoutube} className="text-xl" />
           </Link>
           <Link href="/">
-            <FacebookIcon className="fill-default" />
+            <FontAwesomeIcon icon={faFacebook} className="text-xl" />
           </Link>
           <Link href="/">
             <a className="small">
@@ -77,10 +78,10 @@ function Footer() {
             <small>info@vipassanacreative.com</small>
           </a>
           <Link href="/">
-            <YoutubeIcon className="fill-default" />
+            <FontAwesomeIcon icon={faYoutube} className="text-xl" />
           </Link>
           <Link href="/">
-            <FacebookIcon className="fill-default" />
+            <FontAwesomeIcon icon={faFacebook} className="text-xl" />
           </Link>
         </Column>
 
@@ -112,10 +113,10 @@ function Footer() {
             info@vipassanacreative.com
           </a>
           <Link href="/">
-            <YoutubeIcon className="fill-default" />
+            <FontAwesomeIcon icon={faYoutube} className="text-xl" />
           </Link>
           <Link href="/">
-            <FacebookIcon className="fill-default" />
+            <FontAwesomeIcon icon={faFacebook} className="text-xl" />
           </Link>
         </Column>
         <Column className="w-1/12">
