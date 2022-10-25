@@ -19,6 +19,7 @@ const getPageServerSideProps = (dbId: string) => async (context: GetServerSidePr
         prevPage: pageList[pageIndex - 1]?.id || '',
         nextPage: pageList[pageIndex + 1]?.id || '',
       },
+      revalidate: 10,
     };
   } catch (err) {
     return { notFound: true };

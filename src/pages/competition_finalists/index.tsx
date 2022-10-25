@@ -48,7 +48,7 @@ function CompetitionFinalists({ pageList }: Props) {
 
 const shuffleArray = (arr: NotionPageData<WorkInformation>[]) => arr.sort(() => 0.5 - Math.random());
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   try {
     const pageList = await getPageList<WorkInformation>(process.env.NOTION_WORK_DB_ID || '');
     const pageListWithFilter = shuffleArray(pageList.filter((page) => page['狀態'] === '已發布'));
@@ -74,6 +74,7 @@ export const getServerSideProps = async () => {
       props: {
         pageList: JSON.parse(JSON.stringify(pageListWithType)),
       },
+      revalidate: 10,
     };
   } catch {
     return {
@@ -83,6 +84,7 @@ export const getServerSideProps = async () => {
           open: [],
         },
       },
+      revalidate: 10,
     };
   }
 };

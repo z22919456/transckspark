@@ -3,6 +3,8 @@ import Info from 'components/Info';
 import { getPageList } from 'lib/notion';
 import React from 'react';
 import { NewsInformation, NotionPageData } from 'type';
+import getNotionServerPaths from 'utils/getNotionServerPaths';
+import { getStaticPath } from './index';
 
 type Props = {
   pageList: NotionPageData<NewsInformation>[]
@@ -26,7 +28,7 @@ function News({ pageList }: Props) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   try {
     const pageList = await getPageList(process.env.NOTION_NEWS_DB_ID || '');
     const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布');
@@ -35,10 +37,12 @@ export const getServerSideProps = async () => {
       props: {
         pageList: JSON.parse(JSON.stringify(pageListWithFilter)),
       },
+      revalidate: 10,
     };
   } catch {
     return {
       props: { pageList: [] },
+      revalidate: 10,
     };
   }
 };

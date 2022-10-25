@@ -8,6 +8,7 @@ import { BlockMapType, NotionRenderer } from 'react-notion';
 import { WorkInformation, NotionPageData } from 'type';
 import getPageServerSideProps from 'utils/getNotionServerProps';
 import PaginationButton from 'components/PaginationButton';
+import getNotionServerPaths from 'utils/getNotionServerPaths';
 
 type Props = {
   blocks: BlockMapType
@@ -45,6 +46,8 @@ function WorkPage({
   );
 }
 
-export const getServerSideProps = getPageServerSideProps(process.env.NOTION_WORK_DB_ID || '');
+export const getStaticPaths = getNotionServerPaths(process.env.NOTION_WORK_DB_ID || '');
+
+export const getStaticProps = getPageServerSideProps(process.env.NOTION_WORK_DB_ID || '');
 
 export default WorkPage;
