@@ -63,6 +63,7 @@ export const firstJudges = [
     engName: 'Tan Hochen',
     information: '曾任職台北市都市計畫處、捷運局/公司、交通局，中華電信公司，交通部',
     image: '/images/judge/賀陳旦委員.jpg',
+    chairman: true,
   },
   {
     id: 6,
@@ -154,6 +155,7 @@ export const finalJudges = [
     engName: 'Tan Hochen',
     information: '曾任職台北市都市計畫處、捷運局/公司、交通局，中華電信公司，交通部',
     image: '/images/judge/賀陳旦委員.jpg',
+    chairman: true,
   },
   {
     id: 8,

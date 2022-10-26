@@ -14,16 +14,16 @@ function Judges() {
           <div className="flex items-baseline w-full flex-nowrap">
             <p className="py-1 ml-5 mr-auto text-xs text-gray-600 whitespace-nowrap">初審</p>
             <div className="flex flex-wrap w-full ml-5">
-              {firstJudges.map(({ name, id }) => (
-                <ScrollNavLink key={id} to={`first-${id}`} className="w-auto px-0 mr-1 text-xs" >{name}</ScrollNavLink>
+              {firstJudges.map(({ name, id, ...judge }) => (
+                <ScrollNavLink key={id} to={judge?.chairman ? 'chairman' : `first-${id}`} className="w-auto px-0 mr-1 text-xs" >{name}</ScrollNavLink>
               ))}
             </div>
           </div>
           <div className="flex items-baseline w-full flex-nowrap">
             <p className="py-1 ml-5 mr-auto text-xs text-gray-600 whitespace-nowrap">決選</p>
             <div className="flex flex-wrap w-full ml-5">
-              {finalJudges.map(({ name, id }) => (
-                <ScrollNavLink key={id} to={`final-${id}`} className="w-auto px-0 ml-1 text-xs" >{name}</ScrollNavLink>
+              {finalJudges.map(({ name, id, ...judge }) => (
+                <ScrollNavLink key={id} to={judge?.chairman ? 'chairman' : `final-${id}`} className="w-auto px-0 ml-1 text-xs" >{name}</ScrollNavLink>
               ))}
             </div>
           </div>
@@ -34,26 +34,26 @@ function Judges() {
         </div>
 
         <div id="chairman" className="py-5">
-          <div className="flex justify-between text-xs" >
+          <div className="flex justify-between text-xs" id="chairman">
             <p>評審團主席＆初、決選評審</p>
             <p>{chairman.engName}</p>
           </div>
           <h2 className="py-10 text-lg text-center">{chairman.name}</h2>
 
-          <div className="flex flex-wrap md:flex-nowrap">
-
-            <div className="relative w-full mb-5 md:mr-5 aspect-video md:mb-0">
+          <div className="flex flex-wrap sm:flex-nowrap md:flex-wrap lg:flex-nowrap">
+            {/* sm:flex-nowrap md:flex-wrap xl:flex-nowrap */}
+            <div className="relative w-full mb-5 sm:mr-5 sm:mb-0 md:mr-0 md:mb-5 lg:mb-0 lg:mr-5 aspect-video">
               <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}${chairman.image}`} layout="fill" objectFit="cover" alt={chairman.name} />
             </div>
 
-            <div className="w-full md:ml-5">
+            <div className="w-full ml-0 sm:ml-5 md:ml-0 lg:ml-5">
               <p className="text-xs">{chairman.information}</p>
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap mb-5">
-          {firstJudges.map((judge) => (<Judge key={judge.id} {...judge} />))}
-          {finalJudges.map((judge) => (<Judge key={judge.id} {...judge} final />))}
+        <div className="grid grid-flow-row grid-cols-1 mb-5 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+          {firstJudges.filter((judge) => !judge?.chairman).map((judge) => (<Judge key={judge.id} {...judge} />))}
+          {finalJudges.filter((judge) => !judge?.chairman).map((judge) => (<Judge key={judge.id} {...judge} final />))}
         </div>
       </div>
 
