@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { NotionPageData, WorkInformation } from 'type';
+import Card from './Card';
 
 type Props = {
   work: NotionPageData<WorkInformation>
@@ -9,7 +10,7 @@ type Props = {
 
 function Work({ work }: Props) {
   return (
-    <div className="w-full py-5 md:p-5 border-t md:w-1/2 md:odd:border-r border-default relative before:content-none md:odd:before:content-[''] before:absolute before:h-10 before:w-10 before:top-0 before:right-0 before:translate-x-1/2 before:-translate-y-1/2 before:bg-white before:z-[1]">
+    <Card>
       <div className="flex justify-between">
         <p className="small">{work['種類']}</p>
         <p className="small">{work['製作者']}</p>
@@ -26,7 +27,7 @@ function Work({ work }: Props) {
           </a>
         </p>
       </Link>
-    </div>
+    </Card>
   );
 }
 

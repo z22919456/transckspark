@@ -1,3 +1,4 @@
+import { CardContainer } from 'components/Card';
 import Header from 'components/Header';
 import Judge from 'components/Judge';
 import ScrollNav, { ScrollNavLink } from 'components/ScrollNav';
@@ -51,10 +52,10 @@ function Judges() {
             </div>
           </div>
         </div>
-        <div className="grid grid-flow-row grid-cols-1 mb-5 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+        <CardContainer>
           {firstJudges.filter((judge) => !judge?.chairman).map((judge) => (<Judge key={judge.id} {...judge} />))}
           {finalJudges.filter((judge) => !judge?.chairman).map((judge) => (<Judge key={judge.id} {...judge} final />))}
-        </div>
+        </CardContainer>
       </div>
 
     </div>

@@ -33,10 +33,10 @@ function CompetitionFinalists({ pageList }: Props) {
             <div className="py-10">
               <p className='text-sm'>缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案</p>
             </div>
-            <TabContent value="student" className="flex flex-wrap">
+            <TabContent value="student" className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
               {pageList.student.map((page) => <Work key={page.id} work={page} />)}
             </TabContent>
-            <TabContent value="open" className="flex flex-wrap mb-5">
+            <TabContent value="open" className="grid grid-flow-row grid-cols-1 mb-5 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
               {pageList.open.map((page) => <Work key={page.id} work={page} />)}
             </TabContent>
           </TabList>

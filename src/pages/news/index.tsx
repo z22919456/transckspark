@@ -1,3 +1,4 @@
+import { CardContainer } from 'components/Card';
 import Header from 'components/Header';
 import Info from 'components/Info';
 import { getPageList } from 'lib/notion';
@@ -18,9 +19,9 @@ function News({ pageList }: Props) {
           <h1>最新消息</h1>
           <h1 className="h2">News</h1>
         </div>
-        <div className="flex flex-wrap mb-5">
+        <CardContainer>
           {pageList.map((page) => <Info key={page.id} information={page} />)}
-        </div>
+        </CardContainer>
       </div>
     </div>
   );
