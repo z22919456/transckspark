@@ -13,7 +13,7 @@ const getNews = async () => {
 const getActivities = async () => {
   const response = await axios.get<{ id:string }[]>(`https://notion-api.splitbee.io/v1/table/${process.env.NOTION_ACTIVITY_DB_ID}`);
   return response.data.map((d) => ({
-    loc: `${process.env.NEXT_PUBLIC_HOST}/activity/${d.id}`,
+    loc: `${process.env.NEXT_PUBLIC_HOST}/public_participation/${d.id}`,
     lastmod: new Date().toISOString(),
   }));
 };
@@ -45,7 +45,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
       lastmod: new Date().toISOString(),
     },
     {
-      loc: `${process.env.NEXT_PUBLIC_HOST}/judge`,
+      loc: `${process.env.NEXT_PUBLIC_HOST}/judges`,
       lastmod: new Date().toISOString(),
     },
     {
@@ -53,7 +53,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
       lastmod: new Date().toISOString(),
     },
     {
-      loc: `${process.env.NEXT_PUBLIC_HOST}/activity`,
+      loc: `${process.env.NEXT_PUBLIC_HOST}/public_participation`,
       lastmod: new Date().toISOString(),
     },
     {
