@@ -20,9 +20,8 @@ type Props = {
 function WorkPage({
   pageInformation, blocks, nextPage, prevPage,
 }: Props) {
-  console.log(nextPage);
   return (
-    <div className="activity">
+    <div className="shortlist">
       <Header />
       <div className="py-16 text-center">
         <span className="small">{pageInformation['種類']}</span>
