@@ -46,12 +46,10 @@ function CompetitionFinalists({ pageList }: Props) {
   );
 }
 
-const shuffleArray = (arr: NotionPageData<WorkInformation>[]) => arr.sort(() => 0.5 - Math.random());
-
 export const getStaticProps = async () => {
   try {
     const pageList = await getPageList<WorkInformation>(process.env.NOTION_WORK_DB_ID || '');
-    const pageListWithFilter = shuffleArray(pageList.filter((page) => page['狀態'] === '已發布'));
+    const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布');
     const pageListWithType: { [key: string]: NotionPageData<WorkInformation>[] } = {
       student: [],
       open: [],
