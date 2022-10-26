@@ -16,10 +16,10 @@ const NAV_LIST = [
   { name: '最新消息', href: '/news' },
   { name: '競圖', href: '/competition' },
   { name: '評審', href: '/judges' },
-  { name: '入圍作品一覽', href: '/competition_finalists' },
+  { name: '入圍作品一覽(2022.12.1揭曉)', href: '/competition_finalists', inactive: true },
   { name: '想像中正紀念堂的100種方式', href: '/public_participation' },
   { name: '常見問答', href: '/faq' },
-  { name: '競圖成果展覽', href: '/exhibition' },
+  // { name: '競圖成果展覽', href: '/exhibition' },
 ];
 
 function Navigation({ onClose }: Props) {
@@ -32,17 +32,33 @@ function Navigation({ onClose }: Props) {
         <ul className="space-y-3">
           {NAV_LIST.map((list) => (
             <li className="h3" key={list.href}>
-              <Link href={list.href}>
-                <a className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 hover:translate-x-5 hover:border-white border-default', pathname === list.href && 'border-white')} onClick={onClose} >
+              {list.inactive ? (
+                <p className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 text-gray-500 border-default', pathname === list.href && 'border-white')} onClick={onClose} >
                   {list.name}
-                </a>
-              </Link>
+                </p>
+              ) : (
+                <Link href={list.href}>
+                  <a className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 hover:translate-x-5 hover:border-white border-default', pathname === list.href && 'border-white')} onClick={onClose} >
+                    {list.name}
+                  </a>
+                </Link>
+              )
+              }
+
             </li>
           ))}
         </ul>
         <div className="absolute bottom-0 left-0 flex flex-wrap items-center">
-          <FacebookIcon className="w-6 h-6 mx-5 fill-white" />
-          <YoutubeIcon className="w-6 h-6 mx-5 fill-white" />
+          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
+            <a rel="noreferrer noopener" target="_blank">
+              <FacebookIcon className="w-6 h-6 mx-5 fill-white" />
+            </a>
+          </Link>
+          <Link href="https://www.facebook.com/transckspark/">
+            <a rel="noreferrer noopener" target="_blank">
+              <YoutubeIcon className="w-6 h-6 mx-5 fill-white" />
+            </a>
+          </Link>
           <a className="mx-5 small" href="email://info@vipassanacreative.com">
             info@vipassanacreative.com
           </a>

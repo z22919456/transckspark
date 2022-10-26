@@ -21,17 +21,23 @@ function Footer() {
           中正紀念堂園區  新願景概念競圖小組
         </p>
         <div className="flex items-center justify-center w-full my-5 space-x-5 text-center">
-          <Link href="mail:info@vipassanacreative.com">
-            <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
+          <Link href="mailto:info@vipassanacreative.com">
+            <a >
+              <FontAwesomeIcon icon={faEnvelope} className="text-xl hover:underline" />
+            </a>
+          </Link>
+          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
+            <a rel="noreferrer noopener" target="_blank">
+              <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-700" />
+            </a>
+          </Link>
+          <Link href="https://www.facebook.com/transckspark/">
+            <a rel="noreferrer noopener" target="_blank">
+              <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-700" />
+            </a>
           </Link>
           <Link href="/">
-            <FontAwesomeIcon icon={faYoutube} className="text-xl" />
-          </Link>
-          <Link href="/">
-            <FontAwesomeIcon icon={faFacebook} className="text-xl" />
-          </Link>
-          <Link href="/">
-            <a className="small">
+            <a className="small hover:underline">
               隱私權政策
             </a>
           </Link>
@@ -61,7 +67,7 @@ function Footer() {
       <div className="flex-wrap hidden w-full my-3 text-center md:flex xl:hidden">
         <Column className="w-1/6 border-r">
           <Link href="/">
-            <a className="small">
+            <a className="small hover:underline">
               隱私權政策
             </a>
           </Link>
@@ -74,14 +80,18 @@ function Footer() {
           </p>
         </Column>
         <Column className="!justify-start w-7/12 space-x-5">
-          <a href="mail:info@vipassanacreative.com">
-            <small>info@vipassanacreative.com</small>
-          </a>
-          <Link href="/">
-            <FontAwesomeIcon icon={faYoutube} className="text-xl" />
+          <Link href="mailto:info@vipassanacreative.com">
+            <small className="hover:underline">info@vipassanacreative.com</small>
           </Link>
-          <Link href="/">
-            <FontAwesomeIcon icon={faFacebook} className="text-xl" />
+          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
+            <a rel="noreferrer noopener" target="_blank">
+              <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-700" />
+            </a>
+          </Link>
+          <Link href="https://www.facebook.com/transckspark/">
+            <a rel="noreferrer noopener" target="_blank">
+              <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-700" />
+            </a>
           </Link>
         </Column>
 
@@ -109,19 +119,23 @@ function Footer() {
             <br />
             新願景概念競圖小組
           </p>
-          <a href="mail:info@vipassanacreative.com" className="ml-3 text-xs">
+          <a href="mailto:info@vipassanacreative.com" className="ml-3 text-xs hover:underline">
             info@vipassanacreative.com
           </a>
-          <Link href="/">
-            <FontAwesomeIcon icon={faYoutube} className="text-xl" />
+          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
+            <a rel="noreferrer noopener" target="_blank">
+              <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-700" />
+            </a>
           </Link>
-          <Link href="/">
-            <FontAwesomeIcon icon={faFacebook} className="text-xl" />
+          <Link href="https://www.facebook.com/transckspark/">
+            <a rel="noreferrer noopener" target="_blank">
+              <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-700" />
+            </a>
           </Link>
         </Column>
         <Column className="w-1/12">
           <Link href="/">
-            <a className="small">
+            <a className="small hover:underline">
               隱私權政策
             </a>
           </Link>
