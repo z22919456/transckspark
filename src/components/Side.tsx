@@ -15,7 +15,7 @@ function Side({ onOpen }: Props) {
       <div className="sticky top-0 z-50 flex items-center justify-between w-full sm:z-20 md:hidden bg-default">
         <NavButton onClick={onOpen} />
         <Location className="hidden ml-auto mr-5 lg:block" />
-        <Logo className="mr-5" />
+        <Logo className="mx-auto md:mr-5" />
       </div>
 
       <aside className="top-0 left-0 block w-full h-[50vh] md:h-screen md:fixed md:w-1/2 bg-default">
