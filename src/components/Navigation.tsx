@@ -15,7 +15,7 @@ const NAV_LIST = [
   { name: '關於', href: '/' },
   { name: '最新消息', href: '/news' },
   { name: '競圖', href: '/competition' },
-  { name: '評審', href: '/judge' },
+  { name: '評審', href: '/judges' },
   { name: '入圍作品一覽', href: '/competition_finalists' },
   { name: '想像中正紀念堂的100種方式', href: '/public_participation' },
   { name: '常見問答', href: '/faq' },
