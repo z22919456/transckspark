@@ -1,7 +1,6 @@
 import classnames from 'classnames';
 import TitleSvg from 'components/assets/title.svg';
 import dayjs from 'dayjs';
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 type Props = {
@@ -10,7 +9,7 @@ type Props = {
 
 function Header({ className }: Props) {
   const now = dayjs();
-  const to = dayjs('2022-12-31');
+  const to = dayjs('2022-12-31 12:00');
   const [duration, setDuration] = useState({ day: 0, time: '00:00:00' });
 
   useEffect(() => {
@@ -28,11 +27,6 @@ function Header({ className }: Props) {
         <TitleSvg className="absolute -translate-y-1/2 top-1/2 left-5" />
         <div className="mb-1 text-right text-black/50 lg:flex lg:space-x-5">
           <p>{duration.day} Days {duration.time}</p>
-          <Link href="/">
-            <a>
-              Register Now
-            </a>
-          </Link>
         </div>
       </div>
     </div>
