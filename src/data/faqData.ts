@@ -40,6 +40,6 @@ export const faqData2 = [
   {
     id: 1,
     question: '中正要討論講座、工作坊會錄影並會放上網站嗎？',
-    answer: '會，請上競圖執行小組<a href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r" class="underline decoration-1" rel="noreferrer noopener" target="_blank">游觀創意YouTube頻道觀賞<a>',
+    answer: '會，請上競圖執行小組<a href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r" style="text-decoration: revert;" rel="noreferrer noopener" target="_blank">游觀創意YouTube頻道觀賞<a>',
   },
 ];
