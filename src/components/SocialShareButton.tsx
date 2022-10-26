@@ -33,12 +33,6 @@ function SocialShareButton({ left = false }: Props) {
             <span className="small text-default/70 group-hover:text-primary">Twitter</span>
           </a>
         </Link>
-        <button type="button" className="flex flex-col items-center text-center group">
-          <div className="flex items-center justify-center w-10 h-10 my-auto border border-black rounded-full hover:bg-primary">
-            <FontAwesomeIcon icon={faInstagram} />
-          </div>
-          <span className="small text-default/70 group-hover:text-primary">Twitter</span>
-        </button>
       </div>
     </div>
   );
