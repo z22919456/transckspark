@@ -3,7 +3,7 @@ import Iframe from 'react-iframe';
 
 function AnimateIframe2() {
   return (
-    <Iframe url={'https://transckspark.tw/28349099'} className="w-full h-[calc(100%+64px)] -mt-16"></Iframe>
+    <Iframe title="animation" url={'https://transckspark.tw/28349099'} className="w-full h-[calc(100%+64px)] -mt-16"></Iframe>
   );
 }
 
