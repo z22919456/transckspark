@@ -51,7 +51,7 @@ function About() {
           <p>1975年進行中正紀念堂公開徵圖，設計要點：清楚表達「中國文化」的精神、創造新穎的設計、莊嚴獨特的風格，同時涵入現代工程技術。</p>
           <br />
           <div className="w-full relative aspect-[1.54] mt-5">
-            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/00.jpg`} layout="fill" objectFit='contain' />
+            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/00.jpg`} layout="fill" objectFit='contain' alt="中正紀念堂園區在1903年後（日治時期間），曾是台灣步兵第一聯隊駐紮地。（中央研究院臺灣史研究所典藏、引用自開放博物館）" />
           </div>
           <p className="small text-default/50">中正紀念堂園區在1903年後（日治時期間），曾是台灣步兵第一聯隊駐紮地。（中央研究院臺灣史研究所典藏、引用自開放博物館）</p>
         </Section>
@@ -90,11 +90,11 @@ function About() {
           <br />
           <p>公共空間是市民生活的據點，也是城市精神的象徵。帶著經年累月的日常使用心得，及美好公共空間的願景，社會對中正紀念堂園區轉型的呼聲此起彼落，不論是從歷史背景、城市中心再發展、當代文化發展路徑、轉型正義、日常生活、社區營造等不同的角度，都期待此空間的轉變。</p>
           <div className="w-full relative aspect-[4/3] mt-5">
-            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/about-03.jpg`} layout="fill" objectFit='contain' alt="活動主視覺，設計：永真急制 Workshop" />
+            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/about-03.jpg`} layout="fill" objectFit='contain' alt="國立中正紀念堂管理處提供" />
           </div>
           <p className="small text-default/50">國立中正紀念堂管理處提供</p>
           <div className="w-full relative aspect-[4/3] mt-5">
-            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/about-04.jpg`} layout="fill" objectFit='contain' alt="活動主視覺，設計：永真急制 Workshop" />
+            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/about-04.jpg`} layout="fill" objectFit='contain' alt="" />
           </div>
         </Section>
         <Section id="workgroup" >
