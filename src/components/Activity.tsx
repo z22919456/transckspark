@@ -28,7 +28,7 @@ function Activity({ activity, id, onlySignUp = true }: Props) {
   const canSignUp = dayjs().isBefore(dayjs(activity['報名截止日期']));
   if (!canSignUp && onlySignUp) return <></>;
   return (
-    <Link href={`/activity/${activity.id}`}>
+    <Link href={`/public_participation/${activity.id}`}>
       <Card id={id} >
         <div className="flex items-center justify-between">
           <p>{dateString}</p>
