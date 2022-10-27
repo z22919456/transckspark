@@ -20,8 +20,8 @@ const nextConfig = {
         hostname: 'i.imgur.com',
       },
       {
-        potocal: 'https',
-        hostname: '*.amazonaws.com',
+        protocol: 'https',
+        hostname: '**.amazonaws.com',
       }
     ],
     // unoptimized: !!process.env.IMAGE_OPTIMIZED_SKIP
