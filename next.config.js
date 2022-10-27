@@ -19,8 +19,12 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'i.imgur.com',
       },
+      {
+        potocal: 'https',
+        hostname: '*.amazonaws.com',
+      }
     ],
-    unoptimized: !!process.env.IMAGE_OPTIMIZED_SKIP
+    // unoptimized: !!process.env.IMAGE_OPTIMIZED_SKIP
   },
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined, // for github page
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || undefined // for github page
