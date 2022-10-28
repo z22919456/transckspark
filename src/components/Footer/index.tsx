@@ -80,7 +80,7 @@ function Footer() {
         </Column>
         <Column className="!justify-start w-7/12 space-x-5">
           <Link href="mailto:info@vipassanacreative.com" aria-label="send email">
-            <small className="hover:underline">info@vipassanacreative.com</small>
+            <small className="hover:underline">Contact us: info@vipassanacreative.com</small>
           </Link>
           <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
             <a rel="noreferrer noopener" target="_blank" aria-label="youtube link">
@@ -119,7 +119,7 @@ function Footer() {
             新願景概念競圖小組
           </p>
           <a href="mailto:info@vipassanacreative.com" className="ml-3 text-xs hover:underline" aria-label="send email">
-            info@vipassanacreative.com
+            Contact us: info@vipassanacreative.com
           </a>
           <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
             <a rel="noreferrer noopener" target="_blank" aria-label="youtube link">
