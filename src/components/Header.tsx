@@ -9,7 +9,7 @@ type Props = {
 
 function Header({ className }: Props) {
   const now = dayjs();
-  const to = dayjs('2022-12-31 12:00');
+  const to = dayjs('2022-12-01 12:00');
   const [duration, setDuration] = useState({ day: 0, time: '00:00:00' });
 
   useEffect(() => {
