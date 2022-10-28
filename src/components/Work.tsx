@@ -17,7 +17,7 @@ function Work({ work }: Props) {
       </div>
       <h2 className="flex items-center justify-center h-20 text-lg text-center">{work.Title}</h2>
       <div className="relative my-5 aspect-video">
-        <Image src={work.cover.url} layout="fill" objectFit="cover" alt={work.Title} />
+        <Image src={work.cover.url} layout="fill" objectFit="cover" alt={work.Title} sizes="(max-width:1024px) 25vw, (maw-width:768px) 50vw, (max-width: 640) 100vw, 50vw" />
       </div>
       <p className="h-16 text-xs line-clamp-4">{work['簡介']}</p>
       <Link href={`/competition_finalists/${work.id}`}>
