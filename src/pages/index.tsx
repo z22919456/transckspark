@@ -2,7 +2,7 @@ import Divider from 'components/Divider';
 import Header from 'components/Header';
 import Section from 'components/Section';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import ScrollNav, { ScrollNavLink } from '../components/ScrollNav';
 

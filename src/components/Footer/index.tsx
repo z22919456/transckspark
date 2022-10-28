@@ -6,7 +6,6 @@ import Organizer1Icon from 'components/assets/footer/organizer-1.svg';
 import Organizer2Icon from 'components/assets/footer/organizer-2.svg';
 import Organizer3Icon from 'components/assets/footer/organizer-3.svg';
 import PlanningIcon from 'components/assets/footer/planning.svg';
-import YoutubeIcon from 'components/assets/footer/yt.svg';
 import Link from 'next/link';
 import React from 'react';
 
@@ -21,23 +20,23 @@ function Footer() {
           中正紀念堂園區  新願景概念競圖小組
         </p>
         <div className="flex items-center justify-center w-full my-5 space-x-5 text-center">
-          <Link href="mailto:info@vipassanacreative.com" aria-label="send email">
-            <a >
+          <Link href="mailto:info@vipassanacreative.com">
+            <a aria-label="send email">
               <FontAwesomeIcon icon={faEnvelope} className="text-xl hover:underline" />
             </a>
           </Link>
-          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r" aria-label="youtube link">
-            <a rel="noreferrer noopener" target="_blank">
+          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
+            <a rel="noreferrer noopener" target="_blank" aria-label="youtube link">
               <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
-          <Link href="https://www.facebook.com/transckspark/" aria-label="facebook link">
-            <a rel="noreferrer noopener" target="_blank">
+          <Link href="https://www.facebook.com/transckspark/">
+            <a rel="noreferrer noopener" target="_blank" aria-label="facebook link">
               <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
-          <Link href="/" aria-label="Privacy Policy">
-            <a className="small hover:underline">
+          <Link href="/">
+            <a className="small hover:underline" aria-label="Privacy Policy">
               隱私權政策
             </a>
           </Link>
@@ -66,8 +65,8 @@ function Footer() {
 
       <div className="flex-wrap hidden w-full my-3 text-center md:flex xl:hidden">
         <Column className="w-1/6 border-r">
-          <Link href="/" aria-label="Privacy Policy">
-            <a className="small hover:underline">
+          <Link href="/">
+            <a className="small hover:underline" aria-label="Privacy Policy">
               隱私權政策
             </a>
           </Link>
@@ -83,13 +82,13 @@ function Footer() {
           <Link href="mailto:info@vipassanacreative.com" aria-label="send email">
             <small className="hover:underline">info@vipassanacreative.com</small>
           </Link>
-          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r" aria-label="youtube link">
-            <a rel="noreferrer noopener" target="_blank">
+          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
+            <a rel="noreferrer noopener" target="_blank" aria-label="youtube link">
               <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
-          <Link href="https://www.facebook.com/transckspark/" aria-label="facebook link">
-            <a rel="noreferrer noopener" target="_blank">
+          <Link href="https://www.facebook.com/transckspark/">
+            <a rel="noreferrer noopener" target="_blank" aria-label="facebook link">
               <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
@@ -122,20 +121,20 @@ function Footer() {
           <a href="mailto:info@vipassanacreative.com" className="ml-3 text-xs hover:underline" aria-label="send email">
             info@vipassanacreative.com
           </a>
-          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r" aria-label="youtube link">
-            <a rel="noreferrer noopener" target="_blank">
+          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
+            <a rel="noreferrer noopener" target="_blank" aria-label="youtube link">
               <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
-          <Link href="https://www.facebook.com/transckspark/" aria-label="facebook link">
-            <a rel="noreferrer noopener" target="_blank">
+          <Link href="https://www.facebook.com/transckspark/">
+            <a rel="noreferrer noopener" target="_blank" aria-label="facebook link">
               <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
         </Column>
         <Column className="w-1/12">
-          <Link href="/" aria-label="Private Policy">
-            <a className="small hover:underline">
+          <Link href="/">
+            <a className="small hover:underline" aria-label="Private Policy">
               隱私權政策
             </a>
           </Link>

@@ -1,9 +1,8 @@
-import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classnames from 'classnames';
 import Link from 'next/link';
 import React from 'react';
-import { faAlignLeft, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 type Props = {
   nextPage?: string

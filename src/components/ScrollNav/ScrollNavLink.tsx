@@ -30,7 +30,7 @@ function ScrollTabLink({
   const height = useScrollNavContext();
 
   return (
-    <Link activeClass="!border-primary" offset={-height + 5} hashSpy className={classnames(defaultClassName, className)} smooth="easeOutQuint" spy to={to} {...props}>
+    <Link href={`#${to}`} activeClass="!border-primary" offset={-height + 5} hashSpy className={classnames(defaultClassName, className)} smooth="easeOutQuint" spy to={to} {...props}>
       {children}
     </Link>
   );

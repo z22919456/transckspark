@@ -22,6 +22,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: '**.amazonaws.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.notion.so'
       }
     ],
     // unoptimized: !!process.env.IMAGE_OPTIMIZED_SKIP
