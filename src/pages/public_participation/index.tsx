@@ -3,6 +3,7 @@ import Activity from 'components/Activity';
 import { CardContainer } from 'components/Card';
 import Header from 'components/Header';
 import ScrollNav, { ScrollNavLink } from 'components/ScrollNav';
+import SEO from 'components/SEO';
 import dayjs from 'dayjs';
 import { getPageList } from 'lib/notion';
 import React, { useState } from 'react';
@@ -19,43 +20,46 @@ const NavButton = el.button`px-2 py-1 transition-all duration-200 border-b-4 bor
 function News({ pageList }: Props) {
   const [onlyShowSignUp, setOnlySignUp] = useState(false);
   return (
-    <div className="activity">
-      <Header />
-      <div className="mx-5">
+    <>
+      <SEO title="想像中正紀念堂的100種方式 Public Participation" />
+      <div className="activity">
+        <Header />
+        <div className="mx-5">
 
-        <div className="py-10 text-center">
-          <h1>想像中正紀念堂的100種方式</h1>
-          <h1 className="h2">Public Participation</h1>
-        </div>
+          <div className="py-10 text-center">
+            <h1>想像中正紀念堂的100種方式</h1>
+            <h1 className="h2">Public Participation</h1>
+          </div>
 
-        <ScrollNav>
-          <ScrollNavLink to="tour">
-            導覽
-          </ScrollNavLink>
-          <ScrollNavLink to="lecture">
-            講座
-          </ScrollNavLink>
-          <ScrollNavLink to="workshop">
-            工作坊
-          </ScrollNavLink>
-          <ScrollNavLink to="film">
-            影展
-          </ScrollNavLink>
-          <ScrollNavLink to="forum">
-            論壇
-          </ScrollNavLink>
-          <NavButton to="sign_up" onClick={() => setOnlySignUp((s) => !s)} className={onlyShowSignUp ? 'text-primary border-primary' : ''}>
-            開放報名中
-          </NavButton>
-        </ScrollNav>
-        <div className="py-10">
-          <p className='text-sm'>對於中正紀念堂園區的新願景想像，每個人都有至少一種觀點，人與人的相遇，還會產生新的觀點，在反覆交流、互動中，又能碰撞出更多的可能。 想像中正紀念堂的100種方式，匯集了數場靜態和動態的事件，讓更多人在此過程中找到自身與中正紀念堂連結的可能。如果你時常思索：該如何想像中正紀念堂？該如何描述中正紀念堂？該如何再詮釋中正紀念堂？那麼我們想和你分享以下幾種「想像中正紀念的方式」。</p>
+          <ScrollNav>
+            <ScrollNavLink to="tour">
+              導覽
+            </ScrollNavLink>
+            <ScrollNavLink to="lecture">
+              講座
+            </ScrollNavLink>
+            <ScrollNavLink to="workshop">
+              工作坊
+            </ScrollNavLink>
+            <ScrollNavLink to="film">
+              影展
+            </ScrollNavLink>
+            <ScrollNavLink to="forum">
+              論壇
+            </ScrollNavLink>
+            <NavButton to="sign_up" onClick={() => setOnlySignUp((s) => !s)} className={onlyShowSignUp ? 'text-primary border-primary' : ''}>
+              開放報名中
+            </NavButton>
+          </ScrollNav>
+          <div className="py-10">
+            <p className='text-sm'>對於中正紀念堂園區的新願景想像，每個人都有至少一種觀點，人與人的相遇，還會產生新的觀點，在反覆交流、互動中，又能碰撞出更多的可能。 想像中正紀念堂的100種方式，匯集了數場靜態和動態的事件，讓更多人在此過程中找到自身與中正紀念堂連結的可能。如果你時常思索：該如何想像中正紀念堂？該如何描述中正紀念堂？該如何再詮釋中正紀念堂？那麼我們想和你分享以下幾種「想像中正紀念的方式」。</p>
+          </div>
+          <CardContainer>
+            {ACTIVITY_TYPE.map((type) => pageList[type].map((page, index) => <Activity onlySignUp={onlyShowSignUp} key={page.id} id={index === 0 ? type : undefined} activity={page} />))}
+          </CardContainer>
         </div>
-        <CardContainer>
-          {ACTIVITY_TYPE.map((type) => pageList[type].map((page, index) => <Activity onlySignUp={onlyShowSignUp} key={page.id} id={index === 0 ? type : undefined} activity={page} />))}
-        </CardContainer>
       </div>
-    </div>
+    </>
   );
 }
 

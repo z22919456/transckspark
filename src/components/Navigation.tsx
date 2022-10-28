@@ -12,11 +12,11 @@ type Props = { onClose: () => void };
 
 const NAV_LIST = [
   { name: 'English', href: '/en' },
-  { name: '關於', href: '/' },
+  { name: '首都之心 城中轉正', href: '/' },
   { name: '最新消息', href: '/news' },
-  { name: '競圖', href: '/competition' },
-  { name: '評審', href: '/judges' },
-  { name: '入圍作品一覽(2022.12.1揭曉)', href: '/competition_finalists', inactive: true },
+  { name: '競圖活動說明', href: '/competition' },
+  { name: '評審委員', href: '/judges' },
+  { name: '第一階段入圍作品一覽 (2022.12.1揭曉)', href: '/competition_finalists', inactive: true },
   { name: '想像中正紀念堂的100種方式', href: '/public_participation' },
   { name: '常見問答', href: '/faq' },
   // { name: '競圖成果展覽', href: '/exhibition' },
