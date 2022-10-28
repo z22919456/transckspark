@@ -7,7 +7,7 @@ import {
 import Header from 'components/Header';
 import React from 'react';
 
-import { faqData1, faqData2 } from '../data/faqData';
+import faqData from '../data/faqData';
 
 function Faq() {
   return (
@@ -20,37 +20,23 @@ function Faq() {
       </div>
 
       <div className="px-5">
-        <div className="mb-20">
-          <h1 className="mb-5 text-base text-center">競圖報名相關問題</h1>
-          <Accordion type="single" collapsible>
-            {faqData1.map((faq) => (
-              <AccordionItem value={faq.id.toString()} key={faq.id}>
-                <AccordionTrigger>
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent>
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-
-        <div>
-          <h1 className="mb-5 text-base text-center">想像中正紀念堂的100種方式系列活動相關問題</h1>
-          <Accordion type="single" collapsible>
-            {faqData2.map((faq) => (
-              <AccordionItem value={faq.id.toString()} key={faq.id}>
-                <AccordionTrigger>
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent>
-                  <p dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+        {faqData.map((faqGroup, index) => (
+          <div className="mb-20" key={index}>
+            <h1 className="mb-5 text-base text-center">{faqGroup.title}</h1>
+            <Accordion type="single" collapsible>
+              {faqGroup.faq.map((faq) => (
+                <AccordionItem value={faq.id.toString()} key={faq.id}>
+                  <AccordionTrigger>
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div dangerouslySetInnerHTML={{ __html: faq.answer }}></div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -167,12 +167,12 @@ function Competition() {
             <h2 className="text-base">評比標準</h2>
           </div>
           <h3>
-            <small>初選</small>
+            <small>初審</small>
           </h3>
           {criteria.first.map((p, i) => (<p key={i}>{p}</p>))}
           <Divider />
           <h3>
-            <small>決選</small>
+            <small>決審</small>
           </h3>
           {criteria.finals.map((p, i) => (<p key={i}>{p}</p>))}
         </Section>
