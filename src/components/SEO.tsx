@@ -15,13 +15,12 @@ function SEO({ title, description }: Props) {
       title={allTitle}
       description={allDescription}
       openGraph={{
+        type: 'website',
         title: allTitle,
         description: allDescription,
         images: [
           {
             url: `${process.env.NEXT_PUBLIC_HOST}/metatag.png`,
-            width: 600,
-            height: 600,
             alt: 'Og Image Alt',
             type: 'image/png',
           },
