@@ -35,7 +35,7 @@ function Footer() {
               <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
-          <Link href="/">
+          <Link href="/privacy_policy">
             <a className="small hover:underline" aria-label="Privacy Policy">
               隱私權政策
             </a>
@@ -65,7 +65,7 @@ function Footer() {
 
       <div className="flex-wrap hidden w-full my-3 text-center md:flex xl:hidden">
         <Column className="w-1/6 border-r">
-          <Link href="/">
+          <Link href="/privacy_policy">
             <a className="small hover:underline" aria-label="Privacy Policy">
               隱私權政策
             </a>
@@ -133,7 +133,7 @@ function Footer() {
           </Link>
         </Column>
         <Column className="w-1/12">
-          <Link href="/">
+          <Link href="/privacy_policy">
             <a className="small hover:underline" aria-label="Private Policy">
               隱私權政策
             </a>
