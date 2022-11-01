@@ -48,7 +48,7 @@ function Judges() {
             <div className="flex flex-wrap sm:flex-nowrap md:flex-wrap lg:flex-nowrap">
               {/* sm:flex-nowrap md:flex-wrap xl:flex-nowrap */}
               <div className="relative w-full mb-5 sm:mr-5 sm:mb-0 md:mr-0 md:mb-5 lg:mb-0 lg:mr-5 aspect-video">
-                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}${chairman.image}`} layout="fill" objectFit="cover" alt={chairman.name} />
+                <Image src={chairman.image} layout="fill" objectFit="cover" alt={chairman.name} />
               </div>
 
               <div className="w-full ml-0 sm:ml-5 md:ml-0 lg:ml-5">

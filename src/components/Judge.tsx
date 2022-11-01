@@ -17,7 +17,8 @@ function Judge({
       <h2 className="py-10 text-lg text-center">{name}</h2>
       <p className="text-xs text-center line-clamp-1">{title}</p>
       <div className="relative my-5 aspect-video">
-        <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}${image}`} layout="fill" objectFit="cover" alt={name} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
+
+        <Image src={image} layout="fill" objectFit="cover" alt={name} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
       </div>
       {alt && <p className="mb-2 -mt-5 text-xs text-default/50">{alt}</p>}
       <p className="text-xs">{information}</p>
