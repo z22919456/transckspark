@@ -1,6 +1,11 @@
 import classnames from 'classnames';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import eyesMd from 'images/landingPage/eyes-md.png';
+import eyes from 'images/landingPage/eyes.png';
+import infoMd from 'images/landingPage/info-md.png';
+import infoSm from 'images/landingPage/info-sm.png';
+import info from 'images/landingPage/info.png';
 
 function LandingPage() {
   const [show, setShow] = useState(true);
@@ -20,21 +25,21 @@ function LandingPage() {
   return (
     <div className={classnames('fixed left-0 z-50 w-screen h-screen p-10 bg-default duration-300 transition-all ease', !show && '-translate-y-full opacity-0')}>
       <div className="relative hidden w-full h-1/2 sm:block">
-        <Image priority src={`${process.env.NEXT_PUBLIC_BASE_PATH}/eyes-md.png`} layout="fill" objectPosition="top" objectFit='contain' alt="" ></Image>
+        <Image priority src={eyesMd} layout="fill" objectPosition="top" objectFit='contain' alt="" ></Image>
       </div>
       <div className="block w-full pt-16 sm:hidden h-3/4">
         <div className="relative w-full h-full">
-          <Image priority src={`${process.env.NEXT_PUBLIC_BASE_PATH}/eyes.png`} layout="fill" objectPosition="top" objectFit='contain' alt="" ></Image>
+          <Image priority src={eyes} layout="fill" objectPosition="top" objectFit='contain' alt="" ></Image>
         </div>
       </div>
       <div className="relative hidden w-full h-1/2 md:block">
-        <Image priority className="" src={`${process.env.NEXT_PUBLIC_BASE_PATH}/info-md.png`} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
+        <Image priority className="" src={infoMd} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
       </div>
       <div className="relative hidden w-full h-1/2 sm:block md:hidden">
-        <Image priority className="hidden md:block lg:hidden" src={`${process.env.NEXT_PUBLIC_BASE_PATH}/info-sm.png`} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
+        <Image priority className="hidden md:block lg:hidden" src={infoSm} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
       </div>
       <div className="relative block w-full h-1/4 sm:hidden">
-        <Image priority className="hidden md:block lg:hidden" src={`${process.env.NEXT_PUBLIC_BASE_PATH}/info.png`} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
+        <Image priority className="hidden md:block lg:hidden" src={info} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
       </div>
     </div>
   );
