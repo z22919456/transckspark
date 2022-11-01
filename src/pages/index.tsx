@@ -41,7 +41,7 @@ function About() {
             <h2 className="py-12 text-center">活動緣起｜民間發起的紙上概念競圖</h2>
             <p>首都之心，城中轉正：中正紀念堂園區新願景概念競圖，由台灣現代建築學會、中華民國都市設計學會、中華民國景觀學會國內三大空間規劃設計專業學會共同發起。透過競圖徵件，鼓勵社會將論述具象化；經由公眾參與活動，促進社會溝通。此競圖與系列活動，以 「公共參與」 為理念及方法，在嚴謹公平的程序中，聚焦規劃專業，由下而上動員空間專業界與社會大眾，激發想像力和創造力，參與都市公共空間改造過程。競圖徵件期間，搭配系列公共論壇、講座、工作坊、成果展覽，期待打開更多的對話場合、帶動社會進一步討論，從文字進展到概念，從論述具象為圖面，凝聚社會共識，推動轉型正義的空間工程。</p>
             <div className="w-full relative aspect-[1.54] mt-5">
-              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/04.jpg`} layout="fill" objectFit='contain' alt="活動主視覺，設計：永真急制 Workshop" sizes="(maw-width:768px) 100vw 50vw" />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/04.jpg`} layout="fill" objectFit='contain' alt="活動主視覺，設計：永真急制 Workshop" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
             <p className="small text-default/50">活動主視覺，設計：永真急制 Workshop</p>
           </Section>
@@ -54,7 +54,7 @@ function About() {
             <p>1975年進行中正紀念堂公開徵圖，設計要點：清楚表達「中國文化」的精神、創造新穎的設計、莊嚴獨特的風格，同時涵入現代工程技術。</p>
             <br />
             <div className="w-full relative aspect-[1.54] mt-5">
-              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/00.jpg`} layout="fill" objectFit='contain' alt="中正紀念堂園區在1903年後（日治時期間），曾是台灣步兵第一聯隊駐紮地。（中央研究院臺灣史研究所典藏、引用自開放博物館）" sizes="(maw-width:768px) 100vw 50vw" />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/00.jpg`} layout="fill" objectFit='contain' alt="中正紀念堂園區在1903年後（日治時期間），曾是台灣步兵第一聯隊駐紮地。（中央研究院臺灣史研究所典藏、引用自開放博物館）" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
             <p className="small text-default/50">中正紀念堂園區在1903年後（日治時期間），曾是台灣步兵第一聯隊駐紮地。（中央研究院臺灣史研究所典藏、引用自開放博物館）</p>
           </Section>
@@ -93,11 +93,11 @@ function About() {
             <br />
             <p>公共空間是市民生活的據點，也是城市精神的象徵。帶著經年累月的日常使用心得，及美好公共空間的願景，社會對中正紀念堂園區轉型的呼聲此起彼落，不論是從歷史背景、城市中心再發展、當代文化發展路徑、轉型正義、日常生活、社區營造等不同的角度，都期待此空間的轉變。</p>
             <div className="w-full relative aspect-[4/3] mt-5">
-              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/about-03.jpg`} layout="fill" objectFit='contain' alt="國立中正紀念堂管理處提供" sizes="(maw-width:768px) 100vw 50vw" />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/about-03.jpg`} layout="fill" objectFit='contain' alt="國立中正紀念堂管理處提供" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
             <p className="small text-default/50">國立中正紀念堂管理處提供</p>
             <div className="w-full relative aspect-[4/3] mt-5">
-              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/about-04.jpg`} layout="fill" objectFit='contain' alt="" sizes="(maw-width:768px) 100vw 50vw" />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/about/about-04.jpg`} layout="fill" objectFit='contain' alt="" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </Section>
           <Section id="workgroup" >

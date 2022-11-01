@@ -29,7 +29,7 @@ function Info({ information }: Props) {
       </div>
       <h2 className="flex items-center justify-center h-20 text-lg text-center">{information.Title}</h2>
       <div className="relative my-5 aspect-video">
-        <Image src={information.cover.url} layout="fill" objectFit="cover" alt={information.Title} sizes="(max-width:1024px) 25vw, (maw-width:768px) 50vw, (max-width: 640) 100vw, 50vw" />
+        <Image src={information.cover.url} layout="fill" objectFit="cover" alt={information.Title} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
       </div>
       <p className="h-16 text-xs line-clamp-4">{information['摘要']}</p>
       <Link href={`/news/${information.id}`}>

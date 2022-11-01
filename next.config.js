@@ -14,7 +14,7 @@ const nextConfig = {
     ignoreBuildErrors: true
   },
   images: {
-    deviceSizes: [640, 768, 1024, 1080, 1920],
+    deviceSizes: [375, 640, 768, 1024, 1080, 1920],
     remotePatterns: [
       {
         protocol: 'https',

@@ -40,7 +40,7 @@ function Activity({ activity, id, onlySignUp = true }: Props) {
           {activity.Title}
         </h2>
         <div className="relative my-5 aspect-video">
-          <Image src={activity.cover.url} layout="fill" objectFit="cover" alt={activity.Title} sizes="(max-width:1024px) 25vw, (maw-width:768px) 50vw, (max-width: 640) 100vw, 50vw" />
+          <Image src={activity.cover.url} layout="fill" objectFit="cover" alt={activity.Title} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
         </div>
         <p className="h-24 text-xs line-clamp-6">{activity['摘要']}</p>
       </Card>

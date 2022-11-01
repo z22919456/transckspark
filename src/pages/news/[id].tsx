@@ -28,7 +28,7 @@ function NewsPage({ pageInformation, blocks }: Props) {
         </div>
         <div className="px-5">
           <div className="relative w-full aspect-video">
-            <Image src={pageInformation.cover.url} fill alt="" sizes="(maw-width:768px) 100vw 50vw" />
+            <Image src={pageInformation.cover.url} fill alt="" sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
           <div className="pt-3">
             <NotionRenderer blockMap={blocks} />
