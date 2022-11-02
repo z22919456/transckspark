@@ -9,6 +9,7 @@ import { NewsInformation, NotionPageData } from 'type';
 
 import getNotionServerPaths from 'utils/getNotionServerPaths';
 import SEO from 'components/SEO';
+import placeholder from 'components/assets/imagePlaceholderBase64';
 import getPageServerSideProps from '../../utils/getNotionServerProps';
 
 type Props = {
@@ -28,7 +29,7 @@ function NewsPage({ pageInformation, blocks }: Props) {
         </div>
         <div className="px-5">
           <div className="relative w-full aspect-video">
-            <Image placeholder="blur" blurDataURL="/image_loading.jpg" src={pageInformation.cover.url} fill alt="" sizes="(max-width: 768px) 100vw, 50vw" />
+            <Image placeholder="blur" blurDataURL={placeholder} src={pageInformation.cover.url} fill alt="" sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
           <div className="pt-3">
             <NotionRenderer blockMap={blocks} />

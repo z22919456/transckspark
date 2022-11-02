@@ -1,6 +1,7 @@
 import { JudgeType } from 'data/judgesData';
 import Image from 'next/image';
 import React from 'react';
+import placeholder from './assets/imagePlaceholderBase64';
 import Card from './Card';
 
 type Props = JudgeType & { final?: boolean };
@@ -18,7 +19,7 @@ function Judge({
       <p className="text-xs text-center line-clamp-1">{title}</p>
       <div className="relative my-5 aspect-video">
 
-        <Image placeholder="blur" blurDataURL="/image_loading.jpg" src={image} layout="fill" objectFit="cover" alt={name} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
+        <Image placeholder="blur" blurDataURL={placeholder} src={image} layout="fill" objectFit="cover" alt={name} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
       </div>
       {alt && <p className="mb-2 -mt-5 text-xs text-default/50">{alt}</p>}
       <p className="text-xs">{information}</p>

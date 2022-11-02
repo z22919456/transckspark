@@ -9,6 +9,7 @@ import { WorkInformation, NotionPageData } from 'type';
 import getPageServerSideProps from 'utils/getNotionServerProps';
 import PaginationButton from 'components/PaginationButton';
 import getNotionServerPaths from 'utils/getNotionServerPaths';
+import placeholder from 'components/assets/imagePlaceholderBase64';
 
 type Props = {
   blocks: BlockMapType
@@ -30,7 +31,7 @@ function WorkPage({
       </div>
       <div className="px-5">
         <div className="relative w-full aspect-video">
-          <Image placeholder="blur" blurDataURL="/image_loading.jpg" src={pageInformation.cover.url} fill alt="" sizes="(max-width: 768px) 100vw, 50vw" />
+          <Image placeholder="blur" blurDataURL={placeholder} src={pageInformation.cover.url} fill alt="" sizes="(max-width: 768px) 100vw, 50vw" />
         </div>
         <div className="pt-3">
           <NotionRenderer blockMap={blocks} />

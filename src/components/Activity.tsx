@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import placeholder from './assets/imagePlaceholderBase64';
 import Card from './Card';
 
 type Props = {
@@ -40,7 +41,7 @@ function Activity({ activity, id, onlySignUp = true }: Props) {
           {activity.Title}
         </h2>
         <div className="relative my-5 aspect-video">
-          <Image placeholder="blur" blurDataURL="/image_loading.jpg" src={activity.cover.url} layout="fill" objectFit="cover" alt={activity.Title} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
+          <Image placeholder="blur" blurDataURL={placeholder} src={activity.cover.url} layout="fill" objectFit="cover" alt={activity.Title} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
         </div>
         <p className="h-24 text-xs line-clamp-6">{activity['摘要']}</p>
       </Card>
