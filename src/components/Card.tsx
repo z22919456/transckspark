@@ -8,6 +8,8 @@ const Card = el.div`w-full
   before:absolute 
   before:h-10 before:w-10 before:top-0 before:right-0 
   before:translate-x-1/2 before:-translate-y-1/2 before:bg-white before:z-[1]
+  cursor-pointer
+  group
 `;
 
 export const CardContainer = el.div`grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2`;

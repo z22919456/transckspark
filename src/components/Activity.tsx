@@ -2,8 +2,8 @@ import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import el from '@master/style-element.react';
 import placeholder from './assets/imagePlaceholderBase64';
-import Card from './Card';
 
 type Props = {
   id?: string
@@ -23,28 +23,33 @@ type Props = {
   onlySignUp: boolean
 };
 
+const Tag = el.div`px-2 text-xs border rounded-full border-default`;
+
 function Activity({ activity, id, onlySignUp = true }: Props) {
-  const dateString = dayjs(activity['活動日期']).format('DD MMM');
-  const yearString = dayjs(activity['活動日期']).format('YYYY');
+  const dateString = dayjs(activity['活動日期']).format('DD MMM YYYY');
   const canSignUp = dayjs().isBefore(dayjs(activity['報名截止日期']));
   if (!canSignUp && onlySignUp) return <></>;
   return (
     <Link href={`/public_participation/${activity.id}`}>
-      <Card id={id} >
-        <div className="flex items-center justify-between">
-          <p>{dateString}</p>
-          {canSignUp && <p className="text-sm text-primary">開放報名中</p>}
-          <p>{yearString}</p>
+      <div id={id} className="flex flex-wrap mb-3 border-b border-black cursor-pointer sm:flex-nowrap md:flex-wrap lg:flex-nowrap group">
+
+        <div className="flex flex-col w-full pr-0 my-5 sm:pr-3 md:pr-0 lg:pr-3 sm:w-1/2 md:w-full lg:w-1/2">
+          <div className="flex items-center justify-between">
+            <p className="text-sm">{dateString}</p>
+            <div className="flex space-x-1">
+              <Tag>{activity['種類']}</Tag>
+              {canSignUp && <Tag>開放報名中</Tag>}
+            </div>
+          </div>
+          <h2 className="my-3 overflow-hidden text-lg text-justify whitespace-nowrap text-ellipsis group-hover:text-primary">{activity.Title}</h2>
+          <p className="text-xs text-justify line-clamp-4 group-hover:text-primary">{activity['摘要']}</p>
+          <p className="hidden mt-auto text-sm sm:block md:hidden lg:block group-hover:text-primary">Read More...</p>
         </div>
-        <h2 className="flex flex-col items-center justify-center h-20 text-lg text-center">
-          <span className="text-sm">{activity['種類']}</span>
-          {activity.Title}
-        </h2>
-        <div className="relative my-5 aspect-video">
+
+        <div className="relative w-full my-5 aspect-video sm:w-1/2 md:w-full lg:w-1/2">
           <Image placeholder="blur" blurDataURL={placeholder} src={activity.cover.url} layout="fill" objectFit="cover" alt={activity.Title} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
         </div>
-        <p className="h-24 text-xs line-clamp-6">{activity['摘要']}</p>
-      </Card>
+      </div>
     </Link>
   );
 }

@@ -2,7 +2,6 @@ import classnames from 'classnames';
 import FacebookIcon from 'components/assets/footer/fb.svg';
 import YoutubeIcon from 'components/assets/footer/yt.svg';
 import List from 'components/assets/nav/list.svg';
-import { lstat } from 'fs';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
