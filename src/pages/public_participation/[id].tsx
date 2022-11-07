@@ -1,18 +1,19 @@
-import 'react-notion/src/styles.css';
+import 'react-notion-x/src/styles.css';
 
 import Header from 'components/Header';
 import SocialShareButton from 'components/SocialShareButton';
 import Image from 'next/future/image';
 import React from 'react';
-import { BlockMapType, NotionRenderer } from 'react-notion';
+import { NotionRenderer } from 'react-notion-x';
 import { ActivityInformation, NotionPageData } from 'type';
-import getPageServerSideProps from 'utils/getNotionServerProps';
 import getNotionServerPaths from 'utils/getNotionServerPaths';
 import SEO from 'components/SEO';
 import placeholder from 'components/assets/imagePlaceholderBase64';
+import { ExtendedRecordMap } from 'notion-types';
+import getPageServerSideProps from 'utils/getNotionServerProps';
 
 type Props = {
-  blocks: BlockMapType
+  blocks: ExtendedRecordMap
   pageInformation: NotionPageData<ActivityInformation>
 };
 
@@ -31,7 +32,7 @@ function ActivityPage({ pageInformation, blocks }: Props) {
             <Image placeholder="blur" blurDataURL={placeholder} src={pageInformation.cover.url} fill alt="" sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
           <div className="pt-3">
-            <NotionRenderer blockMap={blocks} />
+            <NotionRenderer components={{ nextImage: Image }} recordMap={blocks}></NotionRenderer>
           </div>
           <SocialShareButton />
         </div>

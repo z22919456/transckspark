@@ -3,6 +3,7 @@ import { GetStaticPropsContext } from 'next';
 
 const getPageServerSideProps = (dbId: string) => async (context: GetStaticPropsContext<{ id: string }>) => {
   const id = context.params?.id;
+  console.log(id);
   if (!id) return { notFound: true };
 
   try {
@@ -22,7 +23,8 @@ const getPageServerSideProps = (dbId: string) => async (context: GetStaticPropsC
       revalidate: 10,
     };
   } catch (err) {
-    return { notFound: true };
+    console.log(err);
+    return { props: { err } };
   }
 };
 

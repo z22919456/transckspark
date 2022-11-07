@@ -2,6 +2,7 @@ import { Client } from '@notionhq/client';
 import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import axios from 'axios';
 import dayjs from 'dayjs';
+import { NotionAPI } from 'notion-client';
 import { BlockMapType } from 'react-notion';
 import { NotionPageData } from 'type';
 
@@ -87,6 +88,7 @@ export const getPageList = async <T>(id: string) => {
 };
 
 export const getPage = async (id: string) => {
-  const response = await axios.get<BlockMapType>(`https://notion-api.splitbee.io/v1/page/${id}`);
-  return response.data;
+  const notionApi = new NotionAPI();
+  const page = await notionApi.getPage(id);
+  return page;
 };

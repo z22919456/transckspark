@@ -1,18 +1,19 @@
-import 'react-notion/src/styles.css';
+import 'react-notion-x/src/styles.css';
 
 import Header from 'components/Header';
 import SocialShareButton from 'components/SocialShareButton';
 import Image from 'next/future/image';
 import React from 'react';
-import { BlockMapType, NotionRenderer } from 'react-notion';
+import { NotionRenderer } from 'react-notion-x';
 import { WorkInformation, NotionPageData } from 'type';
 import getPageServerSideProps from 'utils/getNotionServerProps';
 import PaginationButton from 'components/PaginationButton';
 import getNotionServerPaths from 'utils/getNotionServerPaths';
 import placeholder from 'components/assets/imagePlaceholderBase64';
+import { ExtendedRecordMap } from 'notion-types';
 
 type Props = {
-  blocks: BlockMapType
+  blocks: ExtendedRecordMap
   pageInformation: NotionPageData<WorkInformation>
   nextPage: string
   prevPage: string
@@ -34,7 +35,7 @@ function WorkPage({
           <Image placeholder="blur" blurDataURL={placeholder} src={pageInformation.cover.url} fill alt="" sizes="(max-width: 768px) 100vw, 50vw" />
         </div>
         <div className="pt-3">
-          <NotionRenderer blockMap={blocks} />
+          <NotionRenderer components={{ nextImage: Image }} recordMap={blocks} />
         </div>
         <div className="flex items-end justify-between">
 

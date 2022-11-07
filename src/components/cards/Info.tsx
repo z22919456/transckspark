@@ -23,7 +23,7 @@ function Info({ information }: Props) {
   const dateString = dayjs(information['活動日期']).format('DD MMM YYYY');
   // const yearString = dayjs(information['活動日期']).format('YYYY');
   return (
-    <Link href={`/public_participation/${information.id}`}>
+    <Link href={`/news/${information.id}`}>
       <div className="flex flex-wrap mb-3 border-b border-black cursor-pointer sm:flex-nowrap md:flex-wrap lg:flex-nowrap group">
 
         <div className="flex flex-col w-full pr-0 my-5 sm:pr-3 md:pr-0 lg:pr-3 sm:w-1/2 md:w-full lg:w-1/2">

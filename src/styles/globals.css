@@ -91,7 +91,10 @@
   }
 }
 
-
+main.notion-page {
+  max-width: none !important;
+  width: auto !important;
+}
 
 a,
 button,
