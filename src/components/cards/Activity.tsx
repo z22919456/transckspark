@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import el from '@master/style-element.react';
-import placeholder from './assets/imagePlaceholderBase64';
+import placeholder from '../assets/imagePlaceholderBase64';
 
 type Props = {
   id?: string
@@ -46,8 +46,16 @@ function Activity({ activity, id, onlySignUp = true }: Props) {
           <p className="hidden mt-auto text-sm sm:block md:hidden lg:block group-hover:text-primary">Read More...</p>
         </div>
 
-        <div className="relative w-full my-5 aspect-video sm:w-1/2 md:w-full lg:w-1/2">
-          <Image placeholder="blur" blurDataURL={placeholder} src={activity.cover.url} layout="fill" objectFit="cover" alt={activity.Title} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
+        <div className="relative w-full my-5 aspect-video sm:w-1/2 md:w-full lg:w-1/2 after:h-full after:w-full after:absolute after:top-0 after:left-0 group-hover:after:bg-primary-image-hover">
+          <Image
+            placeholder="blur"
+            blurDataURL={placeholder}
+            src={activity.cover.url}
+            layout="fill"
+            objectFit="cover"
+            alt={activity.Title}
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw"
+          />
         </div>
       </div>
     </Link>

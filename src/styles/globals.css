@@ -44,42 +44,50 @@
 
   .about,
   .about * {
-    --primary-color: #FF5C4A
+    --primary-color: #FF5C4A;
+    --primary-color-hover: #FF5C4A88;
   }
 
   .news,
   .news * {
-    --primary-color: #E0E404
+    --primary-color: #E0E404;
+    --primary-color-hover: #E0E40488;
   }
 
   .competition,
   .competition * {
-    --primary-color: #004EFF
+    --primary-color: #004EFF;
+    --primary-color-hover: #004EFF88;
   }
 
   .judge,
   .judge * {
-    --primary-color: #04E4AE
+    --primary-color: #04E4AE;
+    --primary-color-hover: #04E4AE88;
   }
 
   .shortlist,
   .shortlist * {
-    --primary-color: #FFC700
+    --primary-color: #FFC700;
+    --primary-color-hover: #FFC70088;
   }
 
   .activity,
   .activity * {
-    --primary-color: #8388FF
+    --primary-color: #8388FF;
+    --primary-color-hover: #8388FF88;
   }
 
   .question,
   .question * {
-    --primary-color: #FF005C
+    --primary-color: #FF005C;
+    --primary-color-hover: #FF005C88;
   }
 
   .exhibition,
   .exhibition * {
-    --primary-color: #606060
+    --primary-color: #606060;
+    --primary-color-hover: #60606088;
   }
 }
 

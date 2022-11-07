@@ -36,6 +36,7 @@ module.exports = {
       // },
       colors: {
         primary: 'var(--primary-color)',
+        'primary-image-hover': 'var(--primary-color-hover)',
         default: '#191B20',
         about: '#FF5C4A',
         news: '#E0E404',

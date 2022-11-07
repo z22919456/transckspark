@@ -1,6 +1,6 @@
-import { CardContainer } from 'components/Card';
+import { CardContainer } from 'components/cards/Card';
 import Header from 'components/Header';
-import Info from 'components/Info';
+import Info from 'components/cards/Info';
 import SEO from 'components/SEO';
 import { getPageList } from 'lib/notion';
 import React from 'react';
@@ -22,9 +22,9 @@ function News({ pageList }: Props) {
             <h1>最新消息</h1>
             <h1 className="h2">News</h1>
           </div>
-          <CardContainer>
+          <div>
             {pageList.map((page) => <Info key={page.id} information={page} />)}
-          </CardContainer>
+          </div>
         </div>
       </div>
     </>

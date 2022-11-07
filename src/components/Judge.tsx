@@ -2,7 +2,7 @@ import { JudgeType } from 'data/judgesData';
 import Image from 'next/image';
 import React from 'react';
 import placeholder from './assets/imagePlaceholderBase64';
-import Card from './Card';
+import Card from './cards/Card';
 
 type Props = JudgeType & { final?: boolean };
 

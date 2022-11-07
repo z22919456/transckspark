@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import { NotionPageData, WorkInformation } from 'type';
 import placeholder from './assets/imagePlaceholderBase64';
-import Card from './Card';
+import Card from './cards/Card';
 
 type Props = {
   work: NotionPageData<WorkInformation>

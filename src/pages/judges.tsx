@@ -1,5 +1,5 @@
 import placeholder from 'components/assets/imagePlaceholderBase64';
-import { CardContainer } from 'components/Card';
+import { CardContainer } from 'components/cards/Card';
 import Header from 'components/Header';
 import Judge from 'components/Judge';
 import ScrollNav, { ScrollNavLink } from 'components/ScrollNav';

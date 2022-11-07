@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import el from '@master/style-element.react';
-import Activity from 'components/Activity';
-import { CardContainer } from 'components/Card';
+import Activity from 'components/cards/Activity';
+import { CardContainer } from 'components/cards/Card';
 import Header from 'components/Header';
 import ScrollNav, { } from 'components/ScrollNav';
 import SEO from 'components/SEO';
