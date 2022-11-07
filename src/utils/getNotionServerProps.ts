@@ -23,8 +23,7 @@ const getPageServerSideProps = (dbId: string) => async (context: GetStaticPropsC
       revalidate: 10,
     };
   } catch (err) {
-    console.log(err);
-    return { props: { err } };
+    return { notFound: true };
   }
 };
 
