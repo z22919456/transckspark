@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import placeholder from '../assets/imagePlaceholderBase64';
-import Card from './Card';
 
 type Props = {
   information: {

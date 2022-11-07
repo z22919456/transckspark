@@ -1,4 +1,3 @@
-import { CardContainer } from 'components/cards/Card';
 import Header from 'components/Header';
 import Info from 'components/cards/Info';
 import SEO from 'components/SEO';

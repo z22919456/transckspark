@@ -1,22 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import el from '@master/style-element.react';
+import BackToTop from 'components/BackToTop';
 import Activity from 'components/cards/Activity';
-import { CardContainer } from 'components/cards/Card';
 import Header from 'components/Header';
-import ScrollNav, { } from 'components/ScrollNav';
 import SEO from 'components/SEO';
 import dayjs from 'dayjs';
 import { getPageList } from 'lib/notion';
 import React, { useEffect, useMemo, useState } from 'react';
 import { ActivityInformation, NotionPageData } from 'type';
-import { faArrowLeft, faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import BackToTop from 'components/BackToTop';
 
 type Props = {
   pageList: NotionPageData<ActivityInformation>[]
 };
-
-const ACTIVITY_TYPE = ['tour', 'lecture', 'workshop', 'film', 'forum'];
 
 const NavButton = el.button`px-2 py-1 text-xs transition-all duration-200 border rounded-full border-default shrink-0 hover:bg-primary hover:text-default hover:border-default whitespace-nowrap`;
 

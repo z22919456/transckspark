@@ -3,7 +3,6 @@ import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import axios from 'axios';
 import dayjs from 'dayjs';
 import { NotionAPI } from 'notion-client';
-import { BlockMapType } from 'react-notion';
 import { NotionPageData } from 'type';
 
 const notion = new Client({

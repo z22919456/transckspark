@@ -20,7 +20,6 @@ export const getStaticProps = async () => {
   try {
     const notion = new NotionAPI();
     const page = await notion.getPage('cee103878d234b649b3fcbe3bff6702f');
-    console.log(page);
     // const response = await axios.get<BlockMapType>('https://notion-api.splitbee.io/v1/page/cee103878d234b649b3fcbe3bff6702f');
     return {
       props: {

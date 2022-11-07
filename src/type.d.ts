@@ -1,4 +1,4 @@
-export type NotionPageData <T = any> = {
+export type NotionPageData <T = unknown> = {
   id: string
   Title: sting
   '狀態': '已發布' | string
