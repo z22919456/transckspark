@@ -115,14 +115,16 @@ function About() {
 
             <p className="text-sm text-default/60">(主席外依筆畫排列)</p>
 
-            <h3 className="py-4 font-bold"> 競圖工作委員會 </h3>
+            <h3 className="py-4 font-bold"> 競圖執行工作小組 </h3>
             <p><b>召集人 ｜</b> 黃俊銘</p>
             <p><b>執行長 ｜</b> 張維修</p>
             <p><b>策展人 ｜</b> 王俊雄</p>
-            <p><b>統籌執行 ｜</b> 游觀創意策略  張維修、林孝穎、陳怡廷、王晨宣</p>
+            <p><b>秘書長 ｜</b> 蔣雅君</p>
+            <p><b>統籌執行 ｜</b> 游觀創意策略</p>
+            <p><b>團隊 ｜</b> 林孝穎、陳怡廷、王晨宣</p>
             <p><b>美學顧問 ｜</b> 吳漢中</p>
             <p><b>法律顧問 ｜</b> 圓矩法律事務所</p>
-            <p><b>美術及網站製作 ｜</b> J.C、Arthur</p>
+            <p><b>美術及網站製作 ｜</b> J.C、Arthur Li</p>
             <p><b>主視覺構成 ｜</b> 永真急制Workshop</p>
             <p><b>印刷 ｜</b> 博創印藝文化事業</p>
           </Section>
