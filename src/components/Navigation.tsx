@@ -51,12 +51,12 @@ function Navigation({ onClose }: Props) {
           ))}
         </ul>
         <div className="absolute bottom-0 left-0 flex flex-wrap items-center">
-          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
+          <Link href="https://www.facebook.com/transckspark/">
             <a rel="noreferrer noopener" target="_blank">
               <FacebookIcon className="w-6 h-6 mx-5 fill-white" />
             </a>
           </Link>
-          <Link href="https://www.facebook.com/transckspark/">
+          <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
             <a rel="noreferrer noopener" target="_blank">
               <YoutubeIcon className="w-6 h-6 mx-5 fill-white" />
             </a>
