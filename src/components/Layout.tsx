@@ -1,4 +1,5 @@
 import React, { ReactNode, useState } from 'react';
+import BackToTop from './BackToTop';
 
 import Footer from './Footer';
 import LandingPage from './LandingPage';
@@ -21,6 +22,7 @@ function Layout({ children }: Props) {
       <div className="flex justify-end flex-nowrap">
         <div className="w-full h-auto mb-5 md:min-h-screen md:w-1/2">
           {children}
+          <BackToTop />
         </div>
       </div>
       <Footer />

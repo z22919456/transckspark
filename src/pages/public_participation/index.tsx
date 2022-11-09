@@ -1,5 +1,4 @@
 import el from '@master/style-element.react';
-import BackToTop from 'components/BackToTop';
 import Activity from 'components/cards/Activity';
 import Header from 'components/Header';
 import SEO from 'components/SEO';
@@ -75,7 +74,6 @@ function News({ pageList }: Props) {
           <div>
             {list.map((page) => <Activity onlySignUp={onlyShowSignUp} key={page.id} activity={page} />)}
           </div>
-          <BackToTop />
         </div>
       </div>
     </>
