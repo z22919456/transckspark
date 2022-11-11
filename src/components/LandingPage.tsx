@@ -32,14 +32,14 @@ function LandingPage() {
           <Image priority src={eyes} layout="fill" objectPosition="top" objectFit='contain' alt="" ></Image>
         </div>
       </div>
-      <div className="relative hidden w-full h-1/2 md:block">
+      <div className="relative block w-full h-1/4 sm:hidden">
+        <Image priority className="" src={infoSm} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
+      </div>
+      <div className="relative hidden w-full h-1/2 sm:block lg:hidden">
         <Image priority className="" src={infoMd} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
       </div>
-      <div className="relative hidden w-full h-1/2 sm:block md:hidden">
-        <Image priority className="hidden md:block lg:hidden" src={infoSm} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
-      </div>
-      <div className="relative block w-full h-1/4 sm:hidden">
-        <Image priority className="hidden md:block lg:hidden" src={info} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
+      <div className="relative hidden w-full h-1/2 lg:block">
+        <Image priority className="" src={info} layout="fill" objectPosition="bottom" objectFit='contain' alt="" ></Image>
       </div>
     </div>
   );
