@@ -21,17 +21,17 @@ function Footer() {
         </p>
         <div className="flex items-center justify-center w-full my-5 space-x-5 text-center">
           <Link href="mailto:info@vipassanacreative.com">
-            <a aria-label="send email">
-              <FontAwesomeIcon icon={faEnvelope} className="text-xl hover:underline" />
+            <a aria-label="send email" className='w-5'>
+              <FontAwesomeIcon icon={faEnvelope} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
           <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
-            <a rel="noreferrer noopener" target="_blank" aria-label="youtube link">
+            <a rel="noreferrer noopener" target="_blank" aria-label="youtube link" className='w-5'>
               <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
           <Link href="https://www.facebook.com/transckspark/">
-            <a rel="noreferrer noopener" target="_blank" aria-label="facebook link">
+            <a rel="noreferrer noopener" target="_blank" aria-label="facebook link" className='w-5'>
               <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
@@ -83,12 +83,12 @@ function Footer() {
             <small className="hover:underline">Contact us: info@vipassanacreative.com</small>
           </Link>
           <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
-            <a rel="noreferrer noopener" target="_blank" aria-label="youtube link">
+            <a rel="noreferrer noopener" target="_blank" aria-label="youtube link" className='w-5 m-3'>
               <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
           <Link href="https://www.facebook.com/transckspark/">
-            <a rel="noreferrer noopener" target="_blank" aria-label="facebook link">
+            <a rel="noreferrer noopener" target="_blank" aria-label="facebook link" className='w-5 m-3'>
               <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
@@ -112,7 +112,7 @@ function Footer() {
 
       {/* lg */}
       <div className="flex-wrap hidden w-full my-3 text-center xl:flex">
-        <Column className="justify-between w-1/3 border-r ">
+        <Column className="justify-around w-1/3 border-r ">
           <p className="text-center small whitespace-nowrap">
             中正紀念堂園區
             <br />
@@ -122,12 +122,12 @@ function Footer() {
             Contact us: info@vipassanacreative.com
           </a>
           <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
-            <a rel="noreferrer noopener" target="_blank" aria-label="youtube link">
+            <a rel="noreferrer noopener" target="_blank" aria-label="youtube link" className='w-5'>
               <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
           <Link href="https://www.facebook.com/transckspark/">
-            <a rel="noreferrer noopener" target="_blank" aria-label="facebook link">
+            <a rel="noreferrer noopener" target="_blank" aria-label="facebook link" className='w-5'>
               <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-700" />
             </a>
           </Link>
