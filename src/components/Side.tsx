@@ -19,7 +19,7 @@ function Side({ onOpen }: Props) {
       </div>
 
       <aside className="top-0 left-0 block w-full h-[50vh] md:h-screen md:fixed md:w-1/2 bg-default">
-        <div className="top-0 z-10 items-center justify-between hidden w-full md:flex bg-default">
+        <div className="relative top-0 z-10 items-center justify-between hidden w-full md:flex bg-default">
           <NavButton onClick={onOpen} />
           <Location className="hidden ml-auto mr-5 lg:block" />
           <Logo className="mr-5" />
