@@ -11,16 +11,10 @@ function Animates() {
     setHasMounted(true);
   }, []);
   if (!hasMounted) return <></>;
-  const random = Math.floor(Math.random() * 3);
-  if (random === 0) {
-    const AnimateIframe = dynamic(import('./AnimateIframe'), { ssr: false });
-    return <AnimateIframe />;
-  }
+  const random = Math.floor(Math.random() * 2);
   if (random === 1) {
-    const AnimateIframe2 = dynamic(import('./AnimateIframe2'), { ssr: false });
-    return (
-      <div className='w-full h-full overflow-hidden'><AnimateIframe2 /></div>
-    );
+    const AnimateIframe = dynamic(import('./AnimateIframe2'), { ssr: false });
+    return <AnimateIframe />;
   }
   const EyeAnimate = dynamic(import('./EyeAnimate'), { ssr: false });
   return <EyeAnimate />;
