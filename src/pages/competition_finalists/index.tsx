@@ -1,16 +1,17 @@
+import axios from 'axios';
 import Header from 'components/Header';
 import {
   TabContent, TabTrigger, TabTriggerContainer, TabContainer, TabList,
 } from 'components/Tabs';
-import Work from 'components/Work';
-import { getPageList } from 'lib/notion';
 import React from 'react';
-import { NotionPageData, WorkInformation } from 'type';
+import {
+  WorkOpenInformation, WorkStudentInformation,
+} from 'type';
 
 type Props = {
   pageList: {
-    student: NotionPageData<WorkInformation>[]
-    open: NotionPageData<WorkInformation>[]
+    student: WorkStudentInformation[]
+    open: WorkOpenInformation[]
   }
 };
 
@@ -34,10 +35,10 @@ function CompetitionFinalists({ pageList }: Props) {
               <p className='text-sm'>缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案</p>
             </div>
             <TabContent value="student" className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-              {pageList.student.map((page) => <Work key={page.id} work={page} />)}
+              {/* {pageList.student.map((page) => <Work key={page.id} work={page} />)} */}
             </TabContent>
             <TabContent value="open" className="grid grid-flow-row grid-cols-1 mb-5 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-              {pageList.open.map((page) => <Work key={page.id} work={page} />)}
+              {/* {pageList.open.map((page) => <Work key={page.id} work={page} />)} */}
             </TabContent>
           </TabList>
         </TabContainer>
@@ -48,25 +49,14 @@ function CompetitionFinalists({ pageList }: Props) {
 
 export const getStaticProps = async () => {
   try {
-    const pageList = await getPageList<WorkInformation>(process.env.NOTION_WORK_DB_ID || '');
-    const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布');
-    const pageListWithType: { [key: string]: NotionPageData<WorkInformation>[] } = {
-      student: [],
-      open: [],
+    const openList = await axios.get<WorkOpenInformation[]>(`https://notion-api.splitbee.io/v1/table/${process.env.NOTION_WORK_OPEN_DB_ID}`);
+    const studentList = await axios.get<WorkOpenInformation[]>(`https://notion-api.splitbee.io/v1/table/${process.env.NOTION_WORK_STUDENT_DB_ID}`);
+    const studentListWithFilter = studentList.data.filter((page) => page['發布狀態'] === '已發布');
+    const openListWithFilter = openList.data.filter((page) => page['發布狀態'] === '已發布');
+    const pageListWithType = {
+      student: studentListWithFilter,
+      open: openListWithFilter,
     };
-
-    pageListWithFilter.forEach((page) => {
-      switch (page['種類']) {
-        case '社會組':
-          pageListWithType.open.push(page);
-          break;
-        case '學生組':
-          pageListWithType.student.push(page);
-          break;
-        default:
-          break;
-      }
-    });
 
     return {
       props: {

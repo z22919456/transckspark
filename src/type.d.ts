@@ -20,8 +20,19 @@ export type ActivityInformation = {
   '種類': '導覽' | '講座' | '工作坊' | '影展' | '論壇'
 };
 
-export type WorkInformation = {
-  '製作者': string
-  '簡介': string
-  '種類': '學生組' | '社會組'
+export type WorkStudentInformation = {
+  '團隊名稱': string
+  '發布狀態': string
+  '學校系所': string
+  '發布日期': string
+  '團隊成員': string[]
+  '指導老師': string[]
+};
+
+export type WorkOpenInformation = {
+  '團隊名稱': string
+  '發布狀態': string
+  '發布日期': string
+  '就職單位': string
+  '團隊成員': string[]
 };
