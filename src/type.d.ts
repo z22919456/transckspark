@@ -23,9 +23,8 @@ export type ActivityInformation = {
 export type WorkStudentInformation = {
   '團隊名稱': string
   '發布狀態': string
-  '學校系所': string
   '發布日期': string
-  '團隊成員': string[]
+  '團隊成員與學校': string
   '指導老師': string[]
 };
 
@@ -33,6 +32,5 @@ export type WorkOpenInformation = {
   '團隊名稱': string
   '發布狀態': string
   '發布日期': string
-  '就職單位': string
-  '團隊成員': string[]
+  '團隊成員與單位': string[]
 };

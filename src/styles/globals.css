@@ -117,3 +117,7 @@ textarea {
 .ql-tooltip {
   z-index: 50;
 }
+
+#nprogress .bar {
+  height: 3px !important;
+}
