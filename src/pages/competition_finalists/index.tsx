@@ -3,6 +3,7 @@ import Header from 'components/Header';
 import {
   TabContent, TabTrigger, TabTriggerContainer, TabContainer, TabList,
 } from 'components/Tabs';
+import Link from 'next/link';
 import React from 'react';
 import {
   WorkOpenInformation, WorkStudentInformation,
@@ -32,13 +33,39 @@ function CompetitionFinalists({ pageList }: Props) {
               <TabTrigger value="open" >社會組</TabTrigger>
             </TabTriggerContainer>
             <div className="py-10">
-              <p className='text-sm'>缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案</p>
+              <p className='text-sm'>對於中正紀念堂園區的新願景想像，每個人都有至少一種觀點，人與人的相遇，還會產生新的觀點，在反覆交流、互動中，又能碰撞出更多的可能。 想像中正紀念堂的100種方式，匯集了數場靜態和動態的事件，讓更多人在此過程中找到自身與中正紀念堂連結的可能。如果你時常思索：該如何想像中正紀念堂？該如何描述中正紀念堂？該如何再詮釋中正紀念堂？那麼我們想和你分享以下幾種「想像中正紀念的方式」。</p>
+              <div className="mt-6 text-center">
+                <Link href="#">
+                  <button className="w-full max-w-sm py-2 transition-all ease-in-out border-2 rounded-full bg-primary hover:scale-105 border-default">
+                    入圍名單發布記者會新聞稿
+                  </button>
+                </Link>
+              </div>
             </div>
-            <TabContent value="student" className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-              {/* {pageList.student.map((page) => <Work key={page.id} work={page} />)} */}
+            <TabContent value="student" className="w-full">
+              <ul className="w-full border-t border-default">
+                {pageList.student.map((work, index) => (
+                  <li className="px-2 py-3 border-b border-default" key={index}>
+                    <p className="flex flex-wrap items-baseline justify-between w-full mb-1 text-lg">
+                      {work['團隊名稱']}
+                      {work['指導老師'] && <span className="w-full text-sm text-gray-500 sm:text-xs sm:w-fit md:w-fit lg:w-fit">指導老師：{work['指導老師']}</span>}
+                    </p>
+                    <p className="text-sm font-thin text-gray-500">成員：{work['團隊成員與學校']}</p>
+                  </li>
+                ))}
+              </ul>
             </TabContent>
-            <TabContent value="open" className="grid grid-flow-row grid-cols-1 mb-5 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-              {/* {pageList.open.map((page) => <Work key={page.id} work={page} />)} */}
+            <TabContent value="open" className="w-full">
+              <ul className="w-full border-t border-default">
+                {pageList.open.map((work, index) => (
+                  <li className="px-2 py-3 border-b border-default" key={index}>
+                    <p className="flex flex-wrap items-baseline justify-between w-full mb-1 text-lg">
+                      {work['團隊名稱']}
+                    </p>
+                    <p className="text-sm font-thin text-gray-500">成員：{work['團隊成員與單位']}</p>
+                  </li>
+                ))}
+              </ul>
             </TabContent>
           </TabList>
         </TabContainer>
