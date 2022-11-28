@@ -16,7 +16,7 @@ type Props = {
   }
 };
 
-function CompetitionFinalists({ pageList }: Props) {
+function CompetitionShortlists({ pageList }: Props) {
   return (
     <div className="shortlist">
       <Header />
@@ -24,7 +24,7 @@ function CompetitionFinalists({ pageList }: Props) {
 
         <div className="py-10 text-center">
           <h1>入圍作品一覽</h1>
-          <h1 className="h2">Competition Finalists</h1>
+          <h1 className="h2">Competition Shortlists</h1>
         </div>
         <TabContainer defaultValue="student">
           <TabList>
@@ -105,4 +105,4 @@ export const getStaticProps = async () => {
   }
 };
 
-export default CompetitionFinalists;
+export default CompetitionShortlists;

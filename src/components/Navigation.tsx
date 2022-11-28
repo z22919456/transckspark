@@ -17,7 +17,7 @@ const NAV_LIST = [
   { name: '競圖活動說明', subName: 'Competition', href: '/competition' },
   { name: '評審委員', subName: 'The Jury', href: '/judges' },
   {
-    name: '第一階段入圍作品一覽', subName: 'Competition Finalist', href: '/competition_finalists',
+    name: '第一階段入圍作品一覽', subName: 'Competition Shortlists', href: '/competition_shortlists',
   },
   { name: '想像中正紀念堂的100種方式', subName: 'Public Participation', href: '/public_participation' },
   { name: '常見問答', subName: 'FAQ', href: '/faq' },
@@ -34,19 +34,11 @@ function Navigation({ onClose }: Props) {
         <ul className="space-y-3">
           {NAV_LIST.map((list) => (
             <li className="h3" key={list.href}>
-              {list.inactive ? (
-                <p className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 text-gray-500 border-default', pathname === list.href && 'border-white')} onClick={onClose} >
+              <Link href={list.href}>
+                <a className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 hover:translate-x-5 hover:border-white border-default', pathname === list.href && 'border-white')} onClick={onClose} >
                   {list.name} <span className="text-xs font-normal">{list.subName}</span>
-                </p>
-              ) : (
-                <Link href={list.href}>
-                  <a className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 hover:translate-x-5 hover:border-white border-default', pathname === list.href && 'border-white')} onClick={onClose} >
-                    {list.name} <span className="text-xs font-normal">{list.subName}</span>
-                  </a>
-                </Link>
-              )
-              }
-
+                </a>
+              </Link>
             </li>
           ))}
         </ul>

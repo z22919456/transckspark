@@ -49,7 +49,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
       lastmod: new Date().toISOString(),
     },
     {
-      loc: `${process.env.NEXT_PUBLIC_HOST}/competition_finalists`,
+      loc: `${process.env.NEXT_PUBLIC_HOST}/competition_shortlists`,
       lastmod: new Date().toISOString(),
     },
     {
