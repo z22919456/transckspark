@@ -69,6 +69,7 @@ function CompetitionFinalists({ pageList }: Props) {
             </TabContent>
           </TabList>
         </TabContainer>
+        <p className="mt-5 text-sm font-thin text-center text-gray-500">以上順序按照團隊筆畫排序，無關名次</p>
       </div>
     </div>
   );
