@@ -56,6 +56,10 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
       loc: `${process.env.NEXT_PUBLIC_HOST}/exhibition`,
       lastmod: new Date().toISOString(),
     },
+    {
+      loc: `${process.env.NEXT_PUBLIC_HOST}/private_policies`,
+      lastmod: new Date().toISOString(),
+    },
   ];
 
   await Promise.all([
