@@ -30,7 +30,7 @@ function Header({ className }: Props) {
   useEffect(() => {
     const timer = setInterval(() => {
       const day = to.diff(now, 'd');
-      const time = dayjs(to.diff(now)).format('HH:MM:ss');
+      const time = dayjs(to.diff(now)).subtract(8, 'h').format('HH:mm:ss');
       setDuration({ day, time });
     }, 1000);
     return () => clearInterval(timer);
