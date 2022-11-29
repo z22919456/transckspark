@@ -3,6 +3,7 @@ import Header from 'components/Header';
 import {
   TabContent, TabTrigger, TabTriggerContainer, TabContainer, TabList,
 } from 'components/Tabs';
+import dayjs from 'dayjs';
 import Link from 'next/link';
 import React from 'react';
 import {
@@ -76,6 +77,7 @@ function CompetitionShortlists({ pageList }: Props) {
 }
 
 export const getStaticProps = async () => {
+  if (dayjs().isBefore(dayjs('2022-12-01T12:00:00.000+08:00'))) return { notFound: true };
   try {
     const openList = await axios.get<WorkOpenInformation[]>(`https://notion-api.splitbee.io/v1/table/${process.env.NOTION_WORK_OPEN_DB_ID}`);
     const studentList = await axios.get<WorkOpenInformation[]>(`https://notion-api.splitbee.io/v1/table/${process.env.NOTION_WORK_STUDENT_DB_ID}`);

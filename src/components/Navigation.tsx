@@ -2,6 +2,7 @@ import classnames from 'classnames';
 import FacebookIcon from 'components/assets/footer/fb.svg';
 import YoutubeIcon from 'components/assets/footer/yt.svg';
 import List from 'components/assets/nav/list.svg';
+import dayjs from 'dayjs';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -17,7 +18,7 @@ const NAV_LIST = [
   { name: '競圖活動說明', subName: 'Competition', href: '/competition' },
   { name: '評審委員', subName: 'The Jury', href: '/judges' },
   {
-    name: '第一階段入圍作品一覽', subName: 'Competition Shortlists', href: '/competition_shortlists',
+    name: '第一階段入圍作品一覽', subName: 'Competition Shortlists (2022.12.1揭曉)', href: '/competition_shortlists', inactive: true,
   },
   { name: '想像中正紀念堂的100種方式', subName: 'Public Participation', href: '/public_participation' },
   { name: '常見問答', subName: 'FAQ', href: '/faq' },
@@ -26,6 +27,9 @@ const NAV_LIST = [
 
 function Navigation({ onClose }: Props) {
   const route = useRouter();
+
+  const isShow = dayjs().isBefore(dayjs('2022-12-01 12:00'));
+
   const { pathname } = route;
   return (
     <nav className="fixed top-0 left-0 z-50 flex w-screen h-screen max-h-screen p-5 overflow-hidden text-white md:w-1/2 bg-default">
@@ -34,11 +38,18 @@ function Navigation({ onClose }: Props) {
         <ul className="space-y-3">
           {NAV_LIST.map((list) => (
             <li className="h3" key={list.href}>
-              <Link href={list.href}>
-                <a className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 hover:translate-x-5 hover:border-white border-default', pathname === list.href && 'border-white')} onClick={onClose} >
+              {list.inactive && isShow ? (
+                <p className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 text-gray-500 border-default', pathname === list.href && 'border-white')} >
                   {list.name} <span className="text-xs font-normal">{list.subName}</span>
-                </a>
-              </Link>
+                </p>
+              ) : (
+                <Link href={list.href}>
+                  <a className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 hover:translate-x-5 hover:border-white border-default', pathname === list.href && 'border-white')} onClick={onClose} >
+                    {list.name} <span className="text-xs font-normal">{list.subName}</span>
+                  </a>
+                </Link>
+              )
+              }
             </li>
           ))}
         </ul>

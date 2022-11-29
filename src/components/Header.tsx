@@ -1,15 +1,18 @@
 import classnames from 'classnames';
 import TitleSvg from 'components/assets/title.svg';
 import dayjs from 'dayjs';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 type Props = {
   className?: string
 };
 
+const FIRST_TIME = '2022-12-01T12:00:00.000+08:00';
+const SECOND_TIME = '2023-02-15T12:00:00.000+08:00';
+
 function Header({ className }: Props) {
   const now = dayjs();
-  const to = dayjs('2022-12-01 12:00');
+  const to = useMemo(() => dayjs(dayjs().isBefore(dayjs(FIRST_TIME)) ? FIRST_TIME : SECOND_TIME), []);
   const [duration, setDuration] = useState({ day: 0, time: '00:00:00' });
 
   useEffect(() => {
