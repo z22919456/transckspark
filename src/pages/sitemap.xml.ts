@@ -61,7 +61,6 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   await Promise.all([
     getNews(),
     getActivities(),
-    getWorks(),
   ]).then((values) => {
     values.forEach((p) => {
       fields = fields.concat(p);
