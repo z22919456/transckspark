@@ -18,7 +18,7 @@ const NAV_LIST = [
   { name: '競圖活動說明', subName: 'Competition', href: '/competition' },
   { name: '評審委員', subName: 'The Jury', href: '/judges' },
   {
-    name: '第一階段入圍作品一覽', subName: 'Competition Shortlists (2022.12.1揭曉)', href: '/competition_shortlists', inactive: true,
+    name: '初審入圍名單一覽', subName: 'Competition Shortlists (2022.12.1揭曉)', href: '/competition_shortlists', inactive: true,
   },
   { name: '想像中正紀念堂的100種方式', subName: 'Public Participation', href: '/public_participation' },
   { name: '常見問答', subName: 'FAQ', href: '/faq' },
