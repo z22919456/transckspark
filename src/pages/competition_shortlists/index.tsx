@@ -35,7 +35,7 @@ function CompetitionShortlists({ pageList }: Props) {
             <div className="py-10">
               <p className='text-sm'>對於中正紀念堂園區的新願景想像，每個人都有至少一種觀點，人與人的相遇，還會產生新的觀點，在反覆交流、互動中，又能碰撞出更多的可能。 想像中正紀念堂的100種方式，匯集了數場靜態和動態的事件，讓更多人在此過程中找到自身與中正紀念堂連結的可能。如果你時常思索：該如何想像中正紀念堂？該如何描述中正紀念堂？該如何再詮釋中正紀念堂？那麼我們想和你分享以下幾種「想像中正紀念的方式」。</p>
               <div className="mt-6 text-center">
-                <Link href="#">
+                <Link href="/中正紀念堂園區新願景概念競圖初審入圍名單發布記者會新聞稿.pdf">
                   <button className="w-full max-w-sm py-2 transition-all ease-in-out border-2 rounded-full bg-primary hover:scale-105 border-default">
                     入圍名單發布記者會新聞稿
                   </button>
