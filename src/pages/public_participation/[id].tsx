@@ -29,7 +29,7 @@ function ActivityPage({ pageInformation, blocks }: Props) {
         </div>
         <div className="px-5">
           <div className="relative w-full aspect-video">
-            <Image placeholder="blur" blurDataURL={placeholder} src={pageInformation.cover.url} fill alt="" sizes="(max-width: 768px) 100vw, 50vw" />
+            <Image placeholder="blur" blurDataURL={placeholder} src={pageInformation.cover.url} fill className="object-cover" alt="" sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
           <div className="pt-3">
             <NotionRenderer components={{ nextImage: Image }} recordMap={blocks}></NotionRenderer>
