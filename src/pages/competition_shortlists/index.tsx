@@ -24,7 +24,7 @@ function CompetitionShortlists({ pageList }: Props) {
       <div className="mx-5">
 
         <div className="py-10 text-center">
-          <h1>入圍作品一覽</h1>
+          <h1>初審入圍名單一覽</h1>
           <h1 className="h2">Competition Shortlists</h1>
         </div>
         <TabContainer defaultValue="student">
