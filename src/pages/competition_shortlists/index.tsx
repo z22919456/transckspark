@@ -21,7 +21,7 @@ type Props = {
 function CompetitionShortlists({ pageList }: Props) {
   return (
     <>
-      <SEO title="最新消息 News" description="首都之心 城中轉正：中正紀念堂園區新願景概念競圖 第一階段入圍作品。" />
+      <SEO title="競圖活動說明  Competition" description="首都之心 城中轉正：中正紀念堂園區新願景概念競圖 第一階段入圍作品。" />
       <div className="shortlist">
         <Header />
         <div className="mx-5">
