@@ -34,7 +34,11 @@ function CompetitionShortlists({ pageList }: Props) {
               <TabTrigger value="open" >社會組</TabTrigger>
             </TabTriggerContainer>
             <div className="py-10">
-              <p className='text-sm'>對於中正紀念堂園區的新願景想像，每個人都有至少一種觀點，人與人的相遇，還會產生新的觀點，在反覆交流、互動中，又能碰撞出更多的可能。 想像中正紀念堂的100種方式，匯集了數場靜態和動態的事件，讓更多人在此過程中找到自身與中正紀念堂連結的可能。如果你時常思索：該如何想像中正紀念堂？該如何描述中正紀念堂？該如何再詮釋中正紀念堂？那麼我們想和你分享以下幾種「想像中正紀念的方式」。</p>
+              <p className='text-sm'>
+                「中正紀念堂園區新願景概念競圖」，自2022.7.1起公開徵件，至11/10交件截止日止，共有學生組97件、社會組45件符合交件規格之作品進入評選，其中有15件海外作品。初審評審委員在所有作品中，挑出學生組、社會組優選作品各15件，這30組入圍團隊，需在2023.2.15前精進作品，爭取決選佳績。
+                <br />
+                評審委員會與主辦單位向這一路上所有的參與人致謝，你們的熱情參與，讓我們有機會用空間為本案找解方、為競圖的議題擴大溝通與對話的可能。
+              </p>
               <div className="mt-6 text-center">
                 <Link href="/中正紀念堂園區新願景概念競圖初審入圍名單發布記者會新聞稿.pdf">
                   <button className="w-full max-w-sm py-2 transition-all ease-in-out border-2 rounded-full bg-primary hover:scale-105 border-default">
