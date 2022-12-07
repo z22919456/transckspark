@@ -57,7 +57,6 @@ function Faq({ faqData }: Props) {
 
 type FaqResponse = {
   id: string
-  '排序': number
   '解答': string
   '分類': string
   '問題': string
@@ -71,7 +70,7 @@ export const getStaticProps = async () => {
 
     const faqData = faqType.map((type) => ({
       title: type,
-      faq: faqList.data.filter((faq) => faq['分類'] === type).sort((a, b) => a['排序'] - b['排序']),
+      faq: faqList.data.filter((faq) => faq['分類'] === type && !!faq['問題'] && !!faq['解答']),
     }));
 
     return {
