@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {
   Accordion,
   AccordionContent,
@@ -6,11 +7,19 @@ import {
 } from 'components/Accordion';
 import Header from 'components/Header';
 import SEO from 'components/SEO';
+import { getPageList } from 'lib/notion';
 import React from 'react';
 
-import faqData from '../data/faqData';
+type FaqData = {
+  title: string
+  faq: FaqResponse[]
+}[];
 
-function Faq() {
+type Props = {
+  faqData: FaqData
+};
+
+function Faq({ faqData }: Props) {
   return (
     <>
       <SEO title="常見問答   FAQ" />
@@ -30,10 +39,10 @@ function Faq() {
                 {faqGroup.faq.map((faq) => (
                   <AccordionItem value={faq.id.toString()} key={faq.id}>
                     <AccordionTrigger>
-                      {faq.question}
+                      {faq['問題']}
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div dangerouslySetInnerHTML={{ __html: faq.answer }}></div>
+                      <div dangerouslySetInnerHTML={{ __html: faq['解答'] }}></div>
                     </AccordionContent>
                   </AccordionItem>
                 ))}
@@ -45,5 +54,38 @@ function Faq() {
     </>
   );
 }
+
+type FaqResponse = {
+  id: string
+  '排序': number
+  '解答': string
+  '分類': string
+  '問題': string
+};
+
+export const getStaticProps = async () => {
+  try {
+    const faqList = await axios.get<FaqResponse[]>('https://notion-api.splitbee.io/v1/table/df13a0f7c8c847babdb5f10245f739d8');
+
+    const faqType = Array.from(new Set(faqList.data.map((faq) => faq['分類'])));
+
+    const faqData = faqType.map((type) => ({
+      title: type,
+      faq: faqList.data.filter((faq) => faq['分類'] === type).sort((a, b) => a['排序'] - b['排序']),
+    }));
+
+    return {
+      props: {
+        faqData: JSON.parse(JSON.stringify(faqData)),
+      },
+      revalidate: 10,
+    };
+  } catch {
+    return {
+      props: { faqDate: [] },
+      revalidate: 10,
+    };
+  }
+};
 
 export default Faq;
