@@ -122,10 +122,10 @@ export const firstJudges = [
 export const finalJudges = [
   {
     id: 1,
-    name: 'Andres Lepik',
-    title: '慕尼黑工業大學建築博物館館長',
-    engName: 'Andres Lepik',
-    information: '馬克斯普朗克藝術史研究所博士，曾於德國奧格斯堡大學研讀藝術史以及德語文學。曾任《新蘇黎世報》自由記者、柏林新國家美術館策展人、紐約現代藝術博物館建築和設計部策展人、建築與設計雜誌《Domus》記者。研究專長為建築展覽歷史與理論、當代社會參與建築以及參與式結構，相信建築應該與社會密切對話。具有多項建築展覽策展經驗，包括「Renzo Piano 生活的建築 2000）」、「Rem Koolhaas - AMO/OMA 2003）」 、「Oswald Mathias Ungers 2006）」，並曾在2021年與台灣策展人合作『Taiwan Acts! 』建築展 ，為台灣首次在德國呈現相關主題中，規模最大、內容最豐富的台灣現代建築文化展',
+    name: 'Jolanta Gromadzka',
+    title: '波蘭建築博物館副館長',
+    engName: 'Jolanta Gromadzka',
+    information: '畢業於波蘭弗羅茨瓦夫大學（University of Wrocław）藝術史研究所及波蘭雅蓋隆大（Jagiellonian University）大學博物館策展研究。專注於十九世紀及二十世紀建築的資深策展人，目前是波蘭建築博物館副館長',
     image: judgeImg12,
   },
   {
