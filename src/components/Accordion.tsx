@@ -10,9 +10,10 @@ import {
 import classnames from 'classnames';
 import AddIcon from 'components/assets/add.svg';
 import React, { forwardRef } from 'react';
+import tw from 'tailwind-styled-components';
 
-export const Accordion = el(Root)`overflow-hidden mb-10`;
-export const AccordionItem = el(Item)`overflow-hidden border-t last:border-b border-default`;
+export const Accordion = tw(Root)`overflow-hidden mb-10`;
+export const AccordionItem = tw(Item)`overflow-hidden border-t last:border-b border-default`;
 
 export const AccordionContent = ({ className, children }: AccordionContentProps) => (
   <Content className={classnames('overflow-hidden text-primary rdx-state-open:animate-slide-down rdx-state-closed:animate-slide-up', className)} >

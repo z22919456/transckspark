@@ -12,6 +12,6 @@ const Card = tw.div`w-full
   group
 `;
 
-export const CardContainer = el.div`grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2`;
+export const CardContainer = tw.div`grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2`;
 
 export default Card;
