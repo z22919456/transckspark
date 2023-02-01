@@ -18,7 +18,7 @@ export const competitionEnglishData = {
     },
     {
       title: 'Final Judging',
-      time: 'Late Feb 2023',
+      time: 'Feb 22, 2023 to Feb 23, 2023',
     },
     {
       title: 'Announcement of Winners',
@@ -104,7 +104,7 @@ export const competitionData = {
     },
     {
       title: '決審評選日',
-      time: '2023.2下旬',
+      time: '2023.2.22-2023.2.23',
     },
     {
       title: '決審獲獎者公布',
