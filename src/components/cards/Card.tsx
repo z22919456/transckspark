@@ -1,6 +1,6 @@
-import el from '@master/style-element.react';
+import tw from 'tailwind-styled-components';
 
-const Card = el.div`w-full 
+const Card = tw.div`w-full 
   relative
   py-5 md:px-0 sm:px-5 lg:px-5 lg:odd:pl-0 lg:even:pr-0 sm:odd:pl-0 sm:even:pr-0
   border-t sm:odd:border-r md:odd:border-r-0 lg:odd:border-r border-default 

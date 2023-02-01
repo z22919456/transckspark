@@ -1,4 +1,4 @@
-import el from '@master/style-element.react';
+import tw from 'tailwind-styled-components';
 import Activity from 'components/cards/Activity';
 import Header from 'components/Header';
 import SEO from 'components/SEO';
@@ -11,7 +11,7 @@ type Props = {
   pageList: NotionPageData<ActivityInformation>[]
 };
 
-const NavButton = el.button`px-2 py-1 text-xs transition-all duration-200 border rounded-full border-default shrink-0 hover:bg-primary hover:text-default hover:border-default whitespace-nowrap`;
+const NavButton = tw.button`px-2 py-1 text-xs transition-all duration-200 border rounded-full border-default shrink-0 hover:bg-primary hover:text-default hover:border-default whitespace-nowrap`;
 
 function News({ pageList }: Props) {
   const signUpPageList = useMemo(() => pageList.filter((p) => dayjs(p['報名截止日期']).isAfter(dayjs())), [pageList]);

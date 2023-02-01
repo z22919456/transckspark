@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import el from '@master/style-element.react';
+import tw from 'tailwind-styled-components';
 import placeholder from '../assets/imagePlaceholderBase64';
 
 type Props = {
@@ -23,7 +23,7 @@ type Props = {
   onlySignUp: boolean
 };
 
-const Tag = el.div`px-2 text-xs border rounded-full border-default`;
+const Tag = tw.div`px-2 text-xs border rounded-full border-default`;
 
 function Activity({ activity, id, onlySignUp = true }: Props) {
   const dateString = dayjs(activity['活動日期']).format('DD MMM YYYY');
