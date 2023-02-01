@@ -1,4 +1,3 @@
-import el from '@master/style-element.react';
 import {
   AccordionContentProps,
   AccordionTriggerProps,
