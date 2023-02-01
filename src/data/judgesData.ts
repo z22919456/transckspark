@@ -184,13 +184,4 @@ export const finalJudges = [
     engName: ' Cheng-Yi Huang',
     information: '清華大學科技法律研究所合聘教授、台灣民間真相與和解促進會理事、財團法人島國前進基金會董事長。芝加哥大學法學博士，曾經擔任台灣民間真相與和解促進會理事長2016-2018）、台灣人權促進會副會長2011-2012）、北美洲台灣研究學會會長2007-2008），研究領域包括轉型正義、憲政主義、比較行政法、法律與社會、台灣法律史。學術作品散見Law & Social Inquiry, Washington Journal of International Law, Oxford Handbook of Comparative Administrative Law，台大法學論叢、世新法學等刊物。曾獲美國「法律與社會」學會年度最佳博士論文獎榮譽獎。擔任民間真促會理事長期間，曾與台北律師公會共同舉辦第三屆模擬憲法法庭轉型正義）。受邀擔任文官學院、法官學院、司法官學院講座及憲法法庭鑑定人。近期著作為Constitutionalizing Transitional Justice (Routledge 2022)',
     image: judgeImg19,
-  },
-  {
-    id: 9,
-    name: '藤森照信',
-    title: '建築家、建築史家',
-    engName: 'Terunobu Fujimori',
-    information: '畢業於東北大學工學部建築系。《近代建築指南「關東篇」》。1986年，和赤瀨川原平、南伸坊創立了路上觀察學會。1998年以「日本近代的都市‧建築史研究」獲得日文建築學會獎的論文獎。',
-    image: judgeImg20,
-    alt: '準建築人手札網站 Forgemind ArchiMedia',
   }];
