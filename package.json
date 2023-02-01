@@ -22,8 +22,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@master/literal": "^1.0.11",
-    "@master/style-element.react": "^1.1.6",
     "@next-auth/prisma-adapter": "^1.0.5",
     "@notionhq/client": "^2.2.1",
     "@prisma/client": "^4.4.0",
