@@ -184,4 +184,13 @@ export const finalJudges = [
     engName: ' Cheng-Yi Huang',
     information: '清華大學科技法律研究所合聘教授、台灣民間真相與和解促進會理事、財團法人島國前進基金會董事長。芝加哥大學法學博士，曾經擔任台灣民間真相與和解促進會理事長2016-2018）、台灣人權促進會副會長2011-2012）、北美洲台灣研究學會會長2007-2008），研究領域包括轉型正義、憲政主義、比較行政法、法律與社會、台灣法律史。學術作品散見Law & Social Inquiry, Washington Journal of International Law, Oxford Handbook of Comparative Administrative Law，台大法學論叢、世新法學等刊物。曾獲美國「法律與社會」學會年度最佳博士論文獎榮譽獎。擔任民間真促會理事長期間，曾與台北律師公會共同舉辦第三屆模擬憲法法庭轉型正義）。受邀擔任文官學院、法官學院、司法官學院講座及憲法法庭鑑定人。近期著作為Constitutionalizing Transitional Justice (Routledge 2022)',
     image: judgeImg19,
-  }];
+  },
+  {
+    id: 9,
+    name: 'Philip J. Goad',
+    title: '墨爾本大學建築、結構和規劃學院的Redmond Barry傑出特聘教授兼建築系系主任',
+    engName: ' Philip J. Goad',
+    information: '目前擔任墨爾本大學建築、結構和規劃學院的Redmond Barry傑出特聘教授兼建築系系主任。他還是澳洲皇家建築師學會維多利亞分會的前任主席。 Phillip 於 2021 年 7 月成為維多利亞州遺產委員會主席。Philip 主要從事建築歷史、理論和設計領域的研究。他是現代澳洲建築史的權威。他曾是美國哥倫比亞大學、英國巴特利特建築學院（倫敦）和美國加州大學洛杉磯分校的訪問學者。 Philip是澳洲和紐西蘭建築歷史學家協會雜誌 Fabrications 的前任編輯，也是澳洲建築協會的前特約編輯。2000 年，Philip獲得了澳洲皇家建築師協會頒發的 Bates Smart 媒體建築獎。 1994 年，他獲得了澳洲皇家規劃研究所（現為澳洲規劃研究所）頒發的聯合 RAPI 卓越獎，並於 1991 年獲得 RAIA 總統獎。',
+    image: judgeImg20,
+  },
+];
