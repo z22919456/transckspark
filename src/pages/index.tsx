@@ -111,7 +111,7 @@ function About() {
             <p>台灣現代建築學會、中華民國景觀學會、中華民國都市設計學會</p>
             <h3 className="py-4 font-bold">競圖評審委員會</h3>
             <p><b>初審評審 ｜</b> 賀陳旦(主席)、林芳慧、侯志仁、郭瓊瑩、陳翠蓮、曾旭正、黃海鳴、黃聲遠、詹偉雄、蔡詩萍</p>
-            <p><b>決審評審 ｜</b> 賀陳旦(主席)、Andres Lepik、王明蘅、林曼麗、林靜娟、曾成德、曾旭正、黃丞儀、藤森照信 </p>
+            <p><b>決審評審 ｜</b> 賀陳旦(主席)、Jolanta Gromadzka、Philip J. Goad、王明蘅、林曼麗、林靜娟、曾成德、曾旭正、、黃丞儀 </p>
 
             <p className="text-sm text-default/60">(主席外依筆畫排列)</p>
 
