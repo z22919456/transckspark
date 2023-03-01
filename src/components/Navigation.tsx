@@ -22,7 +22,7 @@ const NAV_LIST = [
   },
   { name: '想像中正紀念堂的100種方式', subName: 'Public Participation', href: '/public_participation' },
   { name: '常見問答', subName: 'FAQ', href: '/faq' },
-  // { name: '競圖成果展覽', href: '/exhibition' },
+  { name: '競圖成果展覽', href: '/exhibition' },
 ];
 
 function Navigation({ onClose }: Props) {

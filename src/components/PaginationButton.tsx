@@ -16,7 +16,7 @@ function PaginationButton({ nextPage, prevPage }: Props) {
         {prevPage && (
           <Link href={prevPage}>
             <a className="flex flex-col items-center text-center group">
-              <div className="flex items-center justify-center w-10 h-10 my-auto border border-black rounded-full hover:bg-primary">
+              <div className="flex items-center justify-center w-10 h-10 p-2 my-auto border border-black rounded-full hover:bg-primary">
                 <FontAwesomeIcon icon={faArrowLeft} />
               </div>
               <span className="small text-default/70 group-hover:text-primary">Previous</span>
@@ -26,7 +26,7 @@ function PaginationButton({ nextPage, prevPage }: Props) {
         {nextPage && (
           <Link href={nextPage} >
             <a className="flex flex-col items-center text-center group">
-              <div className="flex items-center justify-center w-10 h-10 my-auto border border-black rounded-full hover:bg-primary">
+              <div className="flex items-center justify-center w-10 h-10 p-2 my-auto border border-black rounded-full hover:bg-primary">
                 <FontAwesomeIcon icon={faArrowRight} />
               </div>
               <span className="small text-default/70 group-hover:text-primary">Next</span>

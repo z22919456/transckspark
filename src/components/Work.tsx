@@ -1,17 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { NotionPageData, WorkInformation } from 'type';
+import { NotionPageData, ExhibitionInformation } from 'type';
 import placeholder from './assets/imagePlaceholderBase64';
 import Card from './cards/Card';
 
 type Props = {
-  work: NotionPageData<WorkInformation>
+  work: NotionPageData<ExhibitionInformation>
 };
 
 function Work({ work }: Props) {
   return (
     <Card>
+
       <div className="flex justify-between">
         <p className="small">{work['種類']}</p>
         <p className="small">{work['製作者']}</p>
@@ -21,7 +22,7 @@ function Work({ work }: Props) {
         <Image placeholder="blur" blurDataURL={placeholder} src={work.cover.url} layout="fill" objectFit="cover" alt={work.Title} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
       </div>
       <p className="h-16 text-xs line-clamp-4">{work['簡介']}</p>
-      <Link href={`/competition_finalists/${work.id}`}>
+      <Link href={`/exhibition/${work.id}`}>
         <p className="my-5 text-center">
           <a className="cursor-pointer hover:text-primary">
             read more ➔

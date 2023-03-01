@@ -18,6 +18,14 @@ const getActivities = async () => {
   }));
 };
 
+const getExhibition = async () => {
+  const response = await axios.get<{ id:string }[]>(`https://notion-api.splitbee.io/v1/table/${process.env.NOTION_WORK_DB_ID}`);
+  return response.data.map((d) => ({
+    loc: `${process.env.NEXT_PUBLIC_HOST}/exhibition/${d.id}`,
+    lastmod: new Date().toISOString(),
+  }));
+};
+
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   let fields = [
     {
@@ -65,6 +73,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   await Promise.all([
     getNews(),
     getActivities(),
+    getExhibition(),
   ]).then((values) => {
     values.forEach((p) => {
       fields = fields.concat(p);
