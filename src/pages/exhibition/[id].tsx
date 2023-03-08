@@ -12,6 +12,7 @@ import getNotionServerPaths from 'utils/getNotionServerPaths';
 import placeholder from 'components/assets/imagePlaceholderBase64';
 import { ExtendedRecordMap } from 'notion-types';
 import SEO from 'components/SEO';
+import MedalImg from 'components/assets/medal.png';
 
 type Props = {
   blocks: ExtendedRecordMap
@@ -29,8 +30,11 @@ function WorkPage({
       <div className="exhibition">
         <Header />
         <div className="py-16 text-center">
-          <span className="small">{pageInformation['種類']}</span>
-          <h1>{pageInformation.Title}</h1>
+          <span className="block small">{pageInformation['種類']}</span>
+          <h1 className="inline-flex">
+            {pageInformation['優勝'] && <Image src={MedalImg} width={42} alt="medal" className="-ml-3" />}
+            {pageInformation.Title}
+          </h1>
           <h1 className="h2">{pageInformation['製作者']}</h1>
         </div>
         <div className="px-5">

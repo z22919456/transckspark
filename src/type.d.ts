@@ -39,4 +39,5 @@ export type ExhibitionInformation = {
   '製作者': string
   '簡介': string
   '種類': '學生組' | '社會組'
+  '優勝': boolean
 };
