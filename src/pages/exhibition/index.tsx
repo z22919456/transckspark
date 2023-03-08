@@ -34,7 +34,18 @@ function Exhibition({ pageList }: Props) {
                 <TabTrigger value="open" >社會組</TabTrigger>
               </TabTriggerContainer>
               <div className="py-10">
-                <p className='text-sm'>缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案缺少此處文案</p>
+                <p className='mb-2 text-sm'>
+                  本次競圖活動，我們採用兩階段性競賽的方式，事先公布評審名單，第一階段採單盲（將作品匿名去識別化）評選方法，堅守利益迴避原則，讓作者們不依其學校、背景、姓名，影響評審的判斷，從作品本身的概念和創意，來爭取評審們的優先推薦。
+                </p>
+                <p className='mb-2 text-sm'>
+                  入圍第一階段的團隊共有社會組及學生組各十五組，分別獲得15萬元的工作獎金，支持他們更進一步深化設計，並且準備口頭報告，在第二階段決選的公開直播舞臺上，與評審們互動，爭取進入下一階段的門票。
+                </p>
+                <p className='mb-2 text-sm'>
+                  為了保護每個團隊的原創構想，直到最後決審的直播現場才完整的公開入圍團隊的作品細節。第二階段決審選出的社會組及學生組各5組優勝作品的團隊，可以再獲得各30萬元的工作獎金，繼續發展作品的細部設計和論述、製作模型和影片，與所有的入圍者，一同參加實體的成果展覽。
+                </p>
+                <p className='text-sm'>
+                  本次競賽的主要目標是促進社會的對話與交流，最後選出的優勝作品並不分名次順序，希望可以開拓社會各界更多的想像空間。
+                </p>
               </div>
               <TabContent value="student" className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
                 {pageList.student.map((page) => <Work key={page.id} work={page} />)}
