@@ -9,6 +9,7 @@ import { NotionPageData, ExhibitionInformation } from 'type';
 import SEO from 'components/SEO';
 
 type Props = {
+
   pageList: {
     student: NotionPageData<ExhibitionInformation>[]
     open: NotionPageData<ExhibitionInformation>[]
