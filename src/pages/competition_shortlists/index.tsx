@@ -21,13 +21,13 @@ type Props = {
 function CompetitionShortlists({ pageList }: Props) {
   return (
     <>
-      <SEO title="第一階段入圍作品一覽  Competition Shortlists" description="首都之心 城中轉正：中正紀念堂園區新願景概念競圖 第一階段入圍作品。" />
+      <SEO title="初審入圍名單  Competition Shortlists" description="首都之心 城中轉正：中正紀念堂園區新願景概念競圖 初審入圍名單。" />
       <div className="shortlist">
         <Header />
         <div className="mx-5">
 
           <div className="py-10 text-center">
-            <h1>初審入圍名單一覽</h1>
+            <h1>初審入圍名單</h1>
             <h1 className="h2">Competition Shortlists</h1>
           </div>
           <TabContainer defaultValue="student">

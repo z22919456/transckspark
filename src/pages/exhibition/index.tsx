@@ -18,14 +18,14 @@ type Props = {
 function Exhibition({ pageList }: Props) {
   return (
     <>
-      <SEO title="競圖成果展覽 Exhibition" description="" />
+      <SEO title="入圍作品及優勝名單 Competition Finalists & Winners" description="首都之心 城中轉正：中正紀念堂園區新願景概念競圖 入圍作品及優勝名單" />
       <div className="exhibition">
         <Header className="from-exhibition" />
         <div className="mx-5">
 
           <div className="py-10 text-center">
-            <h1>入圍作品一覽</h1>
-            <h1 className="h2">Competition Finalists</h1>
+            <h1>入圍作品及優勝名單</h1>
+            <h1 className="h2">Competition Finalists & Winners</h1>
           </div>
           <TabContainer defaultValue="student">
             <TabList>
