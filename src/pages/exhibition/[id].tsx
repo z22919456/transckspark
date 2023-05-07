@@ -55,8 +55,8 @@ function WorkPage({
   );
 }
 
-// export const getStaticPaths = getNotionServerPaths(process.env.NOTION_WORK_DB_ID || '');
+export const getStaticPaths = getNotionServerPaths(process.env.NOTION_WORK_DB_ID || '');
 
-export const getServerSideProps = getPageServerSideProps(process.env.NOTION_WORK_DB_ID || '');
+export const getStaticProps = getPageServerSideProps(process.env.NOTION_WORK_DB_ID || '');
 
 export default WorkPage;

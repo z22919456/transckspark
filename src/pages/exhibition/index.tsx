@@ -62,7 +62,7 @@ function Exhibition({ pageList }: Props) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   try {
     const pageList = await getPageList<ExhibitionInformation>(process.env.NOTION_WORK_DB_ID || '');
     const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布');
@@ -88,7 +88,7 @@ export const getServerSideProps = async () => {
       props: {
         pageList: JSON.parse(JSON.stringify(pageListWithType)),
       },
-      revalidate: 10,
+      // revalidate: 10,
     };
   } catch {
     return {
