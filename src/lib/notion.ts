@@ -4,6 +4,7 @@ import axios from 'axios';
 import dayjs from 'dayjs';
 import { NotionAPI } from 'notion-client';
 import { NotionPageData } from 'type';
+import uploadImage from 'utils/uploadImage';
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
@@ -53,7 +54,7 @@ export const getPageList = async <T>(id: string) => {
     database_id: id,
   });
 
-  const pagesWithCover = originResponse.results.map((page) => {
+  const pagesWithCover = await Promise.all(originResponse.results.map(async (page) => {
     const nullCover = {
       id: page.id,
       cover: { url: '' },
@@ -69,14 +70,17 @@ export const getPageList = async <T>(id: string) => {
     }
 
     if ('file' in cover) {
+      const url = await uploadImage(cover.file.url);
       return {
         id: page.id,
-        cover: cover.file,
+        cover: { url },
       };
     }
 
     return nullCover;
-  });
+  }));
+
+  console.log({ pagesWithCover });
 
   return response.data
     .filter((page) => (!page['發布日期'] || dayjs().isAfter(dayjs(page['發布日期']))) && page['狀態'] === '已發布')
