@@ -30,7 +30,7 @@ function News({ pageList }: Props) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   try {
     const pageList = await getPageList(process.env.NOTION_NEWS_DB_ID || '');
     const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布');
