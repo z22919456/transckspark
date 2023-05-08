@@ -86,8 +86,6 @@ export const getPageList = async <T>(id: string, catchImage = true) => {
     return nullCover;
   }));
 
-  console.log({ pagesWithCover });
-
   return response.data
     .filter((page) => (!page['發布日期'] || dayjs().isAfter(dayjs(page['發布日期']))) && page['狀態'] === '已發布')
     .map((page) => ({
