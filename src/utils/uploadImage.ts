@@ -11,16 +11,15 @@ const uploadImage = async (url: string) => {
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_SECRET_KEY,
   };
-  console.log(cloudinaryConfig);
   try {
     v2.config(cloudinaryConfig);
-    const uploadImageUrl = await v2.url(url, {
-      quality: 50,
-    });
+    // const uploadImageUrl = await v2.url(url, {
+    //   width: 1024,
+    // });
 
-    console.log(uploadImage);
+    // console.log(uploadImage);
 
-    const res = await v2.uploader.upload(uploadImageUrl, { public_id: imageName, overwrite: true });
+    const res = await v2.uploader.upload(url, { public_id: imageName, overwrite: true });
     console.log(imageName, res.secure_url);
     return res.secure_url;
   } catch (e) {
