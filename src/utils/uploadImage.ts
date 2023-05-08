@@ -23,7 +23,9 @@ const uploadImage = async (url: string) => {
     console.log(imageName, res.secure_url);
     return res.secure_url;
   } catch (e) {
+    console.log('IMAGE UPLOAD ERROR: =========', imageName, '=========');
     console.log(e);
+    console.log('======================================================');
     return '';
   }
 };
