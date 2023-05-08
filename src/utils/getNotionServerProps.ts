@@ -1,12 +1,12 @@
 import { getPage, getPageList } from 'lib/notion';
-import { GetStaticPropsContext } from 'next';
+import { GetServerSidePropsContext } from 'next';
 
-const getPageServerSideProps = (dbId: string) => async (context: GetStaticPropsContext<{ id: string }>) => {
+const getPageServerSideProps = (dbId: string) => async (context: GetServerSidePropsContext<{ id: string }>) => {
   const id = context.params?.id;
   if (!id) return { notFound: true };
 
   try {
-    const pageList = await getPageList(dbId);
+    const pageList = await getPageList(dbId, false);
     const pageInformation = pageList.find((p) => p.id === id);
     const pageIndex = pageList.findIndex((p) => p.id === id);
 
@@ -19,7 +19,6 @@ const getPageServerSideProps = (dbId: string) => async (context: GetStaticPropsC
         prevPage: pageList[pageIndex - 1]?.id || '',
         nextPage: pageList[pageIndex + 1]?.id || '',
       },
-      // revalidate: 60,
     };
   } catch (err) {
     return { notFound: true };

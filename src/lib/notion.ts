@@ -48,7 +48,7 @@ const notion = new Client({
 //   }));
 // };
 
-export const getPageList = async <T>(id: string) => {
+export const getPageList = async <T>(id: string, catchImage = true) => {
   const response = await axios.get<Array<NotionPageData<T>>>(`https://notion-api.splitbee.io/v1/table/${id}`);
   const originResponse = await notion.databases.query({
     database_id: id,
@@ -70,6 +70,12 @@ export const getPageList = async <T>(id: string) => {
     }
 
     if ('file' in cover) {
+      if (!catchImage) {
+        return {
+          id: page.id,
+          cover: cover.file,
+        };
+      }
       const url = await uploadImage(cover.file.url);
       return {
         id: page.id,
@@ -93,5 +99,9 @@ export const getPageList = async <T>(id: string) => {
 export const getPage = async (id: string) => {
   const notionApi = new NotionAPI();
   const page = await notionApi.getPage(id);
+
+  const { signed_urls, ...block } = page;
+
+  console.log(page);
   return page;
 };

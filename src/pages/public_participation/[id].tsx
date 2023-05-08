@@ -41,8 +41,8 @@ function ActivityPage({ pageInformation, blocks }: Props) {
   );
 }
 
-export const getStaticPaths = getNotionServerPaths(process.env.NOTION_ACTIVITY_DB_ID || '');
+// export const getStaticPaths = getNotionServerPaths(process.env.NOTION_ACTIVITY_DB_ID || '');
 
-export const getStaticProps = getPageServerSideProps(process.env.NOTION_ACTIVITY_DB_ID || '');
+export const getServerSideProps = getPageServerSideProps(process.env.NOTION_ACTIVITY_DB_ID || '');
 
 export default ActivityPage;

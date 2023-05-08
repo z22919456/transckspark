@@ -42,8 +42,8 @@ function NewsPage({ pageInformation, blocks }: Props) {
   );
 }
 
-export const getStaticPaths = getNotionServerPaths(process.env.NOTION_NEWS_DB_ID || '');
+// export const getStaticPaths = getNotionServerPaths(process.env.NOTION_NEWS_DB_ID || '');
 
-export const getStaticProps = getPageServerSideProps(process.env.NOTION_NEWS_DB_ID || '');
+export const getServerSideProps = getPageServerSideProps(process.env.NOTION_NEWS_DB_ID || '');
 
 export default NewsPage;
