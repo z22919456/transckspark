@@ -39,12 +39,12 @@ export const getStaticProps = async () => {
       props: {
         pageList: JSON.parse(JSON.stringify(pageListWithFilter)),
       },
-      revalidate: 60,
+      // revalidate: 60,
     };
   } catch {
     return {
       props: { pageList: [] },
-      revalidate: 60,
+      // revalidate: 60,
     };
   }
 };

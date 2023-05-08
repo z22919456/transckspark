@@ -88,7 +88,7 @@ export const getStaticProps = async () => {
       props: {
         pageList: JSON.parse(JSON.stringify(pageListWithType)),
       },
-      revalidate: 60,
+      // revalidate: 60,
     };
   } catch {
     return {
@@ -98,7 +98,7 @@ export const getStaticProps = async () => {
           open: [],
         },
       },
-      revalidate: 60,
+      // revalidate: 60,
     };
   }
 };

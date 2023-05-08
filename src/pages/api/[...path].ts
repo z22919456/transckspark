@@ -1,10 +1,4 @@
-import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
-
-const getExhibition = async () => {
-  const response = await axios.get<{ id:string }[]>(`https://notion-api.splitbee.io/v1/table/${process.env.NOTION_WORK_DB_ID}`);
-  return response.data.map((d) => `/exhibition/${d.id}`);
-};
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.query.secret !== process.env.REVALIDATE_TOKEN) {
@@ -12,13 +6,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    // revalidate the entire exhibition page
-    await res.revalidate('/exhibition');
+    const { path } = req.query;
+    const paths = Array.isArray(path) ? path : [path];
 
-    const exhibitions = await getExhibition();
-    await Promise.all(exhibitions.map(async (page) => {
-      await res.revalidate(page);
-    }));
+    await res.revalidate(`/${paths.join('/')}`);
 
     return res.json({ revalidated: true });
   } catch (err) {
