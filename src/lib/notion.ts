@@ -99,9 +99,5 @@ export const getPageList = async <T>(id: string, catchImage = true) => {
 export const getPage = async (id: string) => {
   const notionApi = new NotionAPI();
   const page = await notionApi.getPage(id);
-
-  const { signed_urls, ...block } = page;
-
-  console.log(page);
   return page;
 };
