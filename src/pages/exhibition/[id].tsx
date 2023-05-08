@@ -39,7 +39,7 @@ function WorkPage({
         </div>
         <div className="px-5">
           <div className="relative w-full aspect-video">
-            <Image placeholder="blur" blurDataURL={placeholder} src={pageInformation.cover.url} fill alt={pageInformation.cover.url ? pageInformation.Title : '修復中...'} unoptimized sizes="(max-width: 768px) 100vw, 50vw" />
+            <Image placeholder="blur" blurDataURL={placeholder} src={pageInformation.cover.url} fill alt={pageInformation.cover.url ? pageInformation.Title : '修復中...'} sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
           <div className="pt-3">
             <NotionRenderer components={{ nextImage: Image }} recordMap={blocks} />
@@ -55,8 +55,8 @@ function WorkPage({
   );
 }
 
-// export const getStaticPaths = getNotionServerPaths(process.env.NOTION_WORK_DB_ID || '');
+export const getStaticPaths = getNotionServerPaths(process.env.NOTION_WORK_DB_ID || '');
 
-export const getServerSideProps = getPageServerSideProps(process.env.NOTION_WORK_DB_ID || '');
+export const getStaticProps = getPageServerSideProps(process.env.NOTION_WORK_DB_ID || '');
 
 export default WorkPage;
