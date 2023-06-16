@@ -32,7 +32,7 @@ export const competitionEnglishData = {
     },
     {
       title: 'Competition Showcase',
-      time: 'Aug 25, 2023 to Sep 17, 2023',
+      time: 'Aug 25, 2023 to Sep 10, 2023',
     },
   ],
   theme: 'Conceptual Design Competition for Heart of the Capital: A Vision for Transforming Chiang Kai-Shek Memorial Park',
