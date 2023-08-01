@@ -19,7 +19,7 @@ const uploadImage = async (url: string, splitCount = 4) => {
 
     // console.log(uploadImage);
 
-    const res = await v2.uploader.upload(url, { public_id: imageName, overwrite: true });
+    const res = await v2.uploader.upload(url, { public_id: imageName.replace(/[^a-zA-Z0-9_-]/g, ''), overwrite: true });
     console.log('Image Catch: ');
     console.log('  *Name:', imageName);
     console.log('  *URL:', res.secure_url);
