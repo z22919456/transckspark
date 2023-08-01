@@ -23,6 +23,8 @@ const NAV_LIST = [
   { name: '想像中正紀念堂的100種方式', subName: 'Public Participation', href: '/public_participation' },
   { name: '常見問答', subName: 'FAQ', href: '/faq' },
   { name: '入圍作品及優勝名單', subName: 'Competition Finalists & Winners', href: '/exhibition' },
+  { name: '優勝作品介紹', subName: 'Introduction of Winning Entry', href: '/introduction_of_winning_entry' },
+  { name: '名人推薦影片', subName: 'Endorsement Videos', href: '/endorsement_videos' },
 ];
 
 function Navigation({ onClose }: Props) {
