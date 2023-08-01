@@ -4,6 +4,7 @@ import axios from 'axios';
 import dayjs from 'dayjs';
 import { NotionAPI } from 'notion-client';
 import { NotionPageData } from 'type';
+import uploadImage from 'utils/uploadImage';
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
@@ -47,13 +48,13 @@ const notion = new Client({
 //   }));
 // };
 
-export const getPageList = async <T>(id: string) => {
+export const getPageList = async <T>(id: string, catchImage = true) => {
   const response = await axios.get<Array<NotionPageData<T>>>(`https://notion-api.splitbee.io/v1/table/${id}`);
   const originResponse = await notion.databases.query({
     database_id: id,
   });
 
-  const pagesWithCover = originResponse.results.map((page) => {
+  const pagesWithCover = await Promise.all(originResponse.results.map(async (page) => {
     const nullCover = {
       id: page.id,
       cover: { url: '' },
@@ -69,14 +70,21 @@ export const getPageList = async <T>(id: string) => {
     }
 
     if ('file' in cover) {
+      if (!catchImage) {
+        return {
+          id: page.id,
+          cover: cover.file,
+        };
+      }
+      const url = await uploadImage(cover.file.url);
       return {
         id: page.id,
-        cover: cover.file,
+        cover: { url },
       };
     }
 
     return nullCover;
-  });
+  }));
 
   return response.data
     .filter((page) => (!page['發布日期'] || dayjs().isAfter(dayjs(page['發布日期']))) && page['狀態'] === '已發布')

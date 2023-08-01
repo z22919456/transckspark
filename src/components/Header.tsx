@@ -10,10 +10,11 @@ type Props = {
 const FIRST_TIME = '2022-12-01T12:00:00.000+08:00';
 const SECOND_TIME = '2023-02-15T12:00:00.000+08:00';
 const THIRD_TIME = '2023-03-10T12:00:00.000+08:00';
+const FOUR_TIME = '2023-08-25T12:00:00.000+08:00';
 
-const TIME_POINTS = [FIRST_TIME, SECOND_TIME, THIRD_TIME];
+const TIME_POINTS = [FIRST_TIME, SECOND_TIME, THIRD_TIME, FOUR_TIME];
 
-const TITLE = ['初審入圍名單公布倒數', '決選交件截止日倒數', '決選優勝者公布'];
+const TITLE = ['初審入圍名單公布倒數', '決選交件截止日倒數', '決選優勝者公布', '成果展覽開幕日'];
 
 function Header({ className }: Props) {
   const now = dayjs();
@@ -21,7 +22,8 @@ function Header({ className }: Props) {
     if (dayjs().isBefore(dayjs(FIRST_TIME))) return 0;
     if (dayjs().isBefore(dayjs(SECOND_TIME))) return 1;
     if (dayjs().isBefore(dayjs(THIRD_TIME))) return 2;
-    return 3;
+    if (dayjs().isBefore(dayjs(FOUR_TIME))) return 3;
+    return 4;
   }, []);
   const title = useMemo(() => TITLE[stage], [stage]);
   const to = useMemo(() => dayjs(TIME_POINTS[stage]), [stage]);

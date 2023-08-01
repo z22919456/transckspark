@@ -15,7 +15,7 @@ const nextConfig = {
   },
   images: {
     deviceSizes: [375, 640, 768, 1024, 1080, 1920],
-    minimumCacheTTL: 60,
+    // minimumCacheTTL: 60,
     remotePatterns: [
       {
         protocol: 'https',
@@ -28,6 +28,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: '**.notion.so'
+      },
+      {
+        protocol: 'https',
+        hostname: '**.cloudinary.com',
       }
     ],
     // unoptimized: !!process.env.IMAGE_OPTIMIZED_SKIP

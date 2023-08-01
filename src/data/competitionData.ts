@@ -32,7 +32,7 @@ export const competitionEnglishData = {
     },
     {
       title: 'Competition Showcase',
-      time: 'Aug 25, 2023 to Sep 17, 2023',
+      time: 'Aug 25, 2023 to Sep 10, 2023',
     },
   ],
   theme: 'Conceptual Design Competition for Heart of the Capital: A Vision for Transforming Chiang Kai-Shek Memorial Park',
@@ -109,8 +109,7 @@ export const competitionData = {
   ],
   importantDates: [
     { title: '民眾參與活動', time: '2022.7—2023.6.30' },
-    { title: '成果展覽', time: '2023.8.25—2023.9.17' },
-
+    { title: '成果展覽', time: '2023.8.25—2023.9.10' },
   ],
   theme: '「首都之心，城中轉正」：中正紀念堂園區新願景概念競圖徵件辦法',
   statements: [ // 活動宣言
