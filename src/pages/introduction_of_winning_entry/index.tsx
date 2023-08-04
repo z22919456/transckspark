@@ -12,13 +12,13 @@ type Props = {
 function IntroductionOfWinningEntry({ pageList }: Props) {
   return (
     <>
-      <SEO title="得獎作品介紹 Introduction Of Winning Entry" description="得獎作品介紹" />
+      <SEO title="優勝作品介紹與團隊訪談 Introduction Of Winning Entry" description="優勝作品介紹與團隊訪談" />
       <div className="introduction">
         <Header />
         <div className="mx-5">
 
           <div className="py-10 text-center">
-            <h1>得獎作品介紹</h1>
+            <h1>優勝作品介紹與團隊訪談</h1>
             <h1 className="h2">Introduction Of Winning Entry</h1>
           </div>
           <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
@@ -33,7 +33,7 @@ function IntroductionOfWinningEntry({ pageList }: Props) {
 export const getStaticProps = async () => {
   try {
     const pageList = await getPageList(process.env.NOTION_VIDEO_AND_INTRO_DB_ID || '');
-    const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布' && page['類型'] === '得獎作品介紹');
+    const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布' && page['類型'] === '優勝作品介紹與團隊訪談');
 
     return {
       props: {
