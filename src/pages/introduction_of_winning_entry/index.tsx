@@ -33,7 +33,7 @@ function IntroductionOfWinningEntry({ pageList }: Props) {
 export const getStaticProps = async () => {
   try {
     const pageList = await getPageList(process.env.NOTION_VIDEO_AND_INTRO_DB_ID || '');
-    const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布' && page['類型'] === '優勝作品介紹與團隊訪談');
+    const pageListWithFilter = pageList.filter((page) => page['狀態'] === '已發布' && page['類型'] === '得獎作品介紹');
 
     return {
       props: {
