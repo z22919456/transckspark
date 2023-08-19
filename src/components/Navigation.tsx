@@ -15,16 +15,15 @@ const NAV_LIST = [
   { name: 'English', subName: '', href: '/en' },
   { name: '關於', subName: 'About the Project', href: '/' },
   { name: '最新消息', subName: 'News', href: '/news' },
+  { name: '網路預展', subName: 'Untitled', href: '/untitled' },
+  { name: '優勝推薦影片', subName: 'Introduction of Winning Entry', href: '/introduction_of_winning_entry' },
+  { name: '名人推薦影片', subName: 'Endorsement Videos', href: '/endorsement_videos' },
+  { name: '入圍作品及優勝名單', subName: 'Competition Finalists & Winners', href: '/exhibition' },
+  { type: 'dividing' },
   { name: '競圖活動說明', subName: 'Competition', href: '/competition' },
-  { name: '評審委員', subName: 'The Jury', href: '/judges' },
-  {
-    name: '初審入圍名單', subName: 'Competition Shortlists (2022.12.1揭曉)', href: '/competition_shortlists', inactive: true,
-  },
+  { name: '評圖委員', subName: 'The Jury', href: '/judges' },
   { name: '想像中正紀念堂的100種方式', subName: 'Public Participation', href: '/public_participation' },
   { name: '常見問答', subName: 'FAQ', href: '/faq' },
-  { name: '入圍作品及優勝名單', subName: 'Competition Finalists & Winners', href: '/exhibition' },
-  { name: '優勝作品介紹與團隊訪談', subName: 'Introduction of Winning Entry', href: '/introduction_of_winning_entry' },
-  { name: '名人推薦影片', subName: 'Endorsement Videos', href: '/endorsement_videos' },
 ];
 
 function Navigation({ onClose }: Props) {
@@ -36,24 +35,20 @@ function Navigation({ onClose }: Props) {
   return (
     <nav className="fixed top-0 left-0 z-50 flex w-screen h-screen max-h-screen p-5 overflow-hidden text-white md:w-1/2 bg-default">
       <List className="flex-shrink-0 w-16 mt-3" />
-      <div className="relative h-full px-3 ml-0 lg:ml-5 max-h-[720px] w-full">
-        <ul className="space-y-3">
+      <div className="relative h-full px-3 ml-0 lg:ml-5 max-h-[720px] w-full p-16">
+        <ul className="h-full space-y-3 overflow-y-auto">
           {NAV_LIST.map((list) => (
-            <li className="h3" key={list.href}>
-              {list.inactive && isShow ? (
-                <p className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 text-gray-500 border-default', pathname === list.href && 'border-white')} >
-                  {list.name} <span className="text-xs font-normal">{list.subName}</span>
-                </p>
-              ) : (
-                <Link href={list.href}>
+            list.type === 'dividing' ? (
+              <hr className="border-gray-400" />
+            ) : (
+              <li className="h3" key={list.href}>
+                <Link href={list.href || ''}>
                   <a className={classnames('pb-1 transition-all ease-out delay-200 border-b-2 hover:translate-x-5 hover:border-white border-default', pathname === list.href && 'border-white')} onClick={onClose} >
                     {list.name} <span className="text-xs font-normal">{list.subName}</span>
                   </a>
                 </Link>
-              )
-              }
-            </li>
-          ))}
+              </li>
+            )))}
         </ul>
         <div className="absolute bottom-0 left-0 flex flex-wrap items-center">
           <Link href="https://www.facebook.com/transckspark/">

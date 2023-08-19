@@ -48,3 +48,9 @@ export type UnnamedInformation = {
   '創作者': string
   '簡介': string
 };
+
+export type OnlineExhibitionInformation = {
+  '類型': '自然共生' | '解放空白' | '記憶迴響' | '脈絡交織' | '眾聲喧嘩'
+  '創作者': string
+  '簡介': string
+};

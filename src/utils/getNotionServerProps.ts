@@ -31,9 +31,10 @@ const getPageServerSideProps = (dbId: string) => async (context: GetStaticPropsC
         prevPage: pageList[pageIndex - 1]?.id || '',
         nextPage: pageList[pageIndex + 1]?.id || '',
       },
+      revalidate: 60,
     };
   } catch (err) {
-    return { notFound: true };
+    return { notFound: true, revalidate: 60 };
   }
 };
 
