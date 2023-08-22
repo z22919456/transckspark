@@ -80,7 +80,7 @@ const INVITED_WORKS_2 = [
 function OnlineExhibitionPage({ pageList }: Props) {
   return (
     <>
-      <SEO title="網路預展 Untitled" description="首都之心 城中轉正：網路預展" />
+      <SEO title="網路預展 Untitled" description="首都之心 城中轉正：展出作品預先於網站上展示" />
       <div className="online-exhibition">
         <Header />
         <div className="mx-5">

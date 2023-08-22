@@ -20,7 +20,7 @@ type Props = {
 function ActivityPage({ pageInformation, blocks }: Props) {
   return (
     <>
-      <SEO title="想像中正紀念堂的100種方式 Public Participation" />
+      <SEO title="想像中正紀念堂的100種方式 Public Participation" description="首都之心，城中轉正：中正紀念堂園區新願景概念競圖，是民間發起的紙上概念競圖，由台灣現代建築學會、中華民國都市設計學會、中華民國景觀學會國內三大空間規劃設計專業學會共同發起。攸關台灣當代城市生活的形塑和社會價值的再造，也是讓生活塑造城市、強化參與的難得機會。" />
       <div className="activity">
         <Header />
         <div className="py-16 text-center">

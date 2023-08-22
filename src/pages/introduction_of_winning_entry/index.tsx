@@ -12,13 +12,13 @@ type Props = {
 function IntroductionOfWinningEntry({ pageList }: Props) {
   return (
     <>
-      <SEO title="優勝作品介紹與團隊訪談 Introduction Of Winning Entry" description="優勝作品介紹與團隊訪談" />
+      <SEO title="優勝推薦影片 Introduction Of Winning Entry" description="10組優勝團隊作品介紹影片" />
       <div className="introduction">
         <Header />
         <div className="mx-5">
 
           <div className="py-10 text-center">
-            <h1>優勝作品介紹與團隊訪談</h1>
+            <h1>優勝推薦影片</h1>
             <h1 className="h2">Introduction Of Winning Entry</h1>
           </div>
           <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">

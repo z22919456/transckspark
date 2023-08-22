@@ -12,7 +12,7 @@ type Props = {
 function EndorsementVideo({ pageList }: Props) {
   return (
     <>
-      <SEO title="名人推薦影片 Endorsement Videos" description="名人推薦影片" />
+      <SEO title="名人推薦影片 Endorsement Videos" description="邀請名人推薦展覽" />
       <div className="video">
         <Header />
         <div className="mx-5">
