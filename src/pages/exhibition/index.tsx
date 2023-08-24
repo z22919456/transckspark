@@ -19,7 +19,7 @@ type Props = {
 function Exhibition({ pageList }: Props) {
   return (
     <>
-      <SEO title="入圍作品及優勝名單 Competition Finalists & Winners" description="首都之心 城中轉正：中正紀念堂園區新願景概念競圖 入圍作品及優勝名單" />
+      <SEO title="入圍作品及優勝名單 Competition Finalists & Winners" description="競圖30組入圍作品介紹及最後10組優勝團隊名單" />
       <div className="exhibition">
         <Header className="from-exhibition" />
         <div className="mx-5">

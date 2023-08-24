@@ -26,6 +26,9 @@ function About() {
 
         <div className="px-5">
           <ScrollNav>
+            <ScrollNavLink to="exhibition">
+              展覽資訊
+            </ScrollNavLink>
             <ScrollNavLink to="about">
               活動緣起
             </ScrollNavLink>
@@ -42,6 +45,83 @@ function About() {
               工作團隊
             </ScrollNavLink>
           </ScrollNav>
+          <Section id="exhibition" >
+            <h2 className="py-12 text-center">想像中正紀念堂的 100 種方式：中正紀念堂園區新願景概念競圖成果展覽</h2>
+            <p className='mb-4'>
+              動員未來的想像 —— 在隨著時間滲透而變化的周邊地景中，中正紀念堂園區作為一個首都城市重要的公共空間，在今日如何扮演多面向的公共性角色，以空間重整的大尺度剖析、或思索建築和自然環境之間的關係來回應當代生活的多樣性。
+            </p>
+            <p className='mb-4'>
+              由台灣現代建築學會、中華民國都市設計學會、中華民國景觀學會共同發起的「中正紀念堂園區新願景概念競圖」，自去年歷經公開徵件、初審入圍、決審評選，可看見來自多元背景的年輕世代與空間專業者熱烈參與，是一個嘗試還原和發現的思辨過程，藉由重新梳理與詮釋空間，來重啟對於都市的發聲。期間也搭配系列論壇、講座、工作坊，期待打開更多的對話場合、帶動社會進一步討論，激發想像力和創造力，提示新經驗的可能。
+            </p>
+            <p className='mb-4'>
+              而本成果展覽延續以「公共參與」為出發的理念，希望透過競圖的具象化，參與團隊的實驗精神與大無畏的創造力，進一步觸發大眾的新視野，因為生活在其中的我們所做的每件事、每個大小決定都影響著這城市。
+            </p>
+            <p className='mb-4'><b>
+              ・展區藉由五個主題的呈現：
+            </b>
+            </p>
+            <div className="mb-4 ml-4">
+              <p>- 自然共生｜生態與威權的地景對話</p>
+              <p>- 解放空白｜開放與公共的新視野</p>
+              <p>- 記憶迴響｜凝視歷史，重塑記憶</p>
+              <p>- 脈絡交織｜既存系統的連結與超越</p>
+              <p>- 眾聲喧嘩｜多元使用活動的介入</p>
+            </div>
+            <p className='mb-4'>
+              將參展作品分類，展出組別分別有評審推薦優秀作品10件、入圍20件、特別邀請2件、歷年畢業設計10件，以及初選徵集142件，總計184件；作品中涵蓋社會組和學生組，也讓民眾看見從不同的視角和領域會創造出什麼不一樣的空間經驗。
+            </p>
+            <p className='mb-4'>
+              本展覽將於8/25舉辦開幕記者會，到9/10展期間另規劃有競圖團隊導覽作品及分享會活動，邀請大家再次從宏觀或微觀的角度來探索和提問，勾勒出中正紀念堂在人民心中的意義，形成更多對話與討論的可能。
+            </p>
+            <h3 className="py-8 text-center">展覽資訊</h3>
+            <p><b>展覽日期</b>｜2023/08/25（五） ~ 09/10（日）</p>
+            <p><b>展覽地點</b>｜臺灣當代文化實驗場C-LAB （台北市大安區建國南路一段177號）</p>
+            <p><b>展覽位置</b>｜聯合餐廳展演空間</p>
+            <p><b>開放時間</b>｜10:00－18:00（週一休館）</p>
+            <h3 className="py-8 text-center">展覽活動資訊</h3>
+            <h4 className="mb-6">
+              <span className="text-lg border-b border-black">
+                展覽第一週
+              </span>
+            </h4>
+            <div className="px-0 md:px-10">
+              <p className="ml-10 -indent-10">8/25（五）開幕記者會、開幕活動</p>
+              <p className="mb-6 ml-10 text-sm text-gray-600">聯合餐廳展演空間灰盒子（10:00 ~ 13:30）</p>
+              <p className="ml-10 -indent-10">8/26（六）特別邀請組｜專題演講、作品分享會</p>
+              <p className="mb-6 ml-10 text-sm text-gray-600">聯合餐廳展演空間灰盒子（09:30 ~ 12:30）</p>
+              <p className="ml-10 -indent-10">8/26（六）評審推薦優秀組｜作品分享會</p>
+              <p className="mb-6 ml-10 text-sm text-gray-600">聯合餐廳展演空間灰盒子（13:00 ~ 16:50）</p>
+              <p className="ml-10 -indent-10">8/27（日）評審推薦優秀作品｜社會組畢業學校參與｜作品導覽</p>
+              <p className="mb-6 ml-10 text-sm text-gray-600">聯合餐廳展演空間（10:00 ~ 11:45）</p>
+              <p className="ml-10 -indent-10">8/27（日）評審推薦優秀作品｜社會組畢業學校參與｜講座</p>
+              <p className="mb-6 ml-10 text-sm text-gray-600">聯合餐廳展演空間灰盒子（13:00 ~ 15:10）</p>
+            </div>
+            <h4 className="mb-6">
+              <span className="text-lg border-b border-black">
+                展覽第二週
+              </span>
+            </h4>
+            <div className="px-0 md:px-10">
+              <p className="ml-10 -indent-10">9/2（六）歷年畢業設計組｜作品分享會</p>
+              <p className="mb-6 ml-10 text-sm text-gray-600">西服務中心二樓（13:00 ~ 15:40）</p>
+            </div>
+
+            <h4 className="mb-6">
+              <span className="text-lg border-b border-black">
+                展覽第三週
+              </span>
+            </h4>
+            <div className="px-0 md:px-10">
+              <p className="ml-10 -indent-10">9/9（六）評審推薦優秀作品｜學生組學校參與｜作品導覽</p>
+              <p className="mb-6 ml-10 text-sm text-gray-600">聯合餐廳展演空間（10:00 ~ 12:05）</p>
+              <p className="ml-10 -indent-10">9/9（六）評審推薦優秀作品｜學生組學校參與｜講座</p>
+              <p className="mb-6 ml-10 text-sm text-gray-600">聯合餐廳展演空間灰盒子（13:00 ~ 15:10）</p>
+              <p className="ml-10 -indent-10">9/10（日）評審推薦優秀作品導覽｜民眾參與活動</p>
+              <p className="mb-6 ml-10 text-sm text-gray-600">聯合餐廳展演空間（09:30 ~ 15:20）</p>
+              <p className="ml-10 -indent-10">9/10（日）學會座談總結計畫</p>
+              <p className="mb-6 ml-10 text-sm text-gray-600">聯合餐廳展演空間灰盒子（15:30 ~ 17:00）</p>
+            </div>
+          </Section>
           <Section id="about" >
             <h2 className="py-12 text-center">活動緣起｜民間發起的紙上概念競圖</h2>
             <p>首都之心，城中轉正：中正紀念堂園區新願景概念競圖，由台灣現代建築學會、中華民國都市設計學會、中華民國景觀學會國內三大空間規劃設計專業學會共同發起。透過競圖徵件，鼓勵社會將論述具象化；經由公眾參與活動，促進社會溝通。此競圖與系列活動，以 「公共參與」 為理念及方法，在嚴謹公平的程序中，聚焦規劃專業，由下而上動員空間專業界與社會大眾，激發想像力和創造力，參與都市公共空間改造過程。競圖徵件期間，搭配系列公共論壇、講座、工作坊、成果展覽，期待打開更多的對話場合、帶動社會進一步討論，從文字進展到概念，從論述具象為圖面，凝聚社會共識，推動轉型正義的空間工程。</p>

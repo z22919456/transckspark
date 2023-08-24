@@ -89,6 +89,24 @@
     --primary-color: #606060;
     --primary-color-hover: #60606088;
   }
+
+  .video,
+  .video * {
+    --primary-color: #FF8A65;
+    --primary-color-hover: #FF8A65;
+  }
+
+  .introduction,
+  .introduction * {
+    --primary-color: #81D4FA;
+    --primary-color-hover: #81D4FA;
+  }
+
+  .online-exhibition,
+  .online-exhibition * {
+    --primary-color: #95CACA;
+    --primary-color-hover: #95CACA;
+  }
 }
 
 main.notion-page {

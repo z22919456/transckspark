@@ -41,3 +41,16 @@ export type ExhibitionInformation = {
   '種類': '學生組' | '社會組'
   '優勝': boolean
 };
+
+export type UnnamedInformation = {
+  'YT連結': string
+  '類型': '名人推薦' | '得獎作品介紹'
+  '創作者': string
+  '簡介': string
+};
+
+export type OnlineExhibitionInformation = {
+  '類型': '自然共生' | '解放空白' | '記憶迴響' | '脈絡交織' | '眾聲喧嘩'
+  '創作者': string
+  '簡介': string
+};
