@@ -15,7 +15,7 @@ const NAV_LIST = [
   { name: 'English', subName: '', href: '/en' },
   { name: '關於', subName: 'About the Project', href: '/' },
   { name: '最新消息', subName: 'News', href: '/news' },
-  { name: '網路預展', subName: 'Untitled', href: '/untitled' },
+  { name: '網路預展', subName: 'Online Pre-exhibition', href: '/online_pre-exhibition' },
   { name: '優勝推薦影片', subName: 'Introduction of Winning Entry', href: '/introduction_of_winning_entry' },
   { name: '名人推薦影片', subName: 'Endorsement Videos', href: '/endorsement_videos' },
   { name: '入圍作品及優勝名單', subName: 'Competition Finalists & Winners', href: '/exhibition' },

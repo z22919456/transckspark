@@ -25,7 +25,7 @@ function WorkPage({
 }: Props) {
   return (
     <>
-      <SEO title={`${pageInformation.Title}｜網路預展 Untitled`} description={pageInformation['簡介']} />
+      <SEO title={`${pageInformation.Title}｜網路預展 Online Pre-exhibition`} description={pageInformation['簡介']} />
       <div className="online-exhibition">
         <Header />
         <div className="py-16 text-center">
@@ -45,7 +45,7 @@ function WorkPage({
           <div className="flex items-end justify-between">
 
             <SocialShareButton left />
-            <PaginationButton nextPage={nextPage ? `/untitled/${nextPage}` : ''} prevPage={prevPage ? `/untitled/${prevPage}` : ''} />
+            <PaginationButton nextPage={nextPage ? `/online_pre-exhibition/${nextPage}` : ''} prevPage={prevPage ? `/online_pre-exhibition/${prevPage}` : ''} />
           </div>
         </div>
       </div>

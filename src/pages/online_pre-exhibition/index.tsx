@@ -80,14 +80,14 @@ const INVITED_WORKS_2 = [
 function OnlineExhibitionPage({ pageList }: Props) {
   return (
     <>
-      <SEO title="網路預展 Untitled" description="首都之心 城中轉正：展出作品預先於網站上展示" />
+      <SEO title="網路預展 Online Pre-exhibition" description="首都之心 城中轉正：展出作品預先於網站上展示" />
       <div className="online-exhibition">
         <Header />
         <div className="mx-5">
 
           <div className="py-10 text-center">
             <h1>網路預展</h1>
-            <h1 className="h2">Untitled</h1>
+            <h1 className="h2">Online Pre-exhibition</h1>
           </div>
           <TabContainer defaultValue="online">
             <TabList>
