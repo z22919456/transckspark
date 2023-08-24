@@ -17,7 +17,7 @@ const NAV_LIST = [
   { name: '最新消息', subName: 'News', href: '/news' },
   { name: '網路預展', subName: 'Exhibition Preview', href: '/exhibition_preview' },
   { name: '優勝推薦影片', subName: 'Introduction of Winning Entry', href: '/introduction_of_winning_entry' },
-  { name: '名人推薦影片', subName: 'Endorsement Videos', href: '/endorsement_videos' },
+  { name: '展覽推薦影片', subName: 'Recommendation Video', href: '/recommendation_videos' },
   { name: '入圍作品及優勝名單', subName: 'Competition Finalists & Winners', href: '/exhibition' },
   { type: 'dividing' },
   { name: '競圖活動說明', subName: 'Competition', href: '/competition' },

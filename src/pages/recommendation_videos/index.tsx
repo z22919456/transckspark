@@ -12,14 +12,14 @@ type Props = {
 function EndorsementVideo({ pageList }: Props) {
   return (
     <>
-      <SEO title="名人推薦影片 Endorsement Videos" description="邀請名人推薦展覽" />
+      <SEO title="展覽推薦影片 Recommendation Videos" description="邀請名人推薦展覽" />
       <div className="video">
         <Header />
         <div className="mx-5">
 
           <div className="py-10 text-center">
-            <h1>名人推薦影片</h1>
-            <h1 className="h2">Endorsement Video</h1>
+            <h1>展覽推薦影片</h1>
+            <h1 className="h2">Recommendation Video</h1>
           </div>
           <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
             {pageList.map((page) => <YTCard key={page.id} data={page} />)}
