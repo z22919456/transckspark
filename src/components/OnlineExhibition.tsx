@@ -24,7 +24,7 @@ function OnlineExhibition({ work }: Props) {
         <Image placeholder="blur" blurDataURL={placeholder} src={work.cover.url} layout="fill" objectFit="cover" alt={work.cover.url ? work.Title : '修復中...'} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw" />
       </div>
       <p className="h-16 text-xs line-clamp-4">{work['簡介']}</p>
-      <Link href={`/untitled/${work.id}`}>
+      <Link href={`/exhibition_preview/${work.id}`}>
         <p className="my-5 text-center">
           <a className="cursor-pointer hover:text-primary">
             read more ➔
