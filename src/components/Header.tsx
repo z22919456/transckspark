@@ -56,7 +56,7 @@ function Header({ className }: Props) {
   return (
     <div
       className={classnames(
-        'relative md:z-10 -z-10  w-full h-20 px-5 bg-gradient-to-b from-primary to-white transition-all duration-200 -mb-20 md:mb-0',
+        'relative md:z-10 -z-10  w-full h-20 px-5 bg-gradient-to-b from-primary to-white transition-all duration-200 -mb-20 md:mb-0 ',
         className,
       )}
     >
