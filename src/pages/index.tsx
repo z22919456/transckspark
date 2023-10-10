@@ -1,16 +1,16 @@
-import Divider from "components/Divider";
-import Header from "components/Header";
-import Section from "components/Section";
-import Image from "next/image";
-import React from "react";
+import Divider from 'components/Divider';
+import Header from 'components/Header';
+import Section from 'components/Section';
+import Image from 'next/image';
+import React from 'react';
 
-import SEO from "components/SEO";
-import about00Img from "images/about/00.jpg";
-import about02Img from "images/about/04.jpg";
-import about03Img from "images/about/about-03.jpg";
-import about04Img from "images/about/about-04.jpg";
-import placeholder from "components/assets/imagePlaceholderBase64";
-import ScrollNav, { ScrollNavLink } from "../components/ScrollNav";
+import SEO from 'components/SEO';
+import about00Img from 'images/about/00.jpg';
+import about02Img from 'images/about/04.jpg';
+import about03Img from 'images/about/about-03.jpg';
+import about04Img from 'images/about/about-04.jpg';
+import placeholder from 'components/assets/imagePlaceholderBase64';
+import ScrollNav, { ScrollNavLink } from '../components/ScrollNav';
 
 function About() {
   return (
@@ -228,20 +228,20 @@ function About() {
               <Divider />
               <p>2017</p>
               <p>
-                {" "}
+                {' '}
                 文化部「推動中正紀念堂轉型之社會討論計畫」辦理系列公民參與工作坊、
                 「想像紀念堂」願景提案等
               </p>
               <Divider />
               <p>2021</p>
               <p>
-                {" "}
+                {' '}
                 促轉會提出「反省威權歷史公園」構想及三大處置原則．委託空間專業團隊提出設計
               </p>
               <Divider />
               <p>2022</p>
               <p>
-                {" "}
+                {' '}
                 民間發起紙上概念競圖「首都之心，城中轉正：中正紀念堂園區新願景概念競圖」
               </p>
             </div>
@@ -285,12 +285,12 @@ function About() {
             <p>台灣現代建築學會、中華民國景觀學會、中華民國都市設計學會</p>
             <h3 className="py-4 font-bold">競圖評審委員會</h3>
             <p>
-              <b>初審評審 ｜</b>{" "}
+              <b>初審評審 ｜</b>{' '}
               賀陳旦(主席)、林芳慧、侯志仁、郭瓊瑩、陳翠蓮、曾旭正、黃海鳴、黃聲遠、詹偉雄、蔡詩萍
             </p>
             <p>
               <b>決審評審 ｜</b> 賀陳旦(主席)、Jolanta Gromadzka、Philip J.
-              Goad、王明蘅、林曼麗、林靜娟、曾成德、曾旭正、黃丞儀{" "}
+              Goad、王明蘅、林曼麗、林靜娟、曾成德、曾旭正、黃丞儀{' '}
             </p>
 
             <p className="text-sm text-default/60">(主席外依筆畫排列)</p>
