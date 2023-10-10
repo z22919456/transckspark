@@ -32,7 +32,7 @@ const TITLE = [
   '成果展覽開幕日',
   '成果展覽展覽中',
   '成果展覽開幕日',
-  '成果展覽展覽中',
+  '中正紀念堂 展覽中',
 ];
 
 function Header({ className }: Props) {
