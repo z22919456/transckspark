@@ -26,7 +26,7 @@
     "**/*.ts",
     "**/*.tsx",
     "next.d.ts"
-  ],
+, "pritterrc.js"  ],
   "exclude": [
     "node_modules"
   ]
