@@ -57,7 +57,7 @@ function About() {
                 <p>下午15:00 ~ 16:00</p>
               </div>
               <div className="w-full text-center sm:w-1/3 md:w-full lg:w-1/3">
-                <p className="text-lg font-bold">10 / 28 (六)</p>
+                <p className="text-lg font-bold">10 / 22 (六)</p>
                 <p>上午10:00 ~ 11:00</p>
                 <p>下午15:00 ~ 16:00</p>
               </div>
