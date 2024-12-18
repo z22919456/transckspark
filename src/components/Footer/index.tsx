@@ -20,7 +20,7 @@ function Footer() {
           中正紀念堂園區  新願景概念競圖小組
         </p>
         <div className="flex items-center justify-center w-full my-5 space-x-5 text-center">
-          <Link href="mailto:info@vipassanacreative.com">
+          <Link href="mailto:info@vcreative.com">
             <a aria-label="send email" className='w-5'>
               <FontAwesomeIcon icon={faEnvelope} className="text-xl hover:text-gray-700" />
             </a>
@@ -79,8 +79,8 @@ function Footer() {
           </p>
         </Column>
         <Column className="!justify-start w-7/12 space-x-5">
-          <Link href="mailto:info@vipassanacreative.com" aria-label="send email">
-            <small className="hover:underline">Contact us: info@vipassanacreative.com</small>
+          <Link href="mailto:info@vcreative.com" aria-label="send email">
+            <small className="hover:underline">Contact us: info@vcreative.com</small>
           </Link>
           <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
             <a rel="noreferrer noopener" target="_blank" aria-label="youtube link" className='w-5 m-3'>
@@ -118,8 +118,8 @@ function Footer() {
             <br />
             新願景概念競圖小組
           </p>
-          <a href="mailto:info@vipassanacreative.com" className="ml-3 text-xs hover:underline" aria-label="send email">
-            Contact us: info@vipassanacreative.com
+          <a href="mailto:info@vcreative.com" className="ml-3 text-xs hover:underline" aria-label="send email">
+            Contact us: info@vcreative.com
           </a>
           <Link href="https://www.youtube.com/playlist?list=PLZJKcj3-88_jHVt2MOGOuW8zSzpLb4r6r">
             <a rel="noreferrer noopener" target="_blank" aria-label="youtube link" className='w-5'>
