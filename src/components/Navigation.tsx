@@ -61,8 +61,8 @@ function Navigation({ onClose }: Props) {
               <YoutubeIcon className="w-6 h-6 mx-5 fill-white" />
             </a>
           </Link>
-          <a className="mx-5 small" href="email://info@vcreative.com">
-            info@vcreative.com
+          <a className="mx-5 small" href="email://info@vcreative.org">
+            info@vcreative.org
           </a>
         </div>
       </div>
